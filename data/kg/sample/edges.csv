@@ -1,0 +1,718 @@
+:START_ID,:TYPE,:END_ID,annotator,line_id,line_text,detail
+1,IS_CAPITAL_OF,2,3,1,https://archive.org/details/dli.ernet.199817/,1.5.6 
+1,IS_SITUTATED_ON_THE_BANKS_OF,3,3,1,https://archive.org/details/dli.ernet.199817/,1.5.5
+64,IS_FATHER_OF,21,3,1,https://archive.org/details/dli.ernet.199817/,1.70.20
+21,IS_FATHER_OF,22,3,1,https://archive.org/details/dli.ernet.199817/,1.70.20
+22,IS_FATHER_OF,24,3,1,https://archive.org/details/dli.ernet.199817/,1.70.20
+24,IS_FATHER_OF,20,3,1,https://archive.org/details/dli.ernet.199817/,1.70.20
+20,IS_FATHER_OF,25,3,1,https://archive.org/details/dli.ernet.199817/,1.70.21
+25,IS_FATHER_OF,26,3,1,https://archive.org/details/dli.ernet.199817/,1.70.22;1.70.21
+26,IS_FATHER_OF,27,3,1,https://archive.org/details/dli.ernet.199817/,1.70.22
+27,IS_FATHER_OF,28,3,1,https://archive.org/details/dli.ernet.199817/,1.70.23
+28,IS_FATHER_OF,29,3,1,https://archive.org/details/dli.ernet.199817/,1.70.23
+29,IS_FATHER_OF,30,3,1,https://archive.org/details/dli.ernet.199817/,1.70.24
+30,IS_FATHER_OF,65,3,1,https://archive.org/details/dli.ernet.199817/,1.70.24
+65,IS_FATHER_OF,32,3,1,https://archive.org/details/dli.ernet.199817/,1.70.24
+32,IS_FATHER_OF,33,3,1,https://archive.org/details/dli.ernet.199817/,1.70.25
+32,IS_FATHER_OF,34,3,1,https://archive.org/details/dli.ernet.199817/,1.70.25
+20,IS_KNOWN_AS,66,3,1,https://archive.org/details/dli.ernet.199817/,1.70.20
+61,IS_KNOWN_AS,70,3,1,https://archive.org/details/dli.ernet.199817/,
+6,IS_KNOWN_AS,70,3,1,https://archive.org/details/dli.ernet.199817/,
+33,IS_FATHER_OF,34,3,1,https://archive.org/details/dli.ernet.199817/,1.70.25
+34,IS_FATHER_OF,35,3,1,https://archive.org/details/dli.ernet.199817/,1.70.26
+34,IS_KNOWN_AS,71,3,1,https://archive.org/details/dli.ernet.199817/,1.7025
+35,IS_FATHER_OF,36,3,1,https://archive.org/details/dli.ernet.199817/,1.70.26
+35,IS_FATHER_OF,37,3,1,https://archive.org/details/dli.ernet.199817/,1.70.26
+36,IS_BROTHER_OF,37,3,1,https://archive.org/details/dli.ernet.199817/,1.70.26
+36,IS_FATHER_OF,38,3,1,https://archive.org/details/dli.ernet.199817/,1.70.27
+38,IS_FATHER_OF,39,3,1,https://archive.org/details/dli.ernet.199817/,1.70.27
+39,IS_ENEMY_OF,40,3,1,https://archive.org/details/dli.ernet.199817/,1.70.28
+39,IS_ENEMY_OF,41,3,1,https://archive.org/details/dli.ernet.199817/,1.70.28
+39,IS_ENEMY_OF,42,3,1,https://archive.org/details/dli.ernet.199817/,1.70.28
+72,IS_WIFE_OF,39,3,1,https://archive.org/details/dli.ernet.199817/,1.70.33
+39,IS_FATHER_OF,43,3,1,https://archive.org/details/dli.ernet.199817/,1.70.37
+72,IS_MOTHER_OF,43,3,1,https://archive.org/details/dli.ernet.199817/,1.70.37
+73,BELONGED_TO,74,3,1,https://archive.org/details/dli.ernet.199817/,1.70.37
+43,IS_POISONED_BY,76,3,1,https://archive.org/details/dli.ernet.199817/,1.70.31
+72,IS_COWIFE_OF,76,3,1,https://archive.org/details/dli.ernet.199817/,
+72,MET_WITH,73,3,1,https://archive.org/details/dli.ernet.199817/,1.70.32
+72,MET_AT,77,3,1,https://archive.org/details/dli.ernet.199817/,1.70.32
+73,MET_AT,77,3,1,https://archive.org/details/dli.ernet.199817/,1.70.32
+43,IS_FATHER_OF,78,3,1,https://archive.org/details/dli.ernet.199817/,1.70.38
+78,IS_FATHER_OF,4,3,1,https://archive.org/details/dli.ernet.199817/,1.70.38
+4,IS_FATHER_OF,45,3,1,https://archive.org/details/dli.ernet.199817/,1.70.38
+45,IS_FATHER_OF,46,3,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+46,IS_FATHER_OF,47,3,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+49,BECAME,80,3,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+49,IS_KNOWN_AS,50,3,1,https://archive.org/details/dli.ernet.199817/,1.70.40
+49,IS_FATHER_OF,51,3,1,https://archive.org/details/dli.ernet.199817/,1.70.40
+51,IS_FATHER_OF,52,3,1,https://archive.org/details/dli.ernet.199817/,1.70.40
+52,IS_FATHER_OF,19,3;4,1,https://archive.org/details/dli.ernet.199817/,"1.70.40;1.70.40,41"
+19,IS_FATHER_OF,53,3,1,https://archive.org/details/dli.ernet.199817/,1.70.41
+53,IS_FATHER_OF,54,3,1,https://archive.org/details/dli.ernet.199817/,1.70.41
+47,IS_FATHER_OF,82,3,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+82,IS_FATHER_OF,49,3,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+83,IS_QUALITY_OF,49,3,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+83,IS_QUALITY_OF,80,3,1,https://archive.org/details/dli.ernet.199817/,
+54,IS_FATHER_OF,55,3,1,https://archive.org/details/dli.ernet.199817/,1.70.41
+55,IS_FATHER_OF,56,3,1,https://archive.org/details/dli.ernet.199817/,1.70.41
+56,IS_FATHER_OF,57,3,1,https://archive.org/details/dli.ernet.199817/,1.70.42
+57,IS_FATHER_OF,58,3,1,https://archive.org/details/dli.ernet.199817/,1.70.42
+58,IS_FATHER_OF,59,3,1,https://archive.org/details/dli.ernet.199817/,1.70.42
+59,IS_FATHER_OF,60,3,1,https://archive.org/details/dli.ernet.199817/,1.70.43
+60,IS_FATHER_OF,6,3,1,https://archive.org/details/dli.ernet.199817/,1.70.43
+70,IS_FATHER_OF,5,3,1,https://archive.org/details/dli.ernet.199817/,1.70.43
+70,IS_FATHER_OF,62,3,1,https://archive.org/details/dli.ernet.199817/,1.70.43
+5,WENT_TO,1,3,1,https://archive.org/details/dli.ernet.199817/,1.1.86
+84,IS_QUALITY_OF,2,3,1,https://archive.org/details/dli.ernet.199817/,1.5.5
+2,IS_SITUTATED_ON_THE_BANKS_OF,3,3,1,https://archive.org/details/dli.ernet.199817/,1.5.5
+20,IS_KNOWN_AS,85,3,1,https://archive.org/details/dli.ernet.199817/,1.5.6
+1,IS_ESTABLISHED_BY,20,3,1,https://archive.org/details/dli.ernet.199817/,1.5.6
+1,HAS_LENGTH,86,3,1,https://archive.org/details/dli.ernet.199817/,1.5.7
+1,HAS_BREADTH,87,3,1,https://archive.org/details/dli.ernet.199817/,
+88,IS_QUALITY_OF,87,3,1,https://archive.org/details/dli.ernet.199817/,1.5.7
+61,IS_REAL_NAME_OF,70,3,1,https://archive.org/details/dli.ernet.199817/,
+5,Returned to,1,3,1,https://archive.org/details/dli.ernet.199817/,1.1.86
+1,Had,90,3,1,https://archive.org/details/dli.ernet.199817/,1.5.8
+1,is developed by,6,3,1,https://archive.org/details/dli.ernet.199817/,1.5.9
+91,IS_QUALITY_OF,1,3,1,https://archive.org/details/dli.ernet.199817/,1.5.10
+92,IS_QUALITY_OF,1,3,1,https://archive.org/details/dli.ernet.199817/,1.5.10
+93,IS_QUALITY_OF,1,3,1,https://archive.org/details/dli.ernet.199817/,1.5.10
+94,IS_QUALITY_OF,90,3,1,https://archive.org/details/dli.ernet.199817/,1.5.8
+96,IS_QUALITY_OF,90,3,1,https://archive.org/details/dli.ernet.199817/,1.5.8
+95,IS_QUALITY_OF,90,3,1,https://archive.org/details/dli.ernet.199817/,1.5.8
+1,is reached by,97,3,1,https://archive.org/details/dli.ernet.199817/,1.5.10
+1,is praised by,98,3,1,https://archive.org/details/dli.ernet.199817/,1.5.11
+1,is praised by,99,3,1,https://archive.org/details/dli.ernet.199817/,1.5.11
+1,Had,100,3,1,https://archive.org/details/dli.ernet.199817/,1.5.11
+100,Had,102,3,1,https://archive.org/details/dli.ernet.199817/,1.5.11
+103,IS_QUALITY_OF,1,3,1,https://archive.org/details/dli.ernet.199817/,1.5.11
+14,is a Conusellor of,6,3,1,https://archive.org/details/dli.ernet.199817/,1.7.3
+12,IS_SITUTATED_ON_THE_BANKS_OF,105,4,1,https://archive.org/details/dli.ernet.199817/,2.71.9
+106,IS_THE_DIRECTOR_TO_POSSES_DIVINE_WEAPONS,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.42-43
+108,IS_SON_OF,16,4,1,https://archive.org/details/dli.ernet.199817/,1.17.13
+16,IS_FATHER_OF,108,4,1,https://archive.org/details/dli.ernet.199817/,1.17.13
+109,LIVED_AT_FOUR_YOJANA_SOUTH_OF,110,4,1,https://archive.org/details/dli.ernet.199817/,3.11.37
+110,HIS_ASHRAMA_WAS_VISITED_BY,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.42
+111,IS_RULED_BY,112,4,1,https://archive.org/details/dli.ernet.199817/,1.9.8
+114,is Husband of,115,4,1,https://archive.org/details/dli.ernet.199817/,1.1.69
+116,is son of,114,4,1,https://archive.org/details/dli.ernet.199817/,4.18.52
+117,is son of,62,4,1,https://archive.org/details/dli.ernet.199817/,7.102.2
+118,IS_CAPITAL_OF,119,4,1,https://archive.org/details/dli.ernet.199817/,7.102.8
+117,is the king of,118,4,1,https://archive.org/details/dli.ernet.199817/,7.102.8
+1,has a shape of,126,3,1,https://archive.org/details/dli.ernet.199817/,1.5.16
+127,is a General of,128,3,1,https://archive.org/details/dli.ernet.199817/,5.46.1-17;6.60.71
+127,Fought with,123,3,1,https://archive.org/details/dli.ernet.199817/,5.46.29-32
+127,is killed by,132,3,1,https://archive.org/details/dli.ernet.199817/,6.76.28-33
+60,is son of,59,4,1,https://archive.org/details/dli.ernet.199817/,1.70.43
+106,Dwelt in,133,4,1,https://archive.org/details/dli.ernet.199817/,1.1.42
+134,Was sent by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.42.14;4.42.27-29;4.42.6;4.42.13
+134,Was sent to,120,4,1,https://archive.org/details/dli.ernet.199817/,
+140,IS_WIFE_OF,141,4,1,https://archive.org/details/dli.ernet.199817/,4.66.8-9
+142,is son of,128,4,1,https://archive.org/details/dli.ernet.199817/,6.68.7
+142,is nephew of,129,4,1,https://archive.org/details/dli.ernet.199817/,6.68.7
+144,is Husband of,145,4,1,https://archive.org/details/dli.ernet.199817/,2.117.7
+146,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.5
+147,IS_MOTHER_OF,148,4,1,https://archive.org/details/dli.ernet.199817/,1.18.12
+147,IS_WIFE_OF,149,4,1,https://archive.org/details/dli.ernet.199817/,1.29.10-11
+150,is a follower of,151,4,1,https://archive.org/details/dli.ernet.199817/,6.37.7-19
+153,IS_WIFE_OF,152,4,1,https://archive.org/details/dli.ernet.199817/,7.5.41-43
+152,IS_FATHER_OF,150,4,1,https://archive.org/details/dli.ernet.199817/,7.5.41-43
+155,IS_KNOWN_AS,69,4,1,https://archive.org/details/dli.ernet.199817/,1.21.15
+157,is daughter of,155,4,1,https://archive.org/details/dli.ernet.199817/,3.14.11
+157,IS_WIFE_OF,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.11
+159,is maternal uncle of,128,4,1,https://archive.org/details/dli.ernet.199817/,6.35.6
+159,IS_FATHER_OF,158,4,1,https://archive.org/details/dli.ernet.199817/,"7.5.36,37"
+160,is son of,107,4,1,https://archive.org/details/dli.ernet.199817/,4.41.4
+161,Dwelt at,162,4,1,https://archive.org/details/dli.ernet.199817/,4.40.50-52
+161,Dwelt in,162,4,1,https://archive.org/details/dli.ernet.199817/,4.40.50-52
+163,is son of,153,4,1,https://archive.org/details/dli.ernet.199817/,7.5.42-44
+163,is counsellor of,151,4,1,https://archive.org/details/dli.ernet.199817/,7.5.42-44
+145,IS_WIFE_OF,144,4,1,https://archive.org/details/dli.ernet.199817/,2.117.7
+165,is killed by,148,4,1,https://archive.org/details/dli.ernet.199817/,4.39.6-7
+166,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.42
+167,is killed by,168,4,1,https://archive.org/details/dli.ernet.199817/,"3.30.27, 6.43.6"
+169,is traversed by,10,4,1,https://archive.org/details/dli.ernet.199817/,
+171,is disciple of,173,4,1,https://archive.org/details/dli.ernet.199817/,2.68.11
+170,is visited by,171,4,1,https://archive.org/details/dli.ernet.199817/,2.68.17
+174,is the town of,148,4,1,https://archive.org/details/dli.ernet.199817/,3.48.10
+116,is sent by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.41.13-14
+175,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.13-14
+176,is disfigured by,62,4,1,https://archive.org/details/dli.ernet.199817/,3.69.13-18
+178,is daughter of,177,4,1,https://archive.org/details/dli.ernet.199817/,7.80.4-5
+179,is climbed by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.56.37
+181,IS_WIFE_OF,180,4,1,https://archive.org/details/dli.ernet.199817/,1.38.4
+182,IS_FATHER_OF,181,4,1,https://archive.org/details/dli.ernet.199817/,1.38.4
+187,IS_BROTHER_OF,188,4,1,https://archive.org/details/dli.ernet.199817/,3.14.33
+187,is son of,189,4,1,https://archive.org/details/dli.ernet.199817/,3.14.12
+190,IS_BROTHER_OF,191,4,1,https://archive.org/details/dli.ernet.199817/,3.14.33
+187,IS_FATHER_OF,190,4,1,https://archive.org/details/dli.ernet.199817/,3.14.33
+192,IS_WIFE_OF,173,4,1,https://archive.org/details/dli.ernet.199817/,5.24.10
+193,is a vanara Soldier of,5,4,1,https://archive.org/details/dli.ernet.199817/,6.4.33
+194,is sent to,195,4,1,https://archive.org/details/dli.ernet.199817/,4.42.3
+194,is sent by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.42.3
+196,is sent to,195,4,1,https://archive.org/details/dli.ernet.199817/,4.42.4
+196,is sent by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.42.4
+198,another name of,197,4,1,https://archive.org/details/dli.ernet.199817/,1.75.23
+199,is killed by,197,4,1,https://archive.org/details/dli.ernet.199817/,1.75.23
+197,is killed by,200,4,1,https://archive.org/details/dli.ernet.199817/,7.6.35
+202,is minister of,10,4,1,https://archive.org/details/dli.ernet.199817/,6.127.11
+203,is situated in,195,4,1,https://archive.org/details/dli.ernet.199817/,4.42.14
+204,protection invoked for,5,4,1,https://archive.org/details/dli.ernet.199817/,2.25.8
+205,IS_MOTHER_OF,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.17
+204,protection invoked by,205,4,1,https://archive.org/details/dli.ernet.199817/,2.25.8
+206,IS_WIFE_OF,25,4,1,https://archive.org/details/dli.ernet.199817/,1.43.11-12
+207,is son of,25,4,1,https://archive.org/details/dli.ernet.199817/,1.43.11
+208,is referred by,209,4,1,https://archive.org/details/dli.ernet.199817/,2.12.43
+211,is situated in,210,4,1,https://archive.org/details/dli.ernet.199817/,4.41.10
+116,is asked to go to,211,4,1,https://archive.org/details/dli.ernet.199817/,4.41.10
+212,is situated in,195,4,1,https://archive.org/details/dli.ernet.199817/,4.42.14
+134,is sent to,212,4,1,https://archive.org/details/dli.ernet.199817/,4.42.14
+213,is counsellor of,128,4,1,https://archive.org/details/dli.ernet.199817/,5.37.12
+214,is killed by,215,4,1,https://archive.org/details/dli.ernet.199817/,6.43.32-34
+216,is a messenger of,173,4,1,https://archive.org/details/dli.ernet.199817/,2.68.5
+218,is daughter of,8,4,1,https://archive.org/details/dli.ernet.199817/,1.1.27-28
+217,is confinement of,218,4,1,https://archive.org/details/dli.ernet.199817/,3.56.32
+222,is son of,221,4,1,https://archive.org/details/dli.ernet.199817/,3.14.16
+221,is daughter of,154,4,1,https://archive.org/details/dli.ernet.199817/,3.14.10-11
+221,IS_WIFE_OF,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.10-11
+223,is maternal uncle of,10,4,1,https://archive.org/details/dli.ernet.199817/,2.1.2
+224,are sons of,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.14-15
+224,are sons of,147,4,1,https://archive.org/details/dli.ernet.199817/,3.14.14-15
+225,is situated in,226,4,1,https://archive.org/details/dli.ernet.199817/,7.23.17-19
+225,is occupied by,128,4,1,https://archive.org/details/dli.ernet.199817/,7.23.17-ॊ9
+227,is situated in,195,4,1,https://archive.org/details/dli.ernet.199817/,4.37.3
+227,is visited by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.46.19
+229,is son of,230,4,1,https://archive.org/details/dli.ernet.199817/,6.119.17
+231,is son of,232,4,1,https://archive.org/details/dli.ernet.199817/,1.32.13
+233,IS_MOTHER_OF,231,4,1,https://archive.org/details/dli.ernet.199817/,1.32.13
+234,IS_WIFE_OF,235,4,1,https://archive.org/details/dli.ernet.199817/,1.48.16
+236,are sons of,147,4,1,https://archive.org/details/dli.ernet.199817/,3.14.14-15
+237,is situated in,210,4,1,https://archive.org/details/dli.ernet.199817/,4.41.10
+237,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.10
+238,Lived at,239,4,1,https://archive.org/details/dli.ernet.199817/,6.22.32
+240,is son of,241,4,1,https://archive.org/details/dli.ernet.199817/,7.56.27
+240,is son of,242,4,1,https://archive.org/details/dli.ernet.199817/,7.56.27
+244,is situated in,243,4,1,https://archive.org/details/dli.ernet.199817/,4.40.34-36
+244,is visited by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.40.34-36
+247,IS_SITUTATED_ON_THE_BANKS_OF,246,4,1,https://archive.org/details/dli.ernet.199817/,1.70.3
+248,Lived at the bank of,246,4,1,https://archive.org/details/dli.ernet.199817/,2.68.17
+248,is the progenitor of,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.8
+249,is killed by,148,4,1,https://archive.org/details/dli.ernet.199817/,1.24.18
+148,is son of,147,4,1,https://archive.org/details/dli.ernet.199817/,1.18.12
+250,is honoured by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.39.22
+251,was ready to kill,5,4,1,https://archive.org/details/dli.ernet.199817/,6.9.2
+253,is famous for,254,4,1,https://archive.org/details/dli.ernet.199817/,2.70य23
+256,is son of,255,4,1,https://archive.org/details/dli.ernet.199817/,7.87.3-7
+256,is the king of,257,4,1,https://archive.org/details/dli.ernet.199817/,7.87.3-7
+258,Lived at,133,4,1,https://archive.org/details/dli.ernet.199817/,3.11.55-66
+258,is killed by,106,4,1,https://archive.org/details/dli.ernet.199817/,3.11.55-66
+259,is riding animal of,260,4,1,https://archive.org/details/dli.ernet.199817/,7.23(b).5
+261,is abounding with,262,4,1,https://archive.org/details/dli.ernet.199817/,2.71.12-13
+261,is visited by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.12-13
+263,is situated in,210,4,1,https://archive.org/details/dli.ernet.199817/,4.41.9
+263,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.9
+123,is sent to,264,4,1,https://archive.org/details/dli.ernet.199817/,4.37.4
+264,is visited by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.46.15
+265,is son of,8,4,1,https://archive.org/details/dli.ernet.199817/,1.71.5;1.71.4
+265,IS_FATHER_OF,266,4,1,https://archive.org/details/dli.ernet.199817/,1.71.5ू
+266,IS_FATHER_OF,267,4,1,https://archive.org/details/dli.ernet.199817/,1.71.5
+268,is son of,159,4,1,https://archive.org/details/dli.ernet.199817/,7.5.35-37
+269,IS_WIFE_OF,159,4,1,https://archive.org/details/dli.ernet.199817/,7.5.35-37
+270,IS_MOTHER_OF,269,4,1,https://archive.org/details/dli.ernet.199817/,"7.5.31,32,35"
+271,is another name of,200,4,1,https://archive.org/details/dli.ernet.199817/,4.17.10
+275,is daughter of,274,4,1,https://archive.org/details/dli.ernet.199817/,1.35.15
+275,IS_WIFE_OF,273,4,1,https://archive.org/details/dli.ernet.199817/,1.35.15
+272,is daughter of,273,4,1,https://archive.org/details/dli.ernet.199817/,1.35.14-16
+105,is daughter of,273,4,1,https://archive.org/details/dli.ernet.199817/,1.35.16
+277,IS_BROTHER_OF,8,4,1,https://archive.org/details/dli.ernet.199817/,1.71.21-22
+276,is daughter of,277,4,1,https://archive.org/details/dli.ernet.199817/,1.71.21-22
+276,IS_WIFE_OF,62,4,1,https://archive.org/details/dli.ernet.199817/,1.71.21-22
+278,is son of,279,4,1,https://archive.org/details/dli.ernet.199817/,4.41.4
+281,Lived at,280,4,1,https://archive.org/details/dli.ernet.199817/,6.27.27
+282,is seen by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.50.7
+283,IS_FATHER_OF,114,4,1,https://archive.org/details/dli.ernet.199817/,7.36.36-37
+283,IS_FATHER_OF,136,4,1,https://archive.org/details/dli.ernet.199817/,7.36.36-37
+285,Dwelt at,284,4,1,https://archive.org/details/dli.ernet.199817/,6.27.9
+287,is sister of,288,4,1,https://archive.org/details/dli.ernet.199817/,1.34.7
+286,is Husband of,287,4,1,https://archive.org/details/dli.ernet.199817/,1.34.7
+289,IS_FATHER_OF,199,4,1,https://archive.org/details/dli.ernet.199817/,1.75.22-23
+290,is situated in the midst of,291,4,1,https://archive.org/details/dli.ernet.199817/,4.40.44
+189,is asked to go to,290,4,1,https://archive.org/details/dli.ernet.199817/,4.40.44
+293,is protected by,294,4,1,https://archive.org/details/dli.ernet.199817/,4.41.40-43
+295,is a king of,1,4,1,https://archive.org/details/dli.ernet.199817/,7.111.10
+296,is killed by,297,4,1,https://archive.org/details/dli.ernet.199817/,6.70.49-65
+299,is son of,128,4,1,https://archive.org/details/dli.ernet.199817/,7.30.1
+300,went in the search of,218,4,1,https://archive.org/details/dli.ernet.199817/,4.42.5
+298,went in the search of,299,4,1,https://archive.org/details/dli.ernet.199817/,6.45.1-3
+116,is sent to,301,4,1,https://archive.org/details/dli.ernet.199817/,4.41.10
+136,spent a life of exile at,302,4,1,https://archive.org/details/dli.ernet.199817/,3.72.12
+302,is visited by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.3.23
+7,is son of,303,4,1,https://archive.org/details/dli.ernet.199817/,1.9.3
+303,is son of,304,4,1,https://archive.org/details/dli.ernet.199817/,1.9.3
+7,is grandson of,304,4,1,https://archive.org/details/dli.ernet.199817/,1.9.3
+305,was a guard of,218,4,1,https://archive.org/details/dli.ernet.199817/,5.23.5-9
+306,is situated near,307,4,1,https://archive.org/details/dli.ernet.199817/,2.71.16
+307,is crossed by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.16
+308,IS_MOTHER_OF,254,4,1,https://archive.org/details/dli.ernet.199817/,3.14.24
+309,is visited by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.3
+310,Came to visit,311,4,1,https://archive.org/details/dli.ernet.199817/,7.90.9
+314,is asked to go to,313,4,1,https://archive.org/details/dli.ernet.199817/,6.74.29-34
+314,is asked by,312,4,1,https://archive.org/details/dli.ernet.199817/,6.74.29-34
+47,is son of,46,4,1,https://archive.org/details/dli.ernet.199817/,1.70.39
+317,are killed by,316,4,1,https://archive.org/details/dli.ernet.199817/,2.21.31
+318,Lived at,210,4,1,https://archive.org/details/dli.ernet.199817/,4.48.11-14
+319,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.2
+320,is daughter of,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.22
+321,IS_MOTHER_OF,320,4,1,https://archive.org/details/dli.ernet.199817/,3.14.22
+323,reduced to ashes by,325,4,1,https://archive.org/details/dli.ernet.199817/,1.23.13
+326,place was visited by,314,4,1,https://archive.org/details/dli.ernet.199817/,5.6.24
+180,IS_FATHER_OF,328,4,1,https://archive.org/details/dli.ernet.199817/,1.40.3
+327,is the destroyer of,328,4,1,https://archive.org/details/dli.ernet.199817/,1.40.24-30
+329,is crossed by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.15
+330,is killed by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.55-56
+5,is directed to,331,4,1,https://archive.org/details/dli.ernet.199817/,1.1.55-56
+5,is directed by,330,4,1,https://archive.org/details/dli.ernet.199817/,1.1.55-56
+128,asked the help of,13,4,1,https://archive.org/details/dli.ernet.199817/,6.75.47
+13,is killed by,116,4,1,https://archive.org/details/dli.ernet.199817/,6.76.1-3
+334,is killed by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.47
+333,is a General of,334,4,1,https://archive.org/details/dli.ernet.199817/,3.23.32
+5,was attacked by,333,4,1,https://archive.org/details/dli.ernet.199817/,3.26.27-28
+335,place was visited by,314,4,1,https://archive.org/details/dli.ernet.199817/,5.6.26
+336,devastated by,337,4,1,https://archive.org/details/dli.ernet.199817/,1.24.18-32
+336,has received the hunger of,148,4,1,https://archive.org/details/dli.ernet.199817/,1.24.18-32
+255,IS_FATHER_OF,256,4,1,https://archive.org/details/dli.ernet.199817/,7.87.3
+340,is daughter of,151,4,1,https://archive.org/details/dli.ernet.199817/,5.37.9-11
+341,is visited by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.16
+116,is asked to go to,342,4,1,https://archive.org/details/dli.ernet.199817/,4.41.11
+50,IS_FATHER_OF,51,4,1,https://archive.org/details/dli.ernet.199817/,1.70.39-40
+343,Formed an alliance with,128,4,1,https://archive.org/details/dli.ernet.199817/,7.23.6-14
+344,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.4
+149,is welcomed by,148,4,1,https://archive.org/details/dli.ernet.199817/,1.11.28
+230,was emancipated by,229,4,1,https://archive.org/details/dli.ernet.199817/,6.119.16
+347,born in the royal house of,348,4,1,https://archive.org/details/dli.ernet.199817/,1.47.16
+347,is son of,349,4,1,https://archive.org/details/dli.ernet.199817/,1.47.16
+347,IS_FATHER_OF,181,4,1,https://archive.org/details/dli.ernet.199817/,1.47.17
+141,Lived at,350,4,1,https://archive.org/details/dli.ernet.199817/,6.27.37
+351,appointed by,63,4,1,https://archive.org/details/dli.ernet.199817/,7.108.8
+353,is a priest to,6,4,1,https://archive.org/details/dli.ernet.199817/,1.7.5
+357,is officer of,356,4,1,https://archive.org/details/dli.ernet.199817/,6.57.30
+357,is killed by,116,4,1,https://archive.org/details/dli.ernet.199817/,6.58.23
+358,IS_WIFE_OF,359,4,1,https://archive.org/details/dli.ernet.199817/,6.7.8
+358,is defeated by,128,4,1,https://archive.org/details/dli.ernet.199817/,6.7.8
+360,is Husband of,361,4,1,https://archive.org/details/dli.ernet.199817/,7.5.38-40
+360,IS_FATHER_OF,358,4,1,https://archive.org/details/dli.ernet.199817/,7.5.38.40
+355,Was sent to,362,4,1,https://archive.org/details/dli.ernet.199817/,4.43.11
+364,is owner of,365,4,1,https://archive.org/details/dli.ernet.199817/,2.91.19
+365,is situated in,363,4,1,https://archive.org/details/dli.ernet.199817/,2.91.19
+366,is passed by,171,4,1,https://archive.org/details/dli.ernet.199817/,2.68.13
+367,a courtier of,5,4,1,https://archive.org/details/dli.ernet.199817/,7.43.2
+368,is situated near,369,4,1,https://archive.org/details/dli.ernet.199817/,2.68.16
+371,is crossed by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.6
+364,IS_BROTHER_OF,128,4,1,https://archive.org/details/dli.ernet.199817/,1.20.18
+364,is son of,372,4,1,https://archive.org/details/dli.ernet.199817/,1.20.18
+373,IS_FATHER_OF,374,4,1,https://archive.org/details/dli.ernet.199817/,1.32.2-3
+373,IS_FATHER_OF,375,4,1,https://archive.org/details/dli.ernet.199817/,1.32.2-3
+373,IS_FATHER_OF,376,4,1,https://archive.org/details/dli.ernet.199817/,1.32.2-3
+373,IS_FATHER_OF,377,4,1,https://archive.org/details/dli.ernet.199817/,1.32.2-3
+378,is son of,379,4,1,https://archive.org/details/dli.ernet.199817/,7.17.8-13
+378,IS_FATHER_OF,380,4,1,https://archive.org/details/dli.ernet.199817/,7.17.8-13
+382,IS_MOTHER_OF,383,4,1,https://archive.org/details/dli.ernet.199817/,1.46.8
+384,Practiced by,382,4,1,https://archive.org/details/dli.ernet.199817/,1.46.8
+384,Practiced at,381,4,1,https://archive.org/details/dli.ernet.199817/,1.46.8
+385,IS_CAPITAL_OF,232,4,1,https://archive.org/details/dli.ernet.199817/,7.108.4
+374,is son of,232,4,1,https://archive.org/details/dli.ernet.199817/,1.32.2
+233,IS_MOTHER_OF,374,4,1,https://archive.org/details/dli.ernet.199817/,1.32.2
+385,is built by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.108.4
+386,is founded by,232,4,1,https://archive.org/details/dli.ernet.199817/,1.32.6
+387,is son of,388,4,1,https://archive.org/details/dli.ernet.199817/,1.47.15
+389,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.2
+390,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.11
+391,Came to visit,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.4
+393,is son of,16,4,1,https://archive.org/details/dli.ernet.199817/,6.27.20-23
+394,Has lived with,364,4,1,https://archive.org/details/dli.ernet.199817/,6.27.20-23
+128,is challenged by,395,4,1,https://archive.org/details/dli.ernet.199817/,6.26.42-43
+396,is visited by,5,4,1,https://archive.org/details/dli.ernet.199817/,3.69.7-8
+396,is visited by,62,4,1,https://archive.org/details/dli.ernet.199817/,3.69.7-8
+397,is visited by,355,4,1,https://archive.org/details/dli.ernet.199817/,4.43.25-27
+399,is daughter of,154,4,1,https://archive.org/details/dli.ernet.199817/,3.14.11-13
+399,IS_WIFE_OF,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.11-13;3.14.10-12
+398,is daughter of,399,4,1,https://archive.org/details/dli.ernet.199817/,3.14.11-13
+400,is churned by,79,4,1,https://archive.org/details/dli.ernet.199817/,1.45.17
+400,is churned by,404,4,1,https://archive.org/details/dli.ernet.199817/,1.45.17
+401,came out of,400,4,1,https://archive.org/details/dli.ernet.199817/,1.45.17
+406,is alias of,287,4,1,https://archive.org/details/dli.ernet.199817/,1.34.7-8
+406,is sister of,288,4,1,https://archive.org/details/dli.ernet.199817/,1.34.7-8
+406,IS_WIFE_OF,286,4,1,https://archive.org/details/dli.ernet.199817/,1.34.7-8
+407,is son of,218,4,1,https://archive.org/details/dli.ernet.199817/,7.66.1-11
+408,BELONGED_TO,409,4,1,https://archive.org/details/dli.ernet.199817/,7.66.1-11
+408,is birthplace of,407,4,1,https://archive.org/details/dli.ernet.199817/,7.66.1-11
+410,are daughters of,154,4,1,https://archive.org/details/dli.ernet.199817/,1.37.23-24
+410,are appointed by,148,4,1,https://archive.org/details/dli.ernet.199817/,1.37.23-24
+411,was fed by,410,4,1,https://archive.org/details/dli.ernet.199817/,1.37.23-24
+413,are produced by,412,4,1,https://archive.org/details/dli.ernet.199817/,1.21.13
+415,Lived at,414,4,1,https://archive.org/details/dli.ernet.199817/,7.26.30
+416,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.9
+223,is the king of,417,4,1,https://archive.org/details/dli.ernet.199817/,1.13.24
+223,is father-in-law of,70,4,1,https://archive.org/details/dli.ernet.199817/,1.13.24
+361,IS_WIFE_OF,360,4,1,https://archive.org/details/dli.ernet.199817/,7.5.37-40
+361,is daughter of,418,4,1,https://archive.org/details/dli.ernet.199817/,7.5.37-40
+361,IS_MOTHER_OF,356,4,1,https://archive.org/details/dli.ernet.199817/,7.5.37-40
+361,IS_MOTHER_OF,13,4,1,https://archive.org/details/dli.ernet.199817/,7.5.37-40
+419,is visited by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.12
+420,IS_WIFE_OF,180,4,1,https://archive.org/details/dli.ernet.199817/,1.38.3
+62,Spent a night near,421,4,1,https://archive.org/details/dli.ernet.199817/,7.51.29
+139,IS_FATHER_OF,314,4,1,https://archive.org/details/dli.ernet.199817/,4.39.18
+139,is Husband of,140,4,1,https://archive.org/details/dli.ernet.199817/,4.66.8
+209,IS_MOTHER_OF,10,4,1,https://archive.org/details/dli.ernet.199817/,1.18.13
+423,is daughter of,360,4,1,https://archive.org/details/dli.ernet.199817/,7.5.38-50
+423,is daughter of,361,4,1,https://archive.org/details/dli.ernet.199817/,7.5.38-50
+424,is killed by,200,4,1,https://archive.org/details/dli.ernet.199817/,7.63.22
+426,is situated near,425,4,1,https://archive.org/details/dli.ernet.199817/,1.24.8
+364,Dwelt at,426,4,1,https://archive.org/details/dli.ernet.199817/,3.32.14
+426,is invaded by,128,4,1,https://archive.org/details/dli.ernet.199817/,3.32.14
+428,flowed through,427,4,1,https://archive.org/details/dli.ernet.199817/,1.5.5
+429,is the king of,427,4,1,https://archive.org/details/dli.ernet.199817/,1.13.26
+189,is asked to go to,430,4,1,https://archive.org/details/dli.ernet.199817/,4.40.23
+334,IS_BROTHER_OF,431,4,1,https://archive.org/details/dli.ernet.199817/,3.17.22
+432,IS_SITUTATED_ON_THE_BANKS_OF,105,4,1,https://archive.org/details/dli.ernet.199817/,1.1.29
+433,is situated near,105,4,1,https://archive.org/details/dli.ernet.199817/,1.2.3;1.2.3-4
+434,participated the coronation ceremony of,136,4,1,https://archive.org/details/dli.ernet.199817/,4.26.35
+435,assembled at,436,4,1,https://archive.org/details/dli.ernet.199817/,1.15.4
+436,is sacrifice of,70,4,1,https://archive.org/details/dli.ernet.199817/,1.15.4
+437,is daughter of,438,4,1,https://archive.org/details/dli.ernet.199817/,3.14.27
+438,IS_MOTHER_OF,439,4,1,https://archive.org/details/dli.ernet.199817/,3.14.28
+435,complained against the acts of,128,4,1,https://archive.org/details/dli.ernet.199817/,1.15.6-11
+440,Accepted the submission of,128,4,1,https://archive.org/details/dli.ernet.199817/,7.19.5
+441,is the kingdom of,440,4,1,https://archive.org/details/dli.ernet.199817/,2.107.11-13
+181,is sister of,188,4,1,https://archive.org/details/dli.ernet.199817/,1.38.4
+181,is daughter of,149,4,1,https://archive.org/details/dli.ernet.199817/,1.38.4
+442,Came to visit,5,4,1,https://archive.org/details/dli.ernet.199817/,7.96.4
+443,Came to visit,136,4,1,https://archive.org/details/dli.ernet.199817/,4.26.34
+443,appointed by,5,4,1,https://archive.org/details/dli.ernet.199817/,6.4.16
+443,is appointed as,444,4,1,https://archive.org/details/dli.ernet.199817/,6.4.16
+445,is appointed as,444,4,1,https://archive.org/details/dli.ernet.199817/,6.4.16
+446,BELONGED_TO,445,4,1,https://archive.org/details/dli.ernet.199817/,4.33.9
+446,is seen by,62,4,1,https://archive.org/details/dli.ernet.199817/,4.33.9
+447,born because of,436,4,1,https://archive.org/details/dli.ernet.199817/,1.34.5
+447,IS_FATHER_OF,288,4,1,https://archive.org/details/dli.ernet.199817/,1.34.6
+287,is daughter of,447,4,1,https://archive.org/details/dli.ernet.199817/,1.34.7
+448,is son of,364,4,1,https://archive.org/details/dli.ernet.199817/,1.17.12
+440,admitted the supremacy of,128,4,1,https://archive.org/details/dli.ernet.199817/,7.19.5
+449,is land of,435,4,1,https://archive.org/details/dli.ernet.199817/,7.101.11
+449,is conquered by,10,4,1,https://archive.org/details/dli.ernet.199817/,7.101.11
+450,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.2
+451,is the king of,417,4,1,https://archive.org/details/dli.ernet.199817/,7.100.1-5
+450,is son of,122,4,1,https://archive.org/details/dli.ernet.199817/,7.100.1-5
+453,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.2
+454,Dwelt in,290,4,1,https://archive.org/details/dli.ernet.199817/,4.41.42-43
+456,is founded by,377,4,1,https://archive.org/details/dli.ernet.199817/,1.32.8-9
+377,is son of,232,4,1,https://archive.org/details/dli.ernet.199817/,1.32.8-9
+457,is another name of,456,4,1,https://archive.org/details/dli.ernet.199817/,1.32.8-9
+458,is messenger of,173,4,1,https://archive.org/details/dli.ernet.199817/,1.68.21-22
+459,MET_WITH,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.30
+459,MET_AT,432,4,1,https://archive.org/details/dli.ernet.199817/,1.1.30
+460,are attendants of,364,4,1,https://archive.org/details/dli.ernet.199817/,4.43.23
+46,practiced austerities at,461,4,1,https://archive.org/details/dli.ernet.199817/,1.42.12
+128,practiced austerities at,461,4,1,https://archive.org/details/dli.ernet.199817/,7.9.47
+462,Flowed by the,463,4,1,https://archive.org/details/dli.ernet.199817/,3.15.11
+5,did inquire about,218,4,1,https://archive.org/details/dli.ernet.199817/,3.64.6-11
+5,did inquire to,462,4,1,https://archive.org/details/dli.ernet.199817/,3.64.6-11
+10,entertained by,464,4,1,https://archive.org/details/dli.ernet.199817/,2.91.46
+466,is crossed by,5,4,1,https://archive.org/details/dli.ernet.199817/,2.49.10-11
+466,situated to the south of,427,4,1,https://archive.org/details/dli.ernet.199817/,2.49.10-11
+469,Was charioteer of,148,4,1,https://archive.org/details/dli.ernet.199817/,6.102.6-7
+468,is son of,469,4,1,https://archive.org/details/dli.ernet.199817/,6.28.10
+469,had a fight with,299,4,1,https://archive.org/details/dli.ernet.199817/,
+470,is killed by,114,4,1,https://archive.org/details/dli.ernet.199817/,4.22.27-29
+471,attended the demise court of,6,4,1,https://archive.org/details/dli.ernet.199817/,2.67.6-8
+235,practiced austerities at,472,4,1,https://archive.org/details/dli.ernet.199817/,1.48.14-16
+235,is Husband of,234,4,1,https://archive.org/details/dli.ernet.199817/,1.48.14-16
+234,was raped by Indra,148,4,1,https://archive.org/details/dli.ernet.199817/,1.48.17-22
+473,place was visited by,314,4,1,https://archive.org/details/dli.ernet.199817/,5.6.23
+474,IS_WIFE_OF,375,4,1,https://archive.org/details/dli.ernet.199817/,1.32.11
+123,burnt the house of,475,4,1,https://archive.org/details/dli.ernet.199817/,5.54.13
+476,place was visited by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.6.24
+477,is visited by,134,4,1,https://archive.org/details/dli.ernet.199817/,4.42.27-29
+478,Fought against,128,4,1,https://archive.org/details/dli.ernet.199817/,6.26.27-28
+65,BECAME,479,4,1,https://archive.org/details/dli.ernet.199817/,1.58.10-11
+480,was the guard of,218,4,1,https://archive.org/details/dli.ernet.199817/,5.24.38-41
+482,Lived at,481,4,1,https://archive.org/details/dli.ernet.199817/,6.26.22
+482,joined the force of,5,4,1,https://archive.org/details/dli.ernet.199817/,6.26.22
+483,is situated near,400,4,1,https://archive.org/details/dli.ernet.199817/,6.50.31
+484,born of,400,4,1,https://archive.org/details/dli.ernet.199817/,7.23.22
+487,is son of,62,4,1,https://archive.org/details/dli.ernet.199817/,7.102.2
+487,made king of,486,4,1,https://archive.org/details/dli.ernet.199817/,7.102.9
+488,is situated in,486,4,1,https://archive.org/details/dli.ernet.199817/,7.102.5
+134,Was sent to,490,4,1,https://archive.org/details/dli.ernet.199817/,4.42.6
+491,dwelt in the hermitage of,173,4,1,https://archive.org/details/dli.ernet.199817/,1.51.23
+492,are produced by,491,4,1,https://archive.org/details/dli.ernet.199817/,1.17.9-23
+492,are produced to help,5,4,1,https://archive.org/details/dli.ernet.199817/,"1.17.9,23"
+5,set up his abode at,493,4,1,https://archive.org/details/dli.ernet.199817/,1.1.31
+494,is counsellor of,5,4,1,https://archive.org/details/dli.ernet.199817/,2.32.17-18
+494,is a charioteer of,5,4,1,https://archive.org/details/dli.ernet.199817/,2.32.17-18
+495,garden of,364,4,1,https://archive.org/details/dli.ernet.199817/,2.91.19
+496,is crossed by,62,4,1,https://archive.org/details/dli.ernet.199817/,2.71.4
+497,is tended by,498,4,1,https://archive.org/details/dli.ernet.199817/,1.33.12
+116,Was sent to,499,4,1,https://archive.org/details/dli.ernet.199817/,4.41.12
+116,Was sent by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.41.12
+501,practiced austerities at,502,4,1,https://archive.org/details/dli.ernet.199817/,1.70.31-32
+501,a scion of the family of,503,4,1,https://archive.org/details/dli.ernet.199817/,1.70.31-32
+123,visited to,504,4,1,https://archive.org/details/dli.ernet.199817/,1.3.28
+123,visit was foreseen by,409,4,1,https://archive.org/details/dli.ernet.199817/,4.42.13
+134,Was sent to,505,4,1,https://archive.org/details/dli.ernet.199817/,4.42.13
+190,Lived at,463,4,1,https://archive.org/details/dli.ernet.199817/,1.1.53
+190,is killed by,128,4,1,https://archive.org/details/dli.ernet.199817/,1.1.53
+5,burnt the carcass of,190,4,1,https://archive.org/details/dli.ernet.199817/,1.1.54
+409,foreseen the death of,190,4,1,https://archive.org/details/dli.ernet.199817/,1.3.21
+506,is defeated by,128,4,1,https://archive.org/details/dli.ernet.199817/,6.7.9
+507,IS_MOTHER_OF,8,4,1,https://archive.org/details/dli.ernet.199817/,1.71.4
+508,is the king of,472,4,1,https://archive.org/details/dli.ernet.199817/,1.13.21
+431,is an inhabitant of,510,4,1,https://archive.org/details/dli.ernet.199817/,1.1.46
+199,IS_FATHER_OF,511,4,1,https://archive.org/details/dli.ernet.199817/,1.75.22-24
+512,was received by,509,4,1,https://archive.org/details/dli.ernet.199817/,1.75.22-24
+512,was received from,286,4,1,https://archive.org/details/dli.ernet.199817/,1.75.22-24
+513,place was visited by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.6.21
+514,lies to the north of,515,4,1,https://archive.org/details/dli.ernet.199817/,4.40.59
+180,IS_FATHER_OF,516,4,1,https://archive.org/details/dli.ernet.199817/,1.39.22
+514,is dug upon by,516,4,1,https://archive.org/details/dli.ernet.199817/,1.39.22
+10,did break his journey at,517,4,1,https://archive.org/details/dli.ernet.199817/,2.71.11
+518,did march to,519,4,1,https://archive.org/details/dli.ernet.199817/,6.4.36
+520,is counsellor of,6,4,1,https://archive.org/details/dli.ernet.199817/,1.7.3
+521,a messenger sent by,173,4,1,https://archive.org/details/dli.ernet.199817/,2.68.5
+523,is son of,148,4,1,https://archive.org/details/dli.ernet.199817/,7.28.6-20
+524,IS_WIFE_OF,148,4,1,https://archive.org/details/dli.ernet.199817/,7.28.6-20
+524,IS_MOTHER_OF,523,4,1,https://archive.org/details/dli.ernet.199817/,7.28.6-20
+525,is daughter of,154,4,1,https://archive.org/details/dli.ernet.199817/,1.21.15
+526,is situated after,400,4,1,https://archive.org/details/dli.ernet.199817/,4.40.47-49
+527,came out from the wrath of,528,4,1,https://archive.org/details/dli.ernet.199817/,4.40.47-49
+527,was placed at,526,4,1,https://archive.org/details/dli.ernet.199817/,4.40.47-49
+527,was placed by,64,4,1,https://archive.org/details/dli.ernet.199817/,4.40.47-49
+529,IS_FATHER_OF,530,4,1,https://archive.org/details/dli.ernet.199817/,3.3.5
+531,sacrificial area was overflooded by,105,4,1,https://archive.org/details/dli.ernet.199817/,1.43.25-38
+532,is a priest of,6,4,1,https://archive.org/details/dli.ernet.199817/,1.7.5
+162,is situated to the north of,526,4,1,https://archive.org/details/dli.ernet.199817/,4.40.50-51
+312,is created by,64,4,1,https://archive.org/details/dli.ernet.199817/,1.17.7
+534,is son of,260,4,1,https://archive.org/details/dli.ernet.199817/,6.30.32
+534,joined the force of,5,4,1,https://archive.org/details/dli.ernet.199817/,6.30.32
+536,is son of,10,4,1,https://archive.org/details/dli.ernet.199817/,7.100.16
+536,is consecrated by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.100.19
+537,is defeated by,128,4,1,https://archive.org/details/dli.ernet.199817/,3.32.14
+538,is situated in,449,4,1,https://archive.org/details/dli.ernet.199817/,7.101.10-15
+538,is founded by,10,4,1,https://archive.org/details/dli.ernet.199817/,7.101.10-15
+539,Fought with,434,4,1,https://archive.org/details/dli.ernet.199817/,6.43.9
+409,took a bath in,433,4,1,https://archive.org/details/dli.ernet.199817/,1.2.3-4
+337,IS_WIFE_OF,542,4,1,https://archive.org/details/dli.ernet.199817/,1.24.25-27
+338,is son of,337,4,1,https://archive.org/details/dli.ernet.199817/,1.24.25-27
+543,is crossed by,116,4,1,https://archive.org/details/dli.ernet.199817/,4.41.17
+115,is son of,379,4,1,https://archive.org/details/dli.ernet.199817/,1.17.11
+136,was accompanied to,544,4,1,https://archive.org/details/dli.ernet.199817/,4.13.4
+136,was accompanied by,545,4,1,https://archive.org/details/dli.ernet.199817/,4.13.4
+115,IS_WIFE_OF,114,4,1,https://archive.org/details/dli.ernet.199817/,1.1.69
+546,was created to help,5,4,1,https://archive.org/details/dli.ernet.199817/,7.36.47
+547,is another name of,188,4,1,https://archive.org/details/dli.ernet.199817/,
+548,are produced by,547,4,1,https://archive.org/details/dli.ernet.199817/,7.36.49
+548,are produced to help,5,4,1,https://archive.org/details/dli.ernet.199817/,7.36.49
+549,is another name of,550,4,1,https://archive.org/details/dli.ernet.199817/,2.9.12-13
+552,requisitioned the services of,551,4,1,https://archive.org/details/dli.ernet.199817/,2.91.18
+551,was cursed by,364,4,1,https://archive.org/details/dli.ernet.199817/,3.4.16-19
+553,Lived near the,274,4,1,https://archive.org/details/dli.ernet.199817/,7.2.14
+10,is passed by,554,4,1,https://archive.org/details/dli.ernet.199817/,2.71.11
+555,is situated in,519,4,1,https://archive.org/details/dli.ernet.199817/,5.2.1
+123,has seated on,555,4,1,https://archive.org/details/dli.ernet.199817/,5.2.1
+556,is from the family of,450,4,1,https://archive.org/details/dli.ernet.199817/,2.32.29
+218,is placed by,557,4,1,https://archive.org/details/dli.ernet.199817/,6.47.11-14
+218,was placed at,558,4,1,https://archive.org/details/dli.ernet.199817/,6.47.11-14
+325,is the destroyer of,559,4,1,https://archive.org/details/dli.ernet.199817/,1.75.12
+65,deputed to,560,4,1,https://archive.org/details/dli.ernet.199817/,1.60.15-16
+65,deputed on the responsibility of,288,4,1,https://archive.org/details/dli.ernet.199817/,1.60.15-16
+561,Lived at,510,4,1,https://archive.org/details/dli.ernet.199817/,1.1.47
+561,is killed by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.47
+128,was accompanied by,562,4,1,https://archive.org/details/dli.ernet.199817/,6.59.19
+563,Fought against,80,4,1,https://archive.org/details/dli.ernet.199817/,7.27.36
+564,is daughter of,154,4,1,https://archive.org/details/dli.ernet.199817/,1.21.15
+565,is son of,360,4,1,https://archive.org/details/dli.ernet.199817/,7.5.38.39
+566,is youngest son of,248,4,1,https://archive.org/details/dli.ernet.199817/,7.79.14-20
+567,is founded by,566,4,1,https://archive.org/details/dli.ernet.199817/,
+177,is the priest of,566,4,1,https://archive.org/details/dli.ernet.199817/,7.79.14-20
+530,is killed by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.41
+530,was killed at,133,4,1,https://archive.org/details/dli.ernet.199817/,1.1.41
+431,was disfigured by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.46-48
+568,was a door-keeper of,260,4,1,https://archive.org/details/dli.ernet.199817/,7.23(b) 8-14
+569,Lived at,544,4,1,https://archive.org/details/dli.ernet.199817/,4.33.11
+569,is maternal uncle of,136,4,1,https://archive.org/details/dli.ernet.199817/,5.61.9
+570,is daughter of,154,4,1,https://archive.org/details/dli.ernet.199817/,3.14.10-11
+570,IS_WIFE_OF,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.10-11
+222,is son of,570,4,1,https://archive.org/details/dli.ernet.199817/,3.14.11-16
+330,is son of,570,4,1,https://archive.org/details/dli.ernet.199817/,3.71.7
+571,is a courtier of,5,4,1,https://archive.org/details/dli.ernet.199817/,7.43.2
+574,is daughter of,573,4,1,https://archive.org/details/dli.ernet.199817/,5.24.12
+574,IS_WIFE_OF,575,4,1,https://archive.org/details/dli.ernet.199817/,5.14.12
+355,is asked to go to,576,4,1,https://archive.org/details/dli.ernet.199817/,4.43.12
+355,is asked by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.43.12;4.43.17-18
+577,has responded to the call of,136,4,1,https://archive.org/details/dli.ernet.199817/,4.39.24
+577,is honoured by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.39.22
+552,Lived at,579,4,1,https://archive.org/details/dli.ernet.199817/,2.91.24
+578,is situated near,579,4,1,https://archive.org/details/dli.ernet.199817/,2.91.24
+116,is asked to go to,580,4,1,https://archive.org/details/dli.ernet.199817/,4.41.9
+582,Lived at,583,4,1,https://archive.org/details/dli.ernet.199817/,4.40.31
+382,IS_WIFE_OF,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.10-11
+382,is daughter of,154,4,1,https://archive.org/details/dli.ernet.199817/,3.14.10-11
+584,is son of,4,4,1,https://archive.org/details/dli.ernet.199817/,"1.42.2,70, 38"
+584,IS_FATHER_OF,46,4,1,https://archive.org/details/dli.ernet.199817/,1.42.7
+585,is a priest of,6,4,1,https://archive.org/details/dli.ernet.199817/,1.7.5
+586,is killed by,114,4,1,https://archive.org/details/dli.ernet.199817/,1.1.64-65
+586,IS_FATHER_OF,587,4,1,https://archive.org/details/dli.ernet.199817/,4.9.4
+589,IS_FATHER_OF,588,4,1,https://archive.org/details/dli.ernet.199817/,7.12.13
+589,is Husband of,590,4,1,https://archive.org/details/dli.ernet.199817/,7.12.13
+588,IS_BROTHER_OF,587,4,1,https://archive.org/details/dli.ernet.199817/,7.12.13
+591,is sister of,588,4,1,https://archive.org/details/dli.ernet.199817/,7.12.13
+592,is a General of,334,4,1,https://archive.org/details/dli.ernet.199817/,3.23.32
+592,Fought against,5,4,1,https://archive.org/details/dli.ernet.199817/,3.23.32
+593,found by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.49.11
+594,is son of,595,4,1,https://archive.org/details/dli.ernet.199817/,6.30.33
+596,is a General of,128,4,1,https://archive.org/details/dli.ernet.199817/,6.46.1-17
+123,is attacked by,596,4,1,https://archive.org/details/dli.ernet.199817/,5.46.1-17
+597,is killed by,598,4,1,https://archive.org/details/dli.ernet.199817/,6.58.21
+599,is son of,159,4,1,https://archive.org/details/dli.ernet.199817/,7.5.34-35
+600,was a guard of,218,4,1,https://archive.org/details/dli.ernet.199817/,5.23.16-19
+601,is son of,144,4,1,https://archive.org/details/dli.ernet.199817/,7.51.2
+601,was saluted by,6,4,1,https://archive.org/details/dli.ernet.199817/,7.50.10-14
+602,admitted the supremacy of,128,4,1,https://archive.org/details/dli.ernet.199817/,7.19.5
+603,Lived at,510,4,1,https://archive.org/details/dli.ernet.199817/,1.1.47
+603,is killed by,5,4,1,https://archive.org/details/dli.ernet.199817/,1.1.47
+603,IS_BROTHER_OF,431,4,1,https://archive.org/details/dli.ernet.199817/,3.17.22
+604,is son of,288,4,1,https://archive.org/details/dli.ernet.199817/,1.57.3-4
+604,Is cursed by,288,4,1,https://archive.org/details/dli.ernet.199817/,1.62.8-18
+605,are invoked to,346,4,1,https://archive.org/details/dli.ernet.199817/,1.14.8
+605,are invoked by,7,4,1,https://archive.org/details/dli.ernet.199817/,1.14.8
+606,is son of,607,4,1,https://archive.org/details/dli.ernet.199817/,1.71.10
+606,IS_FATHER_OF,608,4,1,https://archive.org/details/dli.ernet.199817/,1.71.10
+609,is daughter of,177,4,1,https://archive.org/details/dli.ernet.199817/,7.58.7
+609,IS_WIFE_OF,58,4,1,https://archive.org/details/dli.ernet.199817/,7.58.9-10
+611,Is ancestor of,8,4,1,https://archive.org/details/dli.ernet.199817/,"1.66.8,13"
+610,is son of,611,4,1,https://archive.org/details/dli.ernet.199817/,"1.66.8,13"
+612,is son of,267,4,1,https://archive.org/details/dli.ernet.199817/,1.71.6
+612,IS_FATHER_OF,613,4,1,https://archive.org/details/dli.ernet.199817/,1.71.6
+614,is daughter of,454,4,1,https://archive.org/details/dli.ernet.199817/,7.5.2-6
+614,IS_WIFE_OF,615,4,1,https://archive.org/details/dli.ernet.199817/,7.5.2-6
+617,is daughter of,552,4,1,https://archive.org/details/dli.ernet.199817/,7.3.3-4
+617,IS_MOTHER_OF,364,4,1,https://archive.org/details/dli.ernet.199817/,7.3.3-4
+355,was asked to visit,618,4,1,https://archive.org/details/dli.ernet.199817/,4.43.17-18
+619,is son of,128,4,1,https://archive.org/details/dli.ernet.199817/,6.68.7
+619,is nephew of,129,4,1,https://archive.org/details/dli.ernet.199817/,6.68.7
+238,Dwelt at,621,4,1,https://archive.org/details/dli.ernet.199817/,6.22.29-39
+622,is situated near,400,4,1,https://archive.org/details/dli.ernet.199817/,6.50.31
+623,place was visited by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.6.25
+215,is son of,224,4,1,https://archive.org/details/dli.ernet.199817/,1.17.14
+215,is honoured by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.39.20
+123,set fire to the house of,624,4,1,https://archive.org/details/dli.ernet.199817/,5.54.12
+625,is churned out from,291,4,1,https://archive.org/details/dli.ernet.199817/,1.45.31-32
+5,visited the temple of,626,4,1,https://archive.org/details/dli.ernet.199817/,3.12.21
+627,is a Conusellor of,6,4,1,https://archive.org/details/dli.ernet.199817/,1.7.3
+629,is situated in,133,4,1,https://archive.org/details/dli.ernet.199817/,3.11.8-19
+628,described the history of,629,4,1,https://archive.org/details/dli.ernet.199817/,3.11.8-19
+628,replied to,5,4,1,https://archive.org/details/dli.ernet.199817/,3.11.8
+10,arrived to,630,4,1,https://archive.org/details/dli.ernet.199817/,2.71.10
+631,is crossed by,10,4,1,https://archive.org/details/dli.ernet.199817/,2.71.10
+632,is founded by,376,4,1,https://archive.org/details/dli.ernet.199817/,1.32.7
+232,IS_FATHER_OF,376,4,1,https://archive.org/details/dli.ernet.199817/,1.32.7
+633,was rejected by,128,4,1,https://archive.org/details/dli.ernet.199817/,5.22.39-43
+633,IS_MOTHER_OF,142,4,1,https://archive.org/details/dli.ernet.199817/,6.71.30
+285,is honoured by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.39.21
+123,is asked to go to,634,4,1,https://archive.org/details/dli.ernet.199817/,4.37.6
+635,place was visited by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.6.23
+635,is son of,360,4,1,https://archive.org/details/dli.ernet.199817/,7.5.38-39
+635,appointed by,128,4,1,https://archive.org/details/dli.ernet.199817/,6.51.18-19
+637,is son of,636,4,1,https://archive.org/details/dli.ernet.199817/,1.47.14
+637,IS_FATHER_OF,638,4,1,https://archive.org/details/dli.ernet.199817/,1.47.14
+637,born in the royal house of,348,4,1,https://archive.org/details/dli.ernet.199817/,1.47.14
+640,is daughter of,399,4,1,https://archive.org/details/dli.ernet.199817/,3.14.17-18
+640,IS_MOTHER_OF,641,4,1,https://archive.org/details/dli.ernet.199817/,3.14.19-20
+642,is minister of,10,4,1,https://archive.org/details/dli.ernet.199817/,2.93.25
+5,is visited by,642,4,1,https://archive.org/details/dli.ernet.199817/,2.93.25
+642,was visited at,493,4,1,https://archive.org/details/dli.ernet.199817/,2.93.25
+643,is son of,644,4,1,https://archive.org/details/dli.ernet.199817/,1.71.8
+643,IS_FATHER_OF,645,4,1,https://archive.org/details/dli.ernet.199817/,1.71.8
+646,a courtier of,6,4,1,https://archive.org/details/dli.ernet.199817/,1.7.3
+646,Went to receive,5,4,1,https://archive.org/details/dli.ernet.199817/,6.127.11
+647,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.4
+648,place was visited by,123,4,1,https://archive.org/details/dli.ernet.199817/,5.6.25
+123,set fire to the house of,648,4,1,https://archive.org/details/dli.ernet.199817/,5.54.13
+649,is daughter of,650,4,1,https://archive.org/details/dli.ernet.199817/,3.14.20
+650,is daughter of,399,4,1,https://archive.org/details/dli.ernet.199817/,3.14.17 - 20
+649,IS_MOTHER_OF,189,4,1,https://archive.org/details/dli.ernet.199817/,3.14.20
+651,a messenger sent by,172,4,1,https://archive.org/details/dli.ernet.199817/,2.68.5
+651,Was sent to,417,4,1,https://archive.org/details/dli.ernet.199817/,2.68.5
+651,replied to,10,4,1,https://archive.org/details/dli.ernet.199817/,2.70.11-12
+128,is the destroyer of,652,4,1,https://archive.org/details/dli.ernet.199817/,"3.32.15, 7.13.9"
+364,was taken to,652,4,1,https://archive.org/details/dli.ernet.199817/,7.15.34
+128,laughed at,653,4,1,https://archive.org/details/dli.ernet.199817/,5.50.2-3
+128,was cursed by,653,4,1,https://archive.org/details/dli.ernet.199817/,5.50.2-3
+10,set up his abode at,655,4,1,https://archive.org/details/dli.ernet.199817/,1.1.39
+655,was situated to the east of,1,4,1,https://archive.org/details/dli.ernet.199817/,2.115.10
+656,is killed by,148,4,1,https://archive.org/details/dli.ernet.199817/,3.28.3
+657,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.3
+658,is son of,149,4,1,https://archive.org/details/dli.ernet.199817/,3.14.17
+659,IS_MOTHER_OF,658,4,1,https://archive.org/details/dli.ernet.199817/,3.14.17
+663,Dwelt in,662,4,1,https://archive.org/details/dli.ernet.199817/,4.42.31
+662,is situated in,660,4,1,https://archive.org/details/dli.ernet.199817/,4.42.31
+189,was asked to visit,664,4,1,https://archive.org/details/dli.ernet.199817/,4.40.27-29
+123,burnt the house of,665,4,1,https://archive.org/details/dli.ernet.199817/,5.54.15
+665,Fought with,116,4,1,https://archive.org/details/dli.ernet.199817/,6.69.85-94
+116,is asked to go to,666,4,1,https://archive.org/details/dli.ernet.199817/,4.41.8
+668,IS_FATHER_OF,667,4,1,https://archive.org/details/dli.ernet.199817/,1.17.12
+136,is accompanied by,667,4,1,https://archive.org/details/dli.ernet.199817/,4.13.4
+669,is son of,364,4,1,https://archive.org/details/dli.ernet.199817/,7.26.32-34
+669,made advances to,670,4,1,https://archive.org/details/dli.ernet.199817/,7.26.32-34
+671,emerged from,672,4,1,https://archive.org/details/dli.ernet.199817/,1.43.12
+673,is son of,240,4,1,https://archive.org/details/dli.ernet.199817/,7.56.27-28
+560,IS_RULED_BY,673,4,1,https://archive.org/details/dli.ernet.199817/,7.56.27-28
+674,was prayed by,552,4,1,https://archive.org/details/dli.ernet.199817/,2.91.17
+675,was worshipped at,676,4,1,https://archive.org/details/dli.ernet.199817/,3.12.20
+676,is visited by,5,4,1,https://archive.org/details/dli.ernet.199817/,3.12.20
+205,has invoked the protection of,677,4,1,https://archive.org/details/dli.ernet.199817/,2.25.11
+677,is honoured by,409,4,1,https://archive.org/details/dli.ernet.199817/,1.2.1-2
+131,is minister of,128,4,1,https://archive.org/details/dli.ernet.199817/,5.49.11
+678,is situated in,519,4,1,https://archive.org/details/dli.ernet.199817/,6.82.23-24
+299,did sacrifices at,678,4,1,https://archive.org/details/dli.ernet.199817/,6.82.23-24
+148,was accompanied by,679,4,1,https://archive.org/details/dli.ernet.199817/,3.55.(a)8
+680,Fought with,128,4,1,https://archive.org/details/dli.ernet.199817/,7.23-6-14
+681,Dwelt in,682,4,1,https://archive.org/details/dli.ernet.199817/,4.60.8
+191,went to see,681,4,1,https://archive.org/details/dli.ernet.199817/,4.60.14
+683,is killed by,200,4,1,https://archive.org/details/dli.ernet.199817/,7.6.35
+685,is killed by,684,4,1,https://archive.org/details/dli.ernet.199817/,1.2.10
+667,is son of,107,4,1,https://archive.org/details/dli.ernet.199817/,1.17.13
+686,Is cursed by,677,4,1,https://archive.org/details/dli.ernet.199817/,7.53.7-24
+687,Came to greet,5,4,1,https://archive.org/details/dli.ernet.199817/,7.1.4
+688,is killed by,200,4,1,https://archive.org/details/dli.ernet.199817/,4.42.28
+688,was killed at,477,4,1,https://archive.org/details/dli.ernet.199817/,4.42.28
+364,was accompanied by,689,4,1,https://archive.org/details/dli.ernet.199817/,7.15.6
+364,was carried to,652,4,1,https://archive.org/details/dli.ernet.199817/,7.15.34
+364,was carried by,689,4,1,https://archive.org/details/dli.ernet.199817/,7.15.34
+123,Was sent to,691,4,1,https://archive.org/details/dli.ernet.199817/,4.37.4
+123,Was sent by,136,4,1,https://archive.org/details/dli.ernet.199817/,4.37.4
+692,is honoured by,5,4,1,https://archive.org/details/dli.ernet.199817/,7.39.20
+692,Dwelt at,693,4,1,https://archive.org/details/dli.ernet.199817/,6.26.38
+694,is a follower of,151,4,1,https://archive.org/details/dli.ernet.199817/,6.37.7-19
+5,formed an acquaintance with,123,4,1,https://archive.org/details/dli.ernet.199817/,1.1.58
+5,formed an acquaintance at the bank of,695,4,1,https://archive.org/details/dli.ernet.199817/,1.1.58
+695,is crossed by,128,4,1,https://archive.org/details/dli.ernet.199817/,3.54.5
+511,contested with,5,4,1,https://archive.org/details/dli.ernet.199817/,1.3.12
+511,has promised to,148,4,1,https://archive.org/details/dli.ernet.199817/,1.75.7
+696,is a General of,334,4,1,https://archive.org/details/dli.ernet.199817/,3.23.32
+698,is son of,697,4,1,https://archive.org/details/dli.ernet.199817/,1.17.15
+699,replied to,128,4,1,https://archive.org/details/dli.ernet.199817/,7.23(c) 1-25
+686,Is cursed by,699,4,1,https://archive.org/details/dli.ernet.199817/,7.53.16-22
+700,are created by,701,4,1,https://archive.org/details/dli.ernet.199817/,1.54.18-20
+701,Has lived with,173,4,1,https://archive.org/details/dli.ernet.199817/,1.54.18-20
+702,is crossed by,171,4,1,https://archive.org/details/dli.ernet.199817/,2.68.13
+116,is sent to,703,4,1,https://archive.org/details/dli.ernet.199817/,4.14.12
+116,is sent to,704,4,1,https://archive.org/details/dli.ernet.199817/,4.41.18-19
+693,is submerged in the,705,4,1,https://archive.org/details/dli.ernet.199817/,4.42.19-24
+706,emerged from,672,4,1,https://archive.org/details/dli.ernet.199817/,1.43.12
+707,Is a door-kipper of,260,4,1,https://archive.org/details/dli.ernet.199817/,7.23.(b)9
+708,is situated near,290,4,1,https://archive.org/details/dli.ernet.199817/,4.41.44-45
+205,has invoked the protection of,709,4,1,https://archive.org/details/dli.ernet.199817/,2.25.17
+128,was accompanied by,710,4,1,https://archive.org/details/dli.ernet.199817/,6.59.18
+552,is desired by,711,4,1,https://archive.org/details/dli.ernet.199817/,2.91.47

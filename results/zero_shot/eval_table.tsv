@@ -1,0 +1,6 @@
+LLM	sanskrit	telugu	hindi	bengali	marathi
+gpt-4o	0.517	-	-	-	-	
+claude-3-5-sonnet-20240620	0.733	-	-	-	-	
+llama-v3p1-405b-instruct	0.467	-	-	-	-	
+gemini-1.5-pro	0.517	-	-	-	-	
+mistral-large-latest	0.533	-	-	-	-	

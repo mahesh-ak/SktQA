@@ -1,0 +1,679 @@
+:ID,:LABEL,lemma,annotator,line_id,line_text
+1,Town,अयोध्या,3,1,https://archive.org/details/dli.ernet.199817/
+2,Kingdom,कोसल,3,1,https://archive.org/details/dli.ernet.199817/
+3,River,शरयू,3,1,https://archive.org/details/dli.ernet.199817/
+4,Human,अंशुमान,4,1,https://archive.org/details/dli.ernet.199817/
+5,Human,राम,3,1,https://archive.org/details/dli.ernet.199817/
+6,Human,दशरथ,3,1,https://archive.org/details/dli.ernet.199817/
+7,Human,ऋष्यशृङ्ग,3,1,https://archive.org/details/dli.ernet.199817/
+8,Human,जनक 1,3,1,https://archive.org/details/dli.ernet.199817/
+9,Human,सुमन्त्र,3,1,https://archive.org/details/dli.ernet.199817/
+10,Human,भरत,3,1,https://archive.org/details/dli.ernet.199817/
+11,Human,ऋषभ,3,1,https://archive.org/details/dli.ernet.199817/
+12,Village,अंशुधान,3,1,https://archive.org/details/dli.ernet.199817/
+13,Rakshasa,अकम्पन,3,1,https://archive.org/details/dli.ernet.199817/
+14,Human,अकोप,3,1,https://archive.org/details/dli.ernet.199817/
+15,Rakshasa,अक्ष,3,1,https://archive.org/details/dli.ernet.199817/
+16,Deva,अग्नि,3,1,https://archive.org/details/dli.ernet.199817/
+17,Rishi,अगस्ति,3,1,https://archive.org/details/dli.ernet.199817/
+18,Rakshasa,अग्निकेतु,3,1,https://archive.org/details/dli.ernet.199817/
+19,Human,अग्निवर्ण,3,1,https://archive.org/details/dli.ernet.199817/
+20,Human,मनु,3,1,https://archive.org/details/dli.ernet.199817/
+21,Human,मरीचि,3,1,https://archive.org/details/dli.ernet.199817/
+22,Human,कश्यप,3,1,https://archive.org/details/dli.ernet.199817/
+24,Human,विवस्वान्,3,1,https://archive.org/details/dli.ernet.199817/
+25,Human,इक्ष्वाकु,3,1,https://archive.org/details/dli.ernet.199817/
+26,Human,कुक्षि,3,1,https://archive.org/details/dli.ernet.199817/
+27,Human,विकुक्षि,3,1,https://archive.org/details/dli.ernet.199817/
+28,Human,बाण,3,1,https://archive.org/details/dli.ernet.199817/
+29,Human,अनरण्य,3,1,https://archive.org/details/dli.ernet.199817/
+30,Human,पृथु,3,1,https://archive.org/details/dli.ernet.199817/
+31,Human,त्रिशङ्क,3,1,https://archive.org/details/dli.ernet.199817/
+32,Human,धुन्धुमार,3,1,https://archive.org/details/dli.ernet.199817/
+33,Human,युवनाश्व,3,1,https://archive.org/details/dli.ernet.199817/
+34,Human,मान्धाता,3,1,https://archive.org/details/dli.ernet.199817/
+35,Human,सुसन्धि,3,1,https://archive.org/details/dli.ernet.199817/
+36,Human,ध्रुवसन्धि,3,1,https://archive.org/details/dli.ernet.199817/
+37,Human,प्रसेनजित्,3,1,https://archive.org/details/dli.ernet.199817/
+38,Human,भरत-१,3,1,https://archive.org/details/dli.ernet.199817/
+39,Human,असित,3,1,https://archive.org/details/dli.ernet.199817/
+40,Kingdom,हैहय,3,1,https://archive.org/details/dli.ernet.199817/
+41,Kingdom,तालजङ्घ,3,1,https://archive.org/details/dli.ernet.199817/
+42,Kingdom,शशबिन्दु,3,1,https://archive.org/details/dli.ernet.199817/
+43,Human,सगर,3,1,https://archive.org/details/dli.ernet.199817/
+45,Human,दिलीप,3,1,https://archive.org/details/dli.ernet.199817/
+46,Human,भगीरथ,3,1,https://archive.org/details/dli.ernet.199817/
+47,Human,ककुत्स्थ,3,1,https://archive.org/details/dli.ernet.199817/
+49,Human,प्रवृद्ध,3,1,https://archive.org/details/dli.ernet.199817/
+50,Human,कल्माषपाद,3,1,https://archive.org/details/dli.ernet.199817/
+51,Human,शङ्खण,3,1,https://archive.org/details/dli.ernet.199817/
+52,Human,सुदर्शन,3,1,https://archive.org/details/dli.ernet.199817/
+53,Human,शीघ्रग,3,1,https://archive.org/details/dli.ernet.199817/
+54,Human,मरु,3,1,https://archive.org/details/dli.ernet.199817/
+55,Human,प्रशुश्रुक,3,1,https://archive.org/details/dli.ernet.199817/
+56,Human,अम्बरीष,3,1,https://archive.org/details/dli.ernet.199817/
+57,Human,नहुष,3,1,https://archive.org/details/dli.ernet.199817/
+58,Human,ययाति,3,1,https://archive.org/details/dli.ernet.199817/
+59,Human,नाभाग,3,1,https://archive.org/details/dli.ernet.199817/
+60,Human,अज,3,1,https://archive.org/details/dli.ernet.199817/
+61,Human,नेमि,3,1,https://archive.org/details/dli.ernet.199817/
+62,Human,लक्ष्मण,3,1,https://archive.org/details/dli.ernet.199817/
+63,Human,शत्रुघ्न,3,1,https://archive.org/details/dli.ernet.199817/
+64,Deva,ब्रह्मा,3,1,https://archive.org/details/dli.ernet.199817/
+65,Human,त्रिशङ्कु,3,1,https://archive.org/details/dli.ernet.199817/
+66,Human,वैवस्वत,3,1,https://archive.org/details/dli.ernet.199817/
+67,Human,प्रजापति,3,1,https://archive.org/details/dli.ernet.199817/
+68,Epithet,वैवस्वत,3,1,https://archive.org/details/dli.ernet.199817/
+69,Epithet,प्रजापति,3,1,https://archive.org/details/dli.ernet.199817/
+70,Epithet,दशरथ,3,1,https://archive.org/details/dli.ernet.199817/
+71,Epithet,पृथिवीपति,3,1,https://archive.org/details/dli.ernet.199817/
+72,Human,कालिन्दी,3,1,https://archive.org/details/dli.ernet.199817/
+73,Human,च्यवन,3,1,https://archive.org/details/dli.ernet.199817/
+74,Kula/Family,भार्गव,3,1,https://archive.org/details/dli.ernet.199817/
+76,Human,(असितभार्या२),3,1,https://archive.org/details/dli.ernet.199817/
+77,Mountain,हिमवत्,3,1,https://archive.org/details/dli.ernet.199817/
+78,Human,असमञ्ज,3,1,https://archive.org/details/dli.ernet.199817/
+79,Gana/गण,देव,3,1,https://archive.org/details/dli.ernet.199817/
+80,Gana/गण,राक्षस,3,1,https://archive.org/details/dli.ernet.199817/
+81,Epithet,कल्माषपाद,3,1,https://archive.org/details/dli.ernet.199817/
+82,Human,रघु,3,1,https://archive.org/details/dli.ernet.199817/
+83,‍‍Quality/गुण,पुरुषादक,3,1,https://archive.org/details/dli.ernet.199817/
+84,‍‍Quality/गुण,प्रभूतधनधान्यवान्,3,1,https://archive.org/details/dli.ernet.199817/
+85,Epithet,मानवेन्द्र,3,1,https://archive.org/details/dli.ernet.199817/
+86,Unit/परिमाण,१२ योजनानि,3,1,https://archive.org/details/dli.ernet.199817/
+87,Unit/परिमाण,३ योजन,3,1,https://archive.org/details/dli.ernet.199817/
+88,‍‍Quality/गुण,सुविभक्तमहापथा,3,1,https://archive.org/details/dli.ernet.199817/
+89,‍‍Quality/गुण,श्रीमती,3,1,https://archive.org/details/dli.ernet.199817/
+90,Road,राजमार्ग,3,1,https://archive.org/details/dli.ernet.199817/
+91,‍‍Quality/गुण,कवाटतोरणवती,3,1,https://archive.org/details/dli.ernet.199817/
+92,‍‍Quality/गुण,सुविभक्तान्तरापणा,3,1,https://archive.org/details/dli.ernet.199817/
+93,‍‍Quality/गुण,सर्वयन्त्रायुधवती,3,1,https://archive.org/details/dli.ernet.199817/
+94,‍‍Quality/गुण,सुविभक्त,3,1,https://archive.org/details/dli.ernet.199817/
+95,‍‍Quality/गुण,मुक्तपुष्पावकीर्ण,3,1,https://archive.org/details/dli.ernet.199817/
+96,‍‍Quality/गुण,जलसिक्त,3,1,https://archive.org/details/dli.ernet.199817/
+97,Professional,शिल्पी,3,1,https://archive.org/details/dli.ernet.199817/
+98,Professional,सूत,3,1,https://archive.org/details/dli.ernet.199817/
+99,Professional,मागध,3,1,https://archive.org/details/dli.ernet.199817/
+100,Weapon,शतघ्नी,3,1,https://archive.org/details/dli.ernet.199817/
+102,Unit/परिमाण,१०० शत,3,1,https://archive.org/details/dli.ernet.199817/
+103,‍‍Quality/गुण,उच्चाट्टालध्वजवती,3,1,https://archive.org/details/dli.ernet.199817/
+104,Professional,अकोप,3,1,https://archive.org/details/dli.ernet.199817/
+105,River,गङ्गा,4,1,https://archive.org/details/dli.ernet.199817/
+106,Rishi,अगस्त्य,4,1,https://archive.org/details/dli.ernet.199817/
+107,God,अग्नि,4,1,https://archive.org/details/dli.ernet.199817/
+108,Monkey/वानर,नील,4,1,https://archive.org/details/dli.ernet.199817/
+109,Rishi,अगस्त्यभ्राता,4,1,https://archive.org/details/dli.ernet.199817/
+110,Rishi,सुतीक्ष्ण,4,1,https://archive.org/details/dli.ernet.199817/
+111,Kingdom,अङ्ग,4,1,https://archive.org/details/dli.ernet.199817/
+112,King,रोमपाद,4,1,https://archive.org/details/dli.ernet.199817/
+113,Prince,अङ्गद,4,1,https://archive.org/details/dli.ernet.199817/
+114,Monkey/वानर,वालिन्,4,1,https://archive.org/details/dli.ernet.199817/
+115,Monkey/वानर,तारा,4,1,https://archive.org/details/dli.ernet.199817/
+116,Monkey/वानर,अङ्गद,4,1,https://archive.org/details/dli.ernet.199817/
+117,Human,अङ्गद,4,1,https://archive.org/details/dli.ernet.199817/
+118,Capital/ राजधानी,अङ्गदीया,4,1,https://archive.org/details/dli.ernet.199817/
+119,Kingdom,कारुपथ,4,1,https://archive.org/details/dli.ernet.199817/
+120,City,अङ्गलेपा,4,1,https://archive.org/details/dli.ernet.199817/
+121,Rakshashi/राक्षसी,अङ्गारका,4,1,https://archive.org/details/dli.ernet.199817/
+122,Prajapati,अङ्गिरस,4,1,https://archive.org/details/dli.ernet.199817/
+123,Monkey/वानर,हनुमान्,4,1,https://archive.org/details/dli.ernet.199817/
+124,Hill/पर्वतः,अञ्जन,4,1,https://archive.org/details/dli.ernet.199817/
+125,Elephant/ गजः,अञ्जन,4,1,https://archive.org/details/dli.ernet.199817/
+126,Shape,अष्टापद,3,1,https://archive.org/details/dli.ernet.199817/
+127,Rakshasa,यूपाक्ष,3,1,https://archive.org/details/dli.ernet.199817/
+128,Rakshasa,रावण,3,1,https://archive.org/details/dli.ernet.199817/
+129,Rakshasa,कुम्भकर्ण,3,1,https://archive.org/details/dli.ernet.199817/
+130,Rakshasa,कुम्भ,3,1,https://archive.org/details/dli.ernet.199817/
+131,Rakshasa,निकुम्भ,3,1,https://archive.org/details/dli.ernet.199817/
+132,Monkey/वानर,मैन्द,3,1,https://archive.org/details/dli.ernet.199817/
+133,Forest/अरण्यम्,दण्डक,4,1,https://archive.org/details/dli.ernet.199817/
+134,Monkey/वानर,सुषेण,4,1,https://archive.org/details/dli.ernet.199817/
+135,City,अग्निलेप,4,1,https://archive.org/details/dli.ernet.199817/
+136,Monkey/वानर,सुग्रीव,4,1,https://archive.org/details/dli.ernet.199817/
+137,Part of a Sea,दक्षिणसमुद्र,4,1,https://archive.org/details/dli.ernet.199817/
+139,Monkey/वानर,केशरी,4,1,https://archive.org/details/dli.ernet.199817/
+140,Apsara,अञ्जना,4,1,https://archive.org/details/dli.ernet.199817/
+141,Monkey/वानर,केसरी,4,1,https://archive.org/details/dli.ernet.199817/
+142,Rakshasa,अतिकाय,4,1,https://archive.org/details/dli.ernet.199817/
+144,Rishi,अत्रि 1,4,1,https://archive.org/details/dli.ernet.199817/
+145,Human,अनसूया,4,1,https://archive.org/details/dli.ernet.199817/
+146,Rishi,अत्रि 2,4,1,https://archive.org/details/dli.ernet.199817/
+147,Goddess/देवी,अदिति,4,1,https://archive.org/details/dli.ernet.199817/
+148,God,इन्द्र,4,1,https://archive.org/details/dli.ernet.199817/
+149,Rishi,कश्यप,4,1,https://archive.org/details/dli.ernet.199817/
+150,Rakshasa,अनल,4,1,https://archive.org/details/dli.ernet.199817/
+151,Rakshasa,विभीषण,4,1,https://archive.org/details/dli.ernet.199817/
+152,Rakshasa,माली,4,1,https://archive.org/details/dli.ernet.199817/
+153,Rakshashi/राक्षसी,वसुदा,4,1,https://archive.org/details/dli.ernet.199817/
+154,Prajapati,दक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+155,Rishi,दक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+156,God,प्रजापति,4,1,https://archive.org/details/dli.ernet.199817/
+157,Human,अनला 1,4,1,https://archive.org/details/dli.ernet.199817/
+158,Rakshashi/राक्षसी,अनला 2,4,1,https://archive.org/details/dli.ernet.199817/
+159,Rakshasa,माल्यवान्,4,1,https://archive.org/details/dli.ernet.199817/
+160,Monkey/वानर,अनङ्ग,4,1,https://archive.org/details/dli.ernet.199817/
+161,Rishi,अनन्तदेव,4,1,https://archive.org/details/dli.ernet.199817/
+162,Hill/पर्वतः,जातरूपशिला,4,1,https://archive.org/details/dli.ernet.199817/
+163,Rakshasa,अनिल,4,1,https://archive.org/details/dli.ernet.199817/
+165,Danava,अनुह्लाद,4,1,https://archive.org/details/dli.ernet.199817/
+166,Country/जनपद,अन्ध्र,4,1,https://archive.org/details/dli.ernet.199817/
+167,Danava,अन्धक,4,1,https://archive.org/details/dli.ernet.199817/
+168,Deva,रुद्र,4,1,https://archive.org/details/dli.ernet.199817/
+169,Hill/पर्वतः,अपरपर्वत,4,1,https://archive.org/details/dli.ernet.199817/
+170,Village,अभिकाल,4,1,https://archive.org/details/dli.ernet.199817/
+171,Messenger,दूत,4,1,https://archive.org/details/dli.ernet.199817/
+172,Rishi,वसिष्ठ,4,1,https://archive.org/details/dli.ernet.199817/
+173,Maharshi,वसिष्ठ,4,1,https://archive.org/details/dli.ernet.199817/
+174,Town/ पुरी,अमरावती,4,1,https://archive.org/details/dli.ernet.199817/
+175,Hill/पर्वतः,अयोमुख,4,1,https://archive.org/details/dli.ernet.199817/
+176,Rakshashi/राक्षसी,अयोमुखी,4,1,https://archive.org/details/dli.ernet.199817/
+177,Rishi,उशना,4,1,https://archive.org/details/dli.ernet.199817/
+178,Human,अरजा,4,1,https://archive.org/details/dli.ernet.199817/
+179,Hill/पर्वतः,अरिष्ट,4,1,https://archive.org/details/dli.ernet.199817/
+180,King,सगर,4,1,https://archive.org/details/dli.ernet.199817/
+181,Human,सुमति,4,1,https://archive.org/details/dli.ernet.199817/
+182,Prajapati,अरिष्टनेमि,4,1,https://archive.org/details/dli.ernet.199817/
+183,Tree,अर्जुनक,3,2,https://archive.org/details/pnGL_valmiki-ramayan-kosh-by-ramkumar-ray-kashi-sanskrit-granth-mala-series-no.-168-m/
+184,Insect,इन्द्रगोप,3,2,https://archive.org/details/pnGL_valmiki-ramayan-kosh-by-ramkumar-ray-kashi-sanskrit-granth-mala-series-no.-168-m/
+185,Animal,ईहामृग,3,2,https://archive.org/details/pnGL_valmiki-ramayan-kosh-by-ramkumar-ray-kashi-sanskrit-granth-mala-series-no.-168-m/
+187,Devine Bird/ देव पक्षी,अरुण,4,1,https://archive.org/details/dli.ernet.199817/
+188,Devine Bird/ देव पक्षी,गरुड,4,1,https://archive.org/details/dli.ernet.199817/
+189,Human,विनता,4,1,https://archive.org/details/dli.ernet.199817/
+190,Devine Bird/ देव पक्षी,जटायु,4,1,https://archive.org/details/dli.ernet.199817/
+191,Devine Bird/ देव पक्षी,सम्पाति,4,1,https://archive.org/details/dli.ernet.199817/
+192,Human,अरुन्धती,4,1,https://archive.org/details/dli.ernet.199817/
+193,Monkey/वानर,अर्क,4,1,https://archive.org/details/dli.ernet.199817/
+194,Monkey/वानर,अर्चिष्मान्,4,1,https://archive.org/details/dli.ernet.199817/
+195,Direction,पश्चिमदिशा,4,1,https://archive.org/details/dli.ernet.199817/
+196,Monkey/वानर,अर्चिमाल्यस्,4,1,https://archive.org/details/dli.ernet.199817/
+197,King,अर्जुन,4,1,https://archive.org/details/dli.ernet.199817/
+198,King,कार्तवीर्य,4,1,https://archive.org/details/dli.ernet.199817/
+199,Rishi,जमदग्नि,4,1,https://archive.org/details/dli.ernet.199817/
+200,Deva,विष्णु,4,1,https://archive.org/details/dli.ernet.199817/
+201,King,भरत,4,1,https://archive.org/details/dli.ernet.199817/
+202,Human,अर्थसाधक,4,1,https://archive.org/details/dli.ernet.199817/
+203,Forest/अरण्यम्,अलक्षित,4,1,https://archive.org/details/dli.ernet.199817/
+204,Aditya,अर्यमा,4,1,https://archive.org/details/dli.ernet.199817/
+205,Human,कौशल्या,4,1,https://archive.org/details/dli.ernet.199817/
+206,Human,अलम्बुषा,4,1,https://archive.org/details/dli.ernet.199817/
+207,Human,विशाल,4,1,https://archive.org/details/dli.ernet.199817/
+208,King,अलर्क,4,1,https://archive.org/details/dli.ernet.199817/
+209,Human,कैकेयी,4,1,https://archive.org/details/dli.ernet.199817/
+210,Direction,दक्षिणदिशा,4,1,https://archive.org/details/dli.ernet.199817/
+211,Town,अवन्ति,4,1,https://archive.org/details/dli.ernet.199817/
+212,Town,अवन्ती,4,1,https://archive.org/details/dli.ernet.199817/
+213,Rakshasa,अविन्ध्य,4,1,https://archive.org/details/dli.ernet.199817/
+214,Rakshasa,अशनिप्रभ,4,1,https://archive.org/details/dli.ernet.199817/
+215,Monkey/वानर,द्विविद,4,1,https://archive.org/details/dli.ernet.199817/
+216,Human,अशोक,4,1,https://archive.org/details/dli.ernet.199817/
+217,Garden,अशोकवाटिका,4,1,https://archive.org/details/dli.ernet.199817/
+218,Human,सीता,4,1,https://archive.org/details/dli.ernet.199817/
+219,Rishi,अश्व,4,1,https://archive.org/details/dli.ernet.199817/
+220,Residential Place,आश्रम,4,1,https://archive.org/details/dli.ernet.199817/
+221,Human,दनु,4,1,https://archive.org/details/dli.ernet.199817/
+222,Danava,अश्वग्रीव,4,1,https://archive.org/details/dli.ernet.199817/
+223,Human,अश्वपति,4,1,https://archive.org/details/dli.ernet.199817/
+224,Deva,अश्विन द्वय,4,1,https://archive.org/details/dli.ernet.199817/
+225,City,अश्म,4,1,https://archive.org/details/dli.ernet.199817/
+226,Loka/लोक,रसातल,4,1,https://archive.org/details/dli.ernet.199817/
+227,Hill/पर्वतः,अस्ताचल,4,1,https://archive.org/details/dli.ernet.199817/
+229,Human,अष्टावक्र,4,1,https://archive.org/details/dli.ernet.199817/
+230,Human,कहोल,4,1,https://archive.org/details/dli.ernet.199817/
+231,Human,अमूर्तरजस,4,1,https://archive.org/details/dli.ernet.199817/
+232,Human,कुश,4,1,https://archive.org/details/dli.ernet.199817/
+233,Human,वैदर्भी,4,1,https://archive.org/details/dli.ernet.199817/
+234,Human,अहल्या,4,1,https://archive.org/details/dli.ernet.199817/
+235,Rishi,गौतम,4,1,https://archive.org/details/dli.ernet.199817/
+236,Deva,आदित्यगण,4,1,https://archive.org/details/dli.ernet.199817/
+237,City,आब्रवन्ती,4,1,https://archive.org/details/dli.ernet.199817/
+238,Tribe/जनजाति,आभीर,4,1,https://archive.org/details/dli.ernet.199817/
+239,Direction,उत्तरदिशा,4,1,https://archive.org/details/dli.ernet.199817/
+240,Human,आयु,4,1,https://archive.org/details/dli.ernet.199817/
+241,King,पुरूपवस्,4,1,https://archive.org/details/dli.ernet.199817/
+242,Nymph/अप्सरा,उर्वशी,4,1,https://archive.org/details/dli.ernet.199817/
+243,Sea/सागर,इक्षु,4,1,https://archive.org/details/dli.ernet.199817/
+244,Iland,द्विप,4,1,https://archive.org/details/dli.ernet.199817/
+246,River,इक्षुमती,4,1,https://archive.org/details/dli.ernet.199817/
+247,Town,साङ्काश्य,4,1,https://archive.org/details/dli.ernet.199817/
+248,Linage/वंश,इक्ष्वाकु,4,1,https://archive.org/details/dli.ernet.199817/
+249,Rakshasa,वृत्र,4,1,https://archive.org/details/dli.ernet.199817/
+250,Monkey/वानर,इन्द्रजानु,4,1,https://archive.org/details/dli.ernet.199817/
+251,Rakshasa,इन्द्रशत्रु,4,1,https://archive.org/details/dli.ernet.199817/
+253,Country/जनपद,इन्द्रशिरा,4,1,https://archive.org/details/dli.ernet.199817/
+254,Elephant/ गजः,ऐरावत,4,1,https://archive.org/details/dli.ernet.199817/
+255,Prajapati,कर्दम,4,1,https://archive.org/details/dli.ernet.199817/
+256,King,इल,4,1,https://archive.org/details/dli.ernet.199817/
+257,Kingdom,बाल्ही,4,1,https://archive.org/details/dli.ernet.199817/
+258,Rakshasa,इल्वल,4,1,https://archive.org/details/dli.ernet.199817/
+259,Horse/अश्व,उच्चैःश्रवा,4,1,https://archive.org/details/dli.ernet.199817/
+260,God,सूर्य,4,1,https://archive.org/details/dli.ernet.199817/
+261,City,उज्जिहान,4,1,https://archive.org/details/dli.ernet.199817/
+262,Tree,प्रियक,4,1,https://archive.org/details/dli.ernet.199817/
+263,Country/जनपद,उत्कल,4,1,https://archive.org/details/dli.ernet.199817/
+264,Hill/पर्वतः,उद्याचल,4,1,https://archive.org/details/dli.ernet.199817/
+265,Human,उदावसु,4,1,https://archive.org/details/dli.ernet.199817/
+266,Human,नन्दिवर्धन,4,1,https://archive.org/details/dli.ernet.199817/
+267,Human,सुकेतु,4,1,https://archive.org/details/dli.ernet.199817/
+268,Rakshasa,उन्मत्त,4,1,https://archive.org/details/dli.ernet.199817/
+269,Human,सुन्दरी,4,1,https://archive.org/details/dli.ernet.199817/
+270,Gandharva/गन्धर्व,नर्मदा 2,4,1,https://archive.org/details/dli.ernet.199817/
+271,Deva,उपेन्द्र,4,1,https://archive.org/details/dli.ernet.199817/
+272,Goddess/देवी,उमा,4,1,https://archive.org/details/dli.ernet.199817/
+273,Mountain,हिमवान्,4,1,https://archive.org/details/dli.ernet.199817/
+274,Mountain,मेरु,4,1,https://archive.org/details/dli.ernet.199817/
+275,Human,मेना,4,1,https://archive.org/details/dli.ernet.199817/
+276,Human,उर्मिला,4,1,https://archive.org/details/dli.ernet.199817/
+277,Human,कुशध्वज,4,1,https://archive.org/details/dli.ernet.199817/
+278,Monkey/वानर,उल्का-मुख,4,1,https://archive.org/details/dli.ernet.199817/
+279,Deva,हुताशन,4,1,https://archive.org/details/dli.ernet.199817/
+280,Hill/पर्वतः,उशीरबीजम्,4,1,https://archive.org/details/dli.ernet.199817/
+281,Monkey/वानर,प्रमाथि,4,1,https://archive.org/details/dli.ernet.199817/
+282,Cave,ऋक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+283,Monkey/वानर,ऋक्षराज/ऋक्षराट्,4,1,https://archive.org/details/dli.ernet.199817/
+284,Hill/पर्वतः,ऋक्षवान्,4,1,https://archive.org/details/dli.ernet.199817/
+285,Riksha/ऋक्ष,धूम्र,4,1,https://archive.org/details/dli.ernet.199817/
+286,Rishi,ऋचीक 1,4,1,https://archive.org/details/dli.ernet.199817/
+287,Human,सत्यवती,4,1,https://archive.org/details/dli.ernet.199817/
+288,Rishi,विश्वामित्र,4,1,https://archive.org/details/dli.ernet.199817/
+289,Rishi,ऋचीक 2,4,1,https://archive.org/details/dli.ernet.199817/
+290,Hill/पर्वतः,ऋषभ,4,1,https://archive.org/details/dli.ernet.199817/
+291,Sea/सागर,क्षीरसागर,4,1,https://archive.org/details/dli.ernet.199817/
+292,Monkey/वानर,विनत,4,1,https://archive.org/details/dli.ernet.199817/
+293,Range of hills/पर्वतश्रेणी,ऋषभ 1,4,1,https://archive.org/details/dli.ernet.199817/
+294,Gandharva/गन्धर्व,रोहित,4,1,https://archive.org/details/dli.ernet.199817/
+295,King,ऋषभ 2,4,1,https://archive.org/details/dli.ernet.199817/
+296,Monkey/वानर,ऋषभ 3,4,1,https://archive.org/details/dli.ernet.199817/
+297,Rakshasa,मत्त,4,1,https://archive.org/details/dli.ernet.199817/
+298,Monkey/वानर,ऋषभ-स्कन्ध,4,1,https://archive.org/details/dli.ernet.199817/
+299,Rakshasa,इन्द्रजित्,4,1,https://archive.org/details/dli.ernet.199817/
+300,Monkey/वानर,ऋषि-पुत्र,4,1,https://archive.org/details/dli.ernet.199817/
+301,Country/जनपद,ऋष्टिक,4,1,https://archive.org/details/dli.ernet.199817/
+302,Hill/पर्वतः,ऋष्यमुख,4,1,https://archive.org/details/dli.ernet.199817/
+303,Maharshi,विभाण्डक,4,1,https://archive.org/details/dli.ernet.199817/
+304,Rishi,काश्यप,4,1,https://archive.org/details/dli.ernet.199817/
+305,Rakshashi/राक्षसी,एकजटा,4,1,https://archive.org/details/dli.ernet.199817/
+306,Village,एकसाल,4,1,https://archive.org/details/dli.ernet.199817/
+307,River,स्थाणुमती,4,1,https://archive.org/details/dli.ernet.199817/
+308,Human,इरावती,4,1,https://archive.org/details/dli.ernet.199817/
+309,City,ऐलधान,4,1,https://archive.org/details/dli.ernet.199817/
+310,Rishi,ओङ्कार,4,1,https://archive.org/details/dli.ernet.199817/
+311,Rishi,बुध,4,1,https://archive.org/details/dli.ernet.199817/
+312,Riksha/ऋक्ष,जाम्बवान्,4,1,https://archive.org/details/dli.ernet.199817/
+313,Hill/पर्वतः,ओषधि पर्वत,4,1,https://archive.org/details/dli.ernet.199817/
+314,Monkey/वानर,हनूमान्,4,1,https://archive.org/details/dli.ernet.199817/
+316,Rishi,कण्डु 1,4,1,https://archive.org/details/dli.ernet.199817/
+317,Cow,गौः,4,1,https://archive.org/details/dli.ernet.199817/
+318,Maharshi,कण्डु 2,4,1,https://archive.org/details/dli.ernet.199817/
+319,Rishi,कण्व,4,1,https://archive.org/details/dli.ernet.199817/
+320,Human,कद्रु,4,1,https://archive.org/details/dli.ernet.199817/
+321,Human,क्रोधवशा,4,1,https://archive.org/details/dli.ernet.199817/
+322,place,कनखल,4,1,https://archive.org/details/dli.ernet.199817/
+323,Deva,कन्दर्प,4,1,https://archive.org/details/dli.ernet.199817/
+324,Deva,कामदेव,4,1,https://archive.org/details/dli.ernet.199817/
+325,Deva,शङ्कर,4,1,https://archive.org/details/dli.ernet.199817/
+326,Rakshasa,कपट,4,1,https://archive.org/details/dli.ernet.199817/
+327,incarnation/अवतार,कपिल,4,1,https://archive.org/details/dli.ernet.199817/
+328,Human,पुत्राः,4,1,https://archive.org/details/dli.ernet.199817/
+329,River,कपीवती,4,1,https://archive.org/details/dli.ernet.199817/
+330,Rakshasa,कबन्ध,4,1,https://archive.org/details/dli.ernet.199817/
+331,Tribe/जनजाति,शबरी,4,1,https://archive.org/details/dli.ernet.199817/
+332,Rakshasa,कम्पन,4,1,https://archive.org/details/dli.ernet.199817/
+333,Rakshasa,करवीराक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+334,Rakshasa,खर,4,1,https://archive.org/details/dli.ernet.199817/
+335,Rakshasa,कराल,4,1,https://archive.org/details/dli.ernet.199817/
+336,City,कारुष,4,1,https://archive.org/details/dli.ernet.199817/
+337,Rakshashi/राक्षसी,ताटका,4,1,https://archive.org/details/dli.ernet.199817/
+338,Rakshasa,मारीच,4,1,https://archive.org/details/dli.ernet.199817/
+340,Rakshashi/राक्षसी,कला,4,1,https://archive.org/details/dli.ernet.199817/
+341,Town/ पुरी,कलिङ्ग 1,4,1,https://archive.org/details/dli.ernet.199817/
+342,Town/ पुरी,कलिङ्ग 2,4,1,https://archive.org/details/dli.ernet.199817/
+343,Class of Daityas,कवचगण,4,1,https://archive.org/details/dli.ernet.199817/
+344,Rishi,कवष,4,1,https://archive.org/details/dli.ernet.199817/
+346,Yajna/ यज्ञ,अश्वमेध,4,1,https://archive.org/details/dli.ernet.199817/
+347,Human,काकुत्स्थ,4,1,https://archive.org/details/dli.ernet.199817/
+348,City,विशाला,4,1,https://archive.org/details/dli.ernet.199817/
+349,Human,सोमदत्त,4,1,https://archive.org/details/dli.ernet.199817/
+350,Hill/पर्वतः,काञ्चन 1,4,1,https://archive.org/details/dli.ernet.199817/
+351,Priest,काञ्चन 2,4,1,https://archive.org/details/dli.ernet.199817/
+353,Human,कात्यायन,4,1,https://archive.org/details/dli.ernet.199817/
+354,Range of hills/पर्वतश्रेणी,काम,4,1,https://archive.org/details/dli.ernet.199817/
+355,Monkey/वानर,शतवल,4,1,https://archive.org/details/dli.ernet.199817/
+356,Rakshasa,प्रहस्त,4,1,https://archive.org/details/dli.ernet.199817/
+357,Rakshasa,कुम्भहनु,4,1,https://archive.org/details/dli.ernet.199817/
+358,Rakshashi/राक्षसी,कुम्भीनसी,4,1,https://archive.org/details/dli.ernet.199817/
+359,Rakshasa,मधु,4,1,https://archive.org/details/dli.ernet.199817/
+360,Rakshasa,सुमाली,4,1,https://archive.org/details/dli.ernet.199817/
+361,Rakshashi/राक्षसी,केतुमती,4,1,https://archive.org/details/dli.ernet.199817/
+362,Country/जनपद,कुरु,4,1,https://archive.org/details/dli.ernet.199817/
+363,Forest/अरण्यम्,कुरुः,4,1,https://archive.org/details/dli.ernet.199817/
+364,Rakshasa,कुबेर,4,1,https://archive.org/details/dli.ernet.199817/
+365,Garden,उद्यानम्,4,1,https://archive.org/details/dli.ernet.199817/
+366,Land,कुरुजाङ्गल,4,1,https://archive.org/details/dli.ernet.199817/
+367,Human,कुल,4,1,https://archive.org/details/dli.ernet.199817/
+368,Town,कुलिङ्गा 1,4,1,https://archive.org/details/dli.ernet.199817/
+369,Country/जनपद,शरदण्ड,4,1,https://archive.org/details/dli.ernet.199817/
+371,River,कुलिङ्गा 2,4,1,https://archive.org/details/dli.ernet.199817/
+372,Maharshi,विश्रवा,4,1,https://archive.org/details/dli.ernet.199817/
+373,Brahmana,कुश 1,4,1,https://archive.org/details/dli.ernet.199817/
+374,Human,कुशाम्ब,4,1,https://archive.org/details/dli.ernet.199817/
+375,Human,कुशनाभ,4,1,https://archive.org/details/dli.ernet.199817/
+376,Human,असूर्तरजस,4,1,https://archive.org/details/dli.ernet.199817/
+377,Human,वसु,4,1,https://archive.org/details/dli.ernet.199817/
+378,Maharshi,कुशध्वज 1,4,1,https://archive.org/details/dli.ernet.199817/
+379,Maharshi,बृहस्पति,4,1,https://archive.org/details/dli.ernet.199817/
+380,Human,वेदवती,4,1,https://archive.org/details/dli.ernet.199817/
+381,Tapovan/तपोवन,कुशप्लव,4,1,https://archive.org/details/dli.ernet.199817/
+382,Devi/देवी,दिति,4,1,https://archive.org/details/dli.ernet.199817/
+383,Rakshasa,दैत्य,4,1,https://archive.org/details/dli.ernet.199817/
+384,Tapasya,तपस,4,1,https://archive.org/details/dli.ernet.199817/
+385,Capital/ राजधानी,कुशावती,4,1,https://archive.org/details/dli.ernet.199817/
+386,Town,कौशाम्बी,4,1,https://archive.org/details/dli.ernet.199817/
+387,Human,कुशाश्व,4,1,https://archive.org/details/dli.ernet.199817/
+388,Human,सहदेव,4,1,https://archive.org/details/dli.ernet.199817/
+389,Rishi,कौशिक 1,4,1,https://archive.org/details/dli.ernet.199817/
+390,Country/जनपद,कौशिक 2,4,1,https://archive.org/details/dli.ernet.199817/
+391,Maharshi,कौशेय,4,1,https://archive.org/details/dli.ernet.199817/
+392,Mani/मणि,कौस्तुभ,4,1,https://archive.org/details/dli.ernet.199817/
+393,Prajapati,क्रतु,4,1,https://archive.org/details/dli.ernet.199817/
+394,Monkey/वानर,क्रथन,4,1,https://archive.org/details/dli.ernet.199817/
+395,Monkey/वानर,क्रोधन,4,1,https://archive.org/details/dli.ernet.199817/
+396,Forest/अरण्यम्,क्रौञ्च 1,4,1,https://archive.org/details/dli.ernet.199817/
+397,Mountain,क्रौञ्च 2,4,1,https://archive.org/details/dli.ernet.199817/
+398,Human,क्रौञ्ची,4,1,https://archive.org/details/dli.ernet.199817/
+399,Human,ताम्रा,4,1,https://archive.org/details/dli.ernet.199817/
+400,Sea/सागर,क्षीरोद,4,1,https://archive.org/details/dli.ernet.199817/
+401,Devine juice/ईश्वरीय पेय,अमृत,4,1,https://archive.org/details/dli.ernet.199817/
+404,Gana/गण,असुर,4,1,https://archive.org/details/dli.ernet.199817/
+406,River,कौशिकी,4,1,https://archive.org/details/dli.ernet.199817/
+407,Prince,कुशी,4,1,https://archive.org/details/dli.ernet.199817/
+408,Residential Place,आश्रम 1,4,1,https://archive.org/details/dli.ernet.199817/
+409,Maharshi,वाल्मीकि,4,1,https://archive.org/details/dli.ernet.199817/
+410,Devi/देवी,कृत्तिका,4,1,https://archive.org/details/dli.ernet.199817/
+411,God,कार्तिकेय,4,1,https://archive.org/details/dli.ernet.199817/
+412,Prajapati,कृशाश्व,4,1,https://archive.org/details/dli.ernet.199817/
+413,Weapon,शस्त्र,4,1,https://archive.org/details/dli.ernet.199817/
+414,Mountain,कृष्णगिरि,4,1,https://archive.org/details/dli.ernet.199817/
+415,Monkey/वानर,रम्भ,4,1,https://archive.org/details/dli.ernet.199817/
+416,River,कृष्णवेणी,4,1,https://archive.org/details/dli.ernet.199817/
+417,Country/जनपद,केकय,4,1,https://archive.org/details/dli.ernet.199817/
+418,Gandharvi/गन्धर्वी,नर्मदा 2,4,1,https://archive.org/details/dli.ernet.199817/
+419,Country/जनपद,केरल,4,1,https://archive.org/details/dli.ernet.199817/
+420,Human,केशिनी 1,4,1,https://archive.org/details/dli.ernet.199817/
+421,River,केशिनी 2,4,1,https://archive.org/details/dli.ernet.199817/
+423,Rakshashi/राक्षसी,कैकसी,4,1,https://archive.org/details/dli.ernet.199817/
+424,Daitya,कैटभ,4,1,https://archive.org/details/dli.ernet.199817/
+425,Lake,मानस,4,1,https://archive.org/details/dli.ernet.199817/
+426,Mountain,कैलास,4,1,https://archive.org/details/dli.ernet.199817/
+427,Country/जनपद,कोशल,4,1,https://archive.org/details/dli.ernet.199817/
+428,River,सरयु,4,1,https://archive.org/details/dli.ernet.199817/
+429,King,भानुमान्,4,1,https://archive.org/details/dli.ernet.199817/
+430,district,कोशकार,4,1,https://archive.org/details/dli.ernet.199817/
+431,Rakshashi/राक्षसी,शूर्पणखा,4,1,https://archive.org/details/dli.ernet.199817/
+432,City,शृङ्गवेरपुर,4,1,https://archive.org/details/dli.ernet.199817/
+433,River,तमसा,4,1,https://archive.org/details/dli.ernet.199817/
+434,Monkey/वानर,गज,4,1,https://archive.org/details/dli.ernet.199817/
+435,deity,गन्धर्व,4,1,https://archive.org/details/dli.ernet.199817/
+436,Yajna/ यज्ञ,पुत्रेष्टि,4,1,https://archive.org/details/dli.ernet.199817/
+437,Daitya,गन्धर्वी,4,1,https://archive.org/details/dli.ernet.199817/
+438,Devi/देवी,सुरभी,4,1,https://archive.org/details/dli.ernet.199817/
+439,Animal,अश्वाः,4,1,https://archive.org/details/dli.ernet.199817/
+440,King,गय,4,1,https://archive.org/details/dli.ernet.199817/
+441,Country/जनपद,गया,4,1,https://archive.org/details/dli.ernet.199817/
+442,Rishi,गर्ग,4,1,https://archive.org/details/dli.ernet.199817/
+443,Monkey/वानर,गवय,4,1,https://archive.org/details/dli.ernet.199817/
+444,rank,यूथपति,4,1,https://archive.org/details/dli.ernet.199817/
+445,Monkey/वानर,गवाक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+446,Residential Place,भवन,4,1,https://archive.org/details/dli.ernet.199817/
+447,Human,गाधि,4,1,https://archive.org/details/dli.ernet.199817/
+448,Monkey/वानर,गन्धमादन,4,1,https://archive.org/details/dli.ernet.199817/
+449,City,गान्धार,4,1,https://archive.org/details/dli.ernet.199817/
+450,Rishi,गार्ग्य,4,1,https://archive.org/details/dli.ernet.199817/
+451,Human,युधाजित्,4,1,https://archive.org/details/dli.ernet.199817/
+453,Rishi,गालव,4,1,https://archive.org/details/dli.ernet.199817/
+454,Gandharva/गन्धर्व,ग्रामणी,4,1,https://archive.org/details/dli.ernet.199817/
+456,Town,गिरिव्रज 1,4,1,https://archive.org/details/dli.ernet.199817/
+457,Town,वसुमती,4,1,https://archive.org/details/dli.ernet.199817/
+458,Human,गिरिव्रज 2,4,1,https://archive.org/details/dli.ernet.199817/
+459,Tribe/जनजाति,गुह,4,1,https://archive.org/details/dli.ernet.199817/
+460,Demi-god,गुह्यक,4,1,https://archive.org/details/dli.ernet.199817/
+461,Town,गोकर्ण,4,1,https://archive.org/details/dli.ernet.199817/
+462,River,गोदावरी,4,1,https://archive.org/details/dli.ernet.199817/
+463,Forest/अरण्यम्,पञ्चवटी,4,1,https://archive.org/details/dli.ernet.199817/
+464,Gandharva/गन्धर्व,गोप,4,1,https://archive.org/details/dli.ernet.199817/
+465,pier/घाट,गोप्रतार,4,1,https://archive.org/details/dli.ernet.199817/
+466,River,गोमती,4,1,https://archive.org/details/dli.ernet.199817/
+467,Kingdom,कोशल,4,1,https://archive.org/details/dli.ernet.199817/
+468,Human,गोमुख,4,1,https://archive.org/details/dli.ernet.199817/
+469,Human,मातलि,4,1,https://archive.org/details/dli.ernet.199817/
+470,Gandharva/गन्धर्व,गोलभ,4,1,https://archive.org/details/dli.ernet.199817/
+471,Priest,गौतम 1,4,1,https://archive.org/details/dli.ernet.199817/
+472,Town,मिथिला,4,1,https://archive.org/details/dli.ernet.199817/
+473,Rakshasa,घन,4,1,https://archive.org/details/dli.ernet.199817/
+474,Apsara,घृताची,4,1,https://archive.org/details/dli.ernet.199817/
+475,Rakshasa,घोर,4,1,https://archive.org/details/dli.ernet.199817/
+476,Rakshasa,चक्र,4,1,https://archive.org/details/dli.ernet.199817/
+477,Hill/पर्वतः,चक्रवान्,4,1,https://archive.org/details/dli.ernet.199817/
+478,Monkey/वानर,चण्ड,4,1,https://archive.org/details/dli.ernet.199817/
+479,Society class,चण्डाल,4,1,https://archive.org/details/dli.ernet.199817/
+480,Rakshashi/राक्षसी,चण्डोदरी,4,1,https://archive.org/details/dli.ernet.199817/
+481,Forest/अरण्यम्,चन्दनवन,4,1,https://archive.org/details/dli.ernet.199817/
+482,Animal,वानराः,4,1,https://archive.org/details/dli.ernet.199817/
+483,Range of hills/पर्वतश्रेणी,चन्द्र,4,1,https://archive.org/details/dli.ernet.199817/
+484,Human,चन्द्र 1,4,1,https://archive.org/details/dli.ernet.199817/
+486,Devine place,मल्लभूमि,4,1,https://archive.org/details/dli.ernet.199817/
+487,Human,चन्द्रकेतु,4,1,https://archive.org/details/dli.ernet.199817/
+488,place,चन्द्रकान्त,4,1,https://archive.org/details/dli.ernet.199817/
+490,Country/जनपद,चन्द्रचित्रा,4,1,https://archive.org/details/dli.ernet.199817/
+491,Tribe/जनजाति,चरण,4,1,https://archive.org/details/dli.ernet.199817/
+492,Animal,वानरसन्तान,4,1,https://archive.org/details/dli.ernet.199817/
+493,Hill/पर्वतः,चित्रकूट,4,1,https://archive.org/details/dli.ernet.199817/
+494,Human,चित्ररथ 1,4,1,https://archive.org/details/dli.ernet.199817/
+495,Garden,चित्ररथ 2,4,1,https://archive.org/details/dli.ernet.199817/
+496,Forest/अरण्यम्,चित्ररथ 3,4,1,https://archive.org/details/dli.ernet.199817/
+497,Human,चूलिन्,4,1,https://archive.org/details/dli.ernet.199817/
+498,Gandharvi/गन्धर्वी,सोमदा,4,1,https://archive.org/details/dli.ernet.199817/
+499,Country/जनपद,चोल,4,1,https://archive.org/details/dli.ernet.199817/
+501,Maharshi,च्यवन,4,1,https://archive.org/details/dli.ernet.199817/
+502,Mountain,हिमालय,4,1,https://archive.org/details/dli.ernet.199817/
+503,Maharshi,भृगु,4,1,https://archive.org/details/dli.ernet.199817/
+504,Rakshashi/राक्षसी,छायाग्राह,4,1,https://archive.org/details/dli.ernet.199817/
+505,Town,जटापुर,4,1,https://archive.org/details/dli.ernet.199817/
+506,Snake/नाग,जटी,4,1,https://archive.org/details/dli.ernet.199817/
+507,Human,मिथि,4,1,https://archive.org/details/dli.ernet.199817/
+508,Human,जनक 2,4,1,https://archive.org/details/dli.ernet.199817/
+509,Human,जनमेजय,4,1,https://archive.org/details/dli.ernet.199817/
+510,place,जनस्थान,4,1,https://archive.org/details/dli.ernet.199817/
+511,Rishi,परशुराम,4,1,https://archive.org/details/dli.ernet.199817/
+512,Bow,वैष्णव,4,1,https://archive.org/details/dli.ernet.199817/
+513,Rakshasa,जम्बुमाली,4,1,https://archive.org/details/dli.ernet.199817/
+514,continent,जम्बूद्वीप,4,1,https://archive.org/details/dli.ernet.199817/
+515,Mountain,सौमनस,4,1,https://archive.org/details/dli.ernet.199817/
+516,Human,पुत्राः 1,4,1,https://archive.org/details/dli.ernet.199817/
+517,Village,जम्बूप्रस्थ,4,1,https://archive.org/details/dli.ernet.199817/
+518,Monkey/वानर,जम्भ,4,1,https://archive.org/details/dli.ernet.199817/
+519,Country/जनपद,लङ्का,4,1,https://archive.org/details/dli.ernet.199817/
+520,Human,जयन्त 1,4,1,https://archive.org/details/dli.ernet.199817/
+521,Human,जयन्त 2,4,1,https://archive.org/details/dli.ernet.199817/
+523,God,जयन्त 3,4,1,https://archive.org/details/dli.ernet.199817/
+524,Goddess/देवी,शची,4,1,https://archive.org/details/dli.ernet.199817/
+525,Devi/देवी,जया,4,1,https://archive.org/details/dli.ernet.199817/
+526,Sea/सागर,जलोद,4,1,https://archive.org/details/dli.ernet.199817/
+527,Devine fire,बडवाग्नि,4,1,https://archive.org/details/dli.ernet.199817/
+528,Rishi,और्व,4,1,https://archive.org/details/dli.ernet.199817/
+529,Rakshasa,जव,4,1,https://archive.org/details/dli.ernet.199817/
+530,Rakshasa,विराध,4,1,https://archive.org/details/dli.ernet.199817/
+531,Rishi,जह्नु,4,1,https://archive.org/details/dli.ernet.199817/
+532,Human,जाबाली,4,1,https://archive.org/details/dli.ernet.199817/
+533,Human,जाबालि,4,1,https://archive.org/details/dli.ernet.199817/
+534,Monkey/वानर,ज्योतिर्मुख,4,1,https://archive.org/details/dli.ernet.199817/
+536,Human,तक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+537,Snake/नाग,तक्षक,4,1,https://archive.org/details/dli.ernet.199817/
+538,Town,तक्षशिला,4,1,https://archive.org/details/dli.ernet.199817/
+539,Rakshasa,तपन,4,1,https://archive.org/details/dli.ernet.199817/
+541,Monkey/वानर,तरसा,4,1,https://archive.org/details/dli.ernet.199817/
+542,Rakshasa,सुन्द,4,1,https://archive.org/details/dli.ernet.199817/
+543,River,ताम्रपर्णी,4,1,https://archive.org/details/dli.ernet.199817/
+544,Town,किष्किन्धा,4,1,https://archive.org/details/dli.ernet.199817/
+545,Monkey/वानर,तारा 1,4,1,https://archive.org/details/dli.ernet.199817/
+546,Monkey/वानर,तारेय,4,1,https://archive.org/details/dli.ernet.199817/
+547,Devine Bird/ देव पक्षी,तार्क्ष्य,4,1,https://archive.org/details/dli.ernet.199817/
+548,Monkey/वानर,वानरसन्तान 1,4,1,https://archive.org/details/dli.ernet.199817/
+549,Rakshasa,तिमिध्वज,4,1,https://archive.org/details/dli.ernet.199817/
+550,Rakshasa,शम्बर,4,1,https://archive.org/details/dli.ernet.199817/
+551,Gandharva/गन्धर्व,तुम्बुरु,4,1,https://archive.org/details/dli.ernet.199817/
+552,Rishi,भरद्वाज,4,1,https://archive.org/details/dli.ernet.199817/
+553,Rajarshi,तृणबिन्दु,4,1,https://archive.org/details/dli.ernet.199817/
+554,Village,तोरण,4,1,https://archive.org/details/dli.ernet.199817/
+555,Hill/पर्वतः,त्रिकुट,4,1,https://archive.org/details/dli.ernet.199817/
+556,Brahmana,त्रिजट,4,1,https://archive.org/details/dli.ernet.199817/
+557,Rakshashi/राक्षसी,त्रिजटा,4,1,https://archive.org/details/dli.ernet.199817/
+558,Vimana/विमान,पुष्पक,4,1,https://archive.org/details/dli.ernet.199817/
+559,Bunch of Cities,त्रिपुर,4,1,https://archive.org/details/dli.ernet.199817/
+560,Loka/लोक,स्वर्ग,4,1,https://archive.org/details/dli.ernet.199817/
+561,Rakshasa,त्रिशिरा 1,4,1,https://archive.org/details/dli.ernet.199817/
+562,Rakshasa,त्रिशिरा 2,4,1,https://archive.org/details/dli.ernet.199817/
+563,Aditya,त्वष्टा,4,1,https://archive.org/details/dli.ernet.199817/
+564,Devi/देवी,सुप्रभा,4,1,https://archive.org/details/dli.ernet.199817/
+565,Rakshasa,दण्ड 1,4,1,https://archive.org/details/dli.ernet.199817/
+566,Human,दण्ड 2,4,1,https://archive.org/details/dli.ernet.199817/
+567,Town,मधुमन्त,4,1,https://archive.org/details/dli.ernet.199817/
+568,Demi-god,दण्डिन्,4,1,https://archive.org/details/dli.ernet.199817/
+569,Monkey/वानर,दधिवक्त्र,4,1,https://archive.org/details/dli.ernet.199817/
+570,Devi/देवी,दानू,4,1,https://archive.org/details/dli.ernet.199817/
+571,Human,दन्तवक्त्र,4,1,https://archive.org/details/dli.ernet.199817/
+573,Human,भीम,4,1,https://archive.org/details/dli.ernet.199817/
+574,Human,दमयन्ती,4,1,https://archive.org/details/dli.ernet.199817/
+575,Human,नैषध,4,1,https://archive.org/details/dli.ernet.199817/
+576,Country/जनपद,दरद,4,1,https://archive.org/details/dli.ernet.199817/
+577,Monkey/वानर,दरीमुख,4,1,https://archive.org/details/dli.ernet.199817/
+578,Mountain,दुर्दर,4,1,https://archive.org/details/dli.ernet.199817/
+579,Residential Place,आश्रम 2,4,1,https://archive.org/details/dli.ernet.199817/
+580,Cluster of towns,दशार्ण,4,1,https://archive.org/details/dli.ernet.199817/
+581,Land,दाक्षिणात्य,4,1,https://archive.org/details/dli.ernet.199817/
+582,Race/जाति,दानवाः,4,1,https://archive.org/details/dli.ernet.199817/
+583,Hill/पर्वतः,शिशिर,4,1,https://archive.org/details/dli.ernet.199817/
+584,Human,दिलिप,4,1,https://archive.org/details/dli.ernet.199817/
+585,Human,दीर्घायु,4,1,https://archive.org/details/dli.ernet.199817/
+586,Asura,दुन्दुभि 1,4,1,https://archive.org/details/dli.ernet.199817/
+587,Asura,मायाविन्,4,1,https://archive.org/details/dli.ernet.199817/
+588,Asura,दुन्दुभि 2,4,1,https://archive.org/details/dli.ernet.199817/
+589,Asura,मय,4,1,https://archive.org/details/dli.ernet.199817/
+590,Asura,हेमा,4,1,https://archive.org/details/dli.ernet.199817/
+591,Asura,मन्दोदरी,4,1,https://archive.org/details/dli.ernet.199817/
+592,Rakshasa,दुर्जय,4,1,https://archive.org/details/dli.ernet.199817/
+593,Rakshasa,दुर्धर 1,4,1,https://archive.org/details/dli.ernet.199817/
+594,Monkey/वानर,दुर्धर 2,4,1,https://archive.org/details/dli.ernet.199817/
+595,type of god,वसु 1,4,1,https://archive.org/details/dli.ernet.199817/
+596,Rakshasa,दुर्धर्ष,4,1,https://archive.org/details/dli.ernet.199817/
+597,Rakshasa,समुन्नत,4,1,https://archive.org/details/dli.ernet.199817/
+598,Monkey/वानर,दुर्मुख 1,4,1,https://archive.org/details/dli.ernet.199817/
+599,Rakshasa,दुर्मुख 2,4,1,https://archive.org/details/dli.ernet.199817/
+600,Rakshashi/राक्षसी,दुर्मुखी,4,1,https://archive.org/details/dli.ernet.199817/
+601,Rishi,दुर्वासा,4,1,https://archive.org/details/dli.ernet.199817/
+602,King,दुष्यन्त,4,1,https://archive.org/details/dli.ernet.199817/
+603,Rakshasa,दूषण,4,1,https://archive.org/details/dli.ernet.199817/
+604,Human,दृढनेत्र,4,1,https://archive.org/details/dli.ernet.199817/
+605,Gana/गण,देवाः,4,1,https://archive.org/details/dli.ernet.199817/
+606,Human,देवमीढ,4,1,https://archive.org/details/dli.ernet.199817/
+607,Human,कीर्तिरथ,4,1,https://archive.org/details/dli.ernet.199817/
+608,Human,विवुध,4,1,https://archive.org/details/dli.ernet.199817/
+609,Human,देवयानी,4,1,https://archive.org/details/dli.ernet.199817/
+610,Human,देवरात 1,4,1,https://archive.org/details/dli.ernet.199817/
+611,Human,निमि,4,1,https://archive.org/details/dli.ernet.199817/
+612,Human,देवरात 2,4,1,https://archive.org/details/dli.ernet.199817/
+613,Human,बृहद्रथ,4,1,https://archive.org/details/dli.ernet.199817/
+614,Devi/देवी,देववती,4,1,https://archive.org/details/dli.ernet.199817/
+615,Rakshasa,सुकेश,4,1,https://archive.org/details/dli.ernet.199817/
+617,Devi/देवी,देववर्णिनी,4,1,https://archive.org/details/dli.ernet.199817/
+618,Range of hills/पर्वतश्रेणी,देवसख,4,1,https://archive.org/details/dli.ernet.199817/
+619,Rakshasa,देवान्तक,4,1,https://archive.org/details/dli.ernet.199817/
+620,place,द्राविड,4,1,https://archive.org/details/dli.ernet.199817/
+621,Country/जनपद,द्रुमकुल्य,4,1,https://archive.org/details/dli.ernet.199817/
+622,Hill/पर्वतः,द्रोण,4,1,https://archive.org/details/dli.ernet.199817/
+623,Rakshasa,द्विजिह्व,4,1,https://archive.org/details/dli.ernet.199817/
+624,Rakshasa,दंष्ट्र,4,1,https://archive.org/details/dli.ernet.199817/
+625,Doctor/वैद्य,धन्वन्तरि,4,1,https://archive.org/details/dli.ernet.199817/
+626,God,धर्म,4,1,https://archive.org/details/dli.ernet.199817/
+627,Human,धर्मपाल,4,1,https://archive.org/details/dli.ernet.199817/
+628,Rishi,धर्मभृत्,4,1,https://archive.org/details/dli.ernet.199817/
+629,Lake,पञ्चाप्सर,4,1,https://archive.org/details/dli.ernet.199817/
+630,Village,धर्मवर्धन,4,1,https://archive.org/details/dli.ernet.199817/
+631,River,कुटिकोष्ठिका,4,1,https://archive.org/details/dli.ernet.199817/
+632,Town,धर्मारण्य,4,1,https://archive.org/details/dli.ernet.199817/
+633,Rakshashi/राक्षसी,धान्यमालिनी,4,1,https://archive.org/details/dli.ernet.199817/
+634,Hill/पर्वतः,धूम्रगिरि,4,1,https://archive.org/details/dli.ernet.199817/
+635,Rakshasa,धूम्राक्ष,4,1,https://archive.org/details/dli.ernet.199817/
+636,Human,सुचन्द्र,4,1,https://archive.org/details/dli.ernet.199817/
+637,Human,धूम्राश्व,4,1,https://archive.org/details/dli.ernet.199817/
+638,Human,सृञ्जय,4,1,https://archive.org/details/dli.ernet.199817/
+640,Human,धृतराष्ट्री,4,1,https://archive.org/details/dli.ernet.199817/
+641,Bird,हंस,4,1,https://archive.org/details/dli.ernet.199817/
+642,Human,धृति,4,1,https://archive.org/details/dli.ernet.199817/
+643,Human,धृष्टकेतु,4,1,https://archive.org/details/dli.ernet.199817/
+644,Human,सुधृति,4,1,https://archive.org/details/dli.ernet.199817/
+645,Human,हर्यश्व,4,1,https://archive.org/details/dli.ernet.199817/
+646,Human,धृष्टि,4,1,https://archive.org/details/dli.ernet.199817/
+647,Rishi,धौम्य,4,1,https://archive.org/details/dli.ernet.199817/
+648,Rakshasa,ध्वजग्रीव,4,1,https://archive.org/details/dli.ernet.199817/
+649,Devi/देवी,नता,4,1,https://archive.org/details/dli.ernet.199817/
+650,Devi/देवी,शुकी,4,1,https://archive.org/details/dli.ernet.199817/
+651,Human,नन्दन 1,4,1,https://archive.org/details/dli.ernet.199817/
+652,Forest/अरण्यम्,नन्दन 2,4,1,https://archive.org/details/dli.ernet.199817/
+653,God,नन्दिन्,4,1,https://archive.org/details/dli.ernet.199817/
+655,Town/ पुरी,नन्दीग्राम,4,1,https://archive.org/details/dli.ernet.199817/
+656,Daitya,नमुचि 1,4,1,https://archive.org/details/dli.ernet.199817/
+657,Rishi,नमुचि 2,4,1,https://archive.org/details/dli.ernet.199817/
+658,Human,नरक 1,4,1,https://archive.org/details/dli.ernet.199817/
+659,Human,कालका,4,1,https://archive.org/details/dli.ernet.199817/
+660,Hill/पर्वतः,वराह,4,1,https://archive.org/details/dli.ernet.199817/
+662,Town/ पुरी,प्राग्ज्योतिष,4,1,https://archive.org/details/dli.ernet.199817/
+663,Rakshasa,नरक 2,4,1,https://archive.org/details/dli.ernet.199817/
+664,Class of kirata,नरव्याघ्र,4,1,https://archive.org/details/dli.ernet.199817/
+665,Rakshasa,नरान्तक,4,1,https://archive.org/details/dli.ernet.199817/
+666,River,नर्मदा 2,4,1,https://archive.org/details/dli.ernet.199817/
+667,Monkey/वानर,नल,4,1,https://archive.org/details/dli.ernet.199817/
+668,God,विश्वकर्मा,4,1,https://archive.org/details/dli.ernet.199817/
+669,Human,नलकुबेर/नलकुबर,4,1,https://archive.org/details/dli.ernet.199817/
+670,Nymph/अप्सरा,रम्भा,4,1,https://archive.org/details/dli.ernet.199817/
+671,River,नलिनी,4,1,https://archive.org/details/dli.ernet.199817/
+672,Lake,विन्दु,4,1,https://archive.org/details/dli.ernet.199817/
+673,Deva,नहुष 1,4,1,https://archive.org/details/dli.ernet.199817/
+674,Nymph/अप्सरा,नागदत्ता,4,1,https://archive.org/details/dli.ernet.199817/
+675,Deva,नागराज,4,1,https://archive.org/details/dli.ernet.199817/
+676,temple,मन्दिर,4,1,https://archive.org/details/dli.ernet.199817/
+677,Deva,नारद,4,1,https://archive.org/details/dli.ernet.199817/
+678,holy place/ पवित्र स्थान,निकुम्भिला,4,1,https://archive.org/details/dli.ernet.199817/
+679,Devi/देवी,निद्रा,4,1,https://archive.org/details/dli.ernet.199817/
+680,Class of Daityas,निवात,4,1,https://archive.org/details/dli.ernet.199817/
+681,Rishi,निशाकर,4,1,https://archive.org/details/dli.ernet.199817/
+682,Hill/पर्वतः,विन्ध्य,4,1,https://archive.org/details/dli.ernet.199817/
+683,Rakshasa,निशुम्भक,4,1,https://archive.org/details/dli.ernet.199817/
+684,Tribe/जनजाति,निषाद,4,1,https://archive.org/details/dli.ernet.199817/
+685,Bird,क्रौञ्च 3,4,1,https://archive.org/details/dli.ernet.199817/
+686,King,नृग,4,1,https://archive.org/details/dli.ernet.199817/
+687,Rishi,नृषङ्गु,4,1,https://archive.org/details/dli.ernet.199817/
+688,Rakshasa,पञ्चजन,4,1,https://archive.org/details/dli.ernet.199817/
+689,Nidhi/निधि,पद्म 1,4,1,https://archive.org/details/dli.ernet.199817/
+690,Regional Elephant/दिग्गज,पद्म 2,4,1,https://archive.org/details/dli.ernet.199817/
+691,Hill/पर्वतः,पद्माचल,4,1,https://archive.org/details/dli.ernet.199817/
+692,Monkey/वानर,पनस 1,4,1,https://archive.org/details/dli.ernet.199817/
+693,Hill/पर्वतः,पारियात्र,4,1,https://archive.org/details/dli.ernet.199817/
+694,Rakshasa,पनस 2,4,1,https://archive.org/details/dli.ernet.199817/
+695,Lake,पम्पा,4,1,https://archive.org/details/dli.ernet.199817/
+696,Rakshasa,परुस,4,1,https://archive.org/details/dli.ernet.199817/
+697,Epithet,पर्जन्य,4,1,https://archive.org/details/dli.ernet.199817/
+698,Monkey/वानर,शरभ,4,1,https://archive.org/details/dli.ernet.199817/
+699,Rishi,पर्वत,4,1,https://archive.org/details/dli.ernet.199817/
+700,military/सेना,पह्लवा(बहु.),4,1,https://archive.org/details/dli.ernet.199817/
+701,Devine Cow,सुरभि,4,1,https://archive.org/details/dli.ernet.199817/
+702,Country/जनपद,पाञ्चाल,4,1,https://archive.org/details/dli.ernet.199817/
+703,Town/ पुरी,पाण्ड्य 1,4,1,https://archive.org/details/dli.ernet.199817/
+704,Country/जनपद,पाण्ड्य 2,4,1,https://archive.org/details/dli.ernet.199817/
+705,Sea/सागर,पश्चिमसमुद्र,4,1,https://archive.org/details/dli.ernet.199817/
+706,River,पावनी,4,1,https://archive.org/details/dli.ernet.199817/
+707,Demi-god,पिङ्गल,4,1,https://archive.org/details/dli.ernet.199817/
+708,Loka/लोक,पितृलोक,4,1,https://archive.org/details/dli.ernet.199817/
+709,demon,पिशाच,4,1,https://archive.org/details/dli.ernet.199817/
+710,Rakshasa,पिशाच 1,4,1,https://archive.org/details/dli.ernet.199817/
+711,Nymph/अप्सरा,पुण्डरीका,4,1,https://archive.org/details/dli.ernet.199817/
+712,Rakshashi/राक्षसी,पुञ्जिकस्थला,4,1,https://archive.org/details/dli.ernet.199817/

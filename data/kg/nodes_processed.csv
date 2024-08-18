@@ -1,0 +1,679 @@
+:ID,:LABEL,lemma
+1,Town,अयोध्या
+2,Kingdom,कोसल
+3,River,शरयू
+4,Human,अंशुमान
+5,Human,राम
+6,Human,दशरथ
+7,Human,ऋष्यशृङ्ग
+8,Human,जनक 1
+9,Human,सुमन्त्र
+10,Human,भरत
+11,Human,ऋषभ
+12,Village,अंशुधान
+13,Rakshasa,अकम्पन
+14,Human,अकोप
+15,Rakshasa,अक्ष
+16,Deva,अग्नि
+17,Rishi,अगस्ति
+18,Rakshasa,अग्निकेतु
+19,Human,अग्निवर्ण
+20,Human,मनु
+21,Human,मरीचि
+22,Human,कश्यप
+24,Human,विवस्वान्
+25,Human,इक्ष्वाकु
+26,Human,कुक्षि
+27,Human,विकुक्षि
+28,Human,बाण
+29,Human,अनरण्य
+30,Human,पृथु
+31,Human,त्रिशङ्क
+32,Human,धुन्धुमार
+33,Human,युवनाश्व
+34,Human,मान्धाता
+35,Human,सुसन्धि
+36,Human,ध्रुवसन्धि
+37,Human,प्रसेनजित्
+38,Human,भरत-१
+39,Human,असित
+40,Kingdom,हैहय
+41,Kingdom,तालजङ्घ
+42,Kingdom,शशबिन्दु
+43,Human,सगर
+45,Human,दिलीप
+46,Human,भगीरथ
+47,Human,ककुत्स्थ
+49,Human,प्रवृद्ध
+50,Human,कल्माषपाद
+51,Human,शङ्खण
+52,Human,सुदर्शन
+53,Human,शीघ्रग
+54,Human,मरु
+55,Human,प्रशुश्रुक
+56,Human,अम्बरीष
+57,Human,नहुष
+58,Human,ययाति
+59,Human,नाभाग
+60,Human,अज
+61,Human,नेमि
+62,Human,लक्ष्मण
+63,Human,शत्रुघ्न
+64,Deva,ब्रह्मा
+65,Human,त्रिशङ्कु
+66,Human,वैवस्वत
+67,Human,प्रजापति
+68,Epithet,वैवस्वत
+69,Epithet,प्रजापति
+70,Epithet,दशरथ
+71,Epithet,पृथिवीपति
+72,Human,कालिन्दी
+73,Human,च्यवन
+74,Kula,भार्गव
+76,Human,(असितभार्या२)
+77,Mountain,हिमवत्
+78,Human,असमञ्ज
+79,Gana,देव
+80,Gana,राक्षस
+81,Epithet,कल्माषपाद
+82,Human,रघु
+83,‍‍quality,पुरुषादक
+84,‍‍quality,प्रभूतधनधान्यवान्
+85,Epithet,मानवेन्द्र
+86,Unit,१२ योजनानि
+87,Unit,३ योजन
+88,‍‍quality,सुविभक्तमहापथा
+89,‍‍quality,श्रीमती
+90,Road,राजमार्ग
+91,‍‍quality,कवाटतोरणवती
+92,‍‍quality,सुविभक्तान्तरापणा
+93,‍‍quality,सर्वयन्त्रायुधवती
+94,‍‍quality,सुविभक्त
+95,‍‍quality,मुक्तपुष्पावकीर्ण
+96,‍‍quality,जलसिक्त
+97,Professional,शिल्पी
+98,Professional,सूत
+99,Professional,मागध
+100,Weapon,शतघ्नी
+102,Unit,१०० शत
+103,‍‍quality,उच्चाट्टालध्वजवती
+104,Professional,अकोप
+105,River,गङ्गा
+106,Rishi,अगस्त्य
+107,God,अग्नि
+108,Monkey,नील
+109,Rishi,अगस्त्यभ्राता
+110,Rishi,सुतीक्ष्ण
+111,Kingdom,अङ्ग
+112,King,रोमपाद
+113,Prince,अङ्गद
+114,Monkey,वालिन्
+115,Monkey,तारा
+116,Monkey,अङ्गद
+117,Human,अङ्गद
+118,Capital,अङ्गदीया
+119,Kingdom,कारुपथ
+120,City,अङ्गलेपा
+121,Rakshashi,अङ्गारका
+122,Prajapati,अङ्गिरस
+123,Monkey,हनुमान्
+124,Hill,अञ्जन
+125,Elephant,अञ्जन
+126,Shape,अष्टापद
+127,Rakshasa,यूपाक्ष
+128,Rakshasa,रावण
+129,Rakshasa,कुम्भकर्ण
+130,Rakshasa,कुम्भ
+131,Rakshasa,निकुम्भ
+132,Monkey,मैन्द
+133,Forest,दण्डक
+134,Monkey,सुषेण
+135,City,अग्निलेप
+136,Monkey,सुग्रीव
+137,Part_of_a_sea,दक्षिणसमुद्र
+139,Monkey,केशरी
+140,Apsara,अञ्जना
+141,Monkey,केसरी
+142,Rakshasa,अतिकाय
+144,Rishi,अत्रि 1
+145,Human,अनसूया
+146,Rishi,अत्रि 2
+147,Goddess,अदिति
+148,God,इन्द्र
+149,Rishi,कश्यप
+150,Rakshasa,अनल
+151,Rakshasa,विभीषण
+152,Rakshasa,माली
+153,Rakshashi,वसुदा
+154,Prajapati,दक्ष
+155,Rishi,दक्ष
+156,God,प्रजापति
+157,Human,अनला 1
+158,Rakshashi,अनला 2
+159,Rakshasa,माल्यवान्
+160,Monkey,अनङ्ग
+161,Rishi,अनन्तदेव
+162,Hill,जातरूपशिला
+163,Rakshasa,अनिल
+165,Danava,अनुह्लाद
+166,Country,अन्ध्र
+167,Danava,अन्धक
+168,Deva,रुद्र
+169,Hill,अपरपर्वत
+170,Village,अभिकाल
+171,Messenger,दूत
+172,Rishi,वसिष्ठ
+173,Maharshi,वसिष्ठ
+174,Town,अमरावती
+175,Hill,अयोमुख
+176,Rakshashi,अयोमुखी
+177,Rishi,उशना
+178,Human,अरजा
+179,Hill,अरिष्ट
+180,King,सगर
+181,Human,सुमति
+182,Prajapati,अरिष्टनेमि
+183,Tree,अर्जुनक
+184,Insect,इन्द्रगोप
+185,Animal,ईहामृग
+187,Devine_bird,अरुण
+188,Devine_bird,गरुड
+189,Human,विनता
+190,Devine_bird,जटायु
+191,Devine_bird,सम्पाति
+192,Human,अरुन्धती
+193,Monkey,अर्क
+194,Monkey,अर्चिष्मान्
+195,Direction,पश्चिमदिशा
+196,Monkey,अर्चिमाल्यस्
+197,King,अर्जुन
+198,King,कार्तवीर्य
+199,Rishi,जमदग्नि
+200,Deva,विष्णु
+201,King,भरत
+202,Human,अर्थसाधक
+203,Forest,अलक्षित
+204,Aditya,अर्यमा
+205,Human,कौशल्या
+206,Human,अलम्बुषा
+207,Human,विशाल
+208,King,अलर्क
+209,Human,कैकेयी
+210,Direction,दक्षिणदिशा
+211,Town,अवन्ति
+212,Town,अवन्ती
+213,Rakshasa,अविन्ध्य
+214,Rakshasa,अशनिप्रभ
+215,Monkey,द्विविद
+216,Human,अशोक
+217,Garden,अशोकवाटिका
+218,Human,सीता
+219,Rishi,अश्व
+220,Residential_place,आश्रम
+221,Human,दनु
+222,Danava,अश्वग्रीव
+223,Human,अश्वपति
+224,Deva,अश्विन द्वय
+225,City,अश्म
+226,Loka,रसातल
+227,Hill,अस्ताचल
+229,Human,अष्टावक्र
+230,Human,कहोल
+231,Human,अमूर्तरजस
+232,Human,कुश
+233,Human,वैदर्भी
+234,Human,अहल्या
+235,Rishi,गौतम
+236,Deva,आदित्यगण
+237,City,आब्रवन्ती
+238,Tribe,आभीर
+239,Direction,उत्तरदिशा
+240,Human,आयु
+241,King,पुरूपवस्
+242,Nymph,उर्वशी
+243,Sea,इक्षु
+244,Iland,द्विप
+246,River,इक्षुमती
+247,Town,साङ्काश्य
+248,Linage,इक्ष्वाकु
+249,Rakshasa,वृत्र
+250,Monkey,इन्द्रजानु
+251,Rakshasa,इन्द्रशत्रु
+253,Country,इन्द्रशिरा
+254,Elephant,ऐरावत
+255,Prajapati,कर्दम
+256,King,इल
+257,Kingdom,बाल्ही
+258,Rakshasa,इल्वल
+259,Horse,उच्चैःश्रवा
+260,God,सूर्य
+261,City,उज्जिहान
+262,Tree,प्रियक
+263,Country,उत्कल
+264,Hill,उद्याचल
+265,Human,उदावसु
+266,Human,नन्दिवर्धन
+267,Human,सुकेतु
+268,Rakshasa,उन्मत्त
+269,Human,सुन्दरी
+270,Gandharva,नर्मदा 2
+271,Deva,उपेन्द्र
+272,Goddess,उमा
+273,Mountain,हिमवान्
+274,Mountain,मेरु
+275,Human,मेना
+276,Human,उर्मिला
+277,Human,कुशध्वज
+278,Monkey,उल्का-मुख
+279,Deva,हुताशन
+280,Hill,उशीरबीजम्
+281,Monkey,प्रमाथि
+282,Cave,ऋक्ष
+283,Monkey,ऋक्षराज/ऋक्षराट्
+284,Hill,ऋक्षवान्
+285,Riksha,धूम्र
+286,Rishi,ऋचीक 1
+287,Human,सत्यवती
+288,Rishi,विश्वामित्र
+289,Rishi,ऋचीक 2
+290,Hill,ऋषभ
+291,Sea,क्षीरसागर
+292,Monkey,विनत
+293,Range_of_hills,ऋषभ 1
+294,Gandharva,रोहित
+295,King,ऋषभ 2
+296,Monkey,ऋषभ 3
+297,Rakshasa,मत्त
+298,Monkey,ऋषभ-स्कन्ध
+299,Rakshasa,इन्द्रजित्
+300,Monkey,ऋषि-पुत्र
+301,Country,ऋष्टिक
+302,Hill,ऋष्यमुख
+303,Maharshi,विभाण्डक
+304,Rishi,काश्यप
+305,Rakshashi,एकजटा
+306,Village,एकसाल
+307,River,स्थाणुमती
+308,Human,इरावती
+309,City,ऐलधान
+310,Rishi,ओङ्कार
+311,Rishi,बुध
+312,Riksha,जाम्बवान्
+313,Hill,ओषधि पर्वत
+314,Monkey,हनूमान्
+316,Rishi,कण्डु 1
+317,Cow,गौः
+318,Maharshi,कण्डु 2
+319,Rishi,कण्व
+320,Human,कद्रु
+321,Human,क्रोधवशा
+322,Place,कनखल
+323,Deva,कन्दर्प
+324,Deva,कामदेव
+325,Deva,शङ्कर
+326,Rakshasa,कपट
+327,Incarnation,कपिल
+328,Human,पुत्राः
+329,River,कपीवती
+330,Rakshasa,कबन्ध
+331,Tribe,शबरी
+332,Rakshasa,कम्पन
+333,Rakshasa,करवीराक्ष
+334,Rakshasa,खर
+335,Rakshasa,कराल
+336,City,कारुष
+337,Rakshashi,ताटका
+338,Rakshasa,मारीच
+340,Rakshashi,कला
+341,Town,कलिङ्ग 1
+342,Town,कलिङ्ग 2
+343,Class_of_daityas,कवचगण
+344,Rishi,कवष
+346,Yajna,अश्वमेध
+347,Human,काकुत्स्थ
+348,City,विशाला
+349,Human,सोमदत्त
+350,Hill,काञ्चन 1
+351,Priest,काञ्चन 2
+353,Human,कात्यायन
+354,Range_of_hills,काम
+355,Monkey,शतवल
+356,Rakshasa,प्रहस्त
+357,Rakshasa,कुम्भहनु
+358,Rakshashi,कुम्भीनसी
+359,Rakshasa,मधु
+360,Rakshasa,सुमाली
+361,Rakshashi,केतुमती
+362,Country,कुरु
+363,Forest,कुरुः
+364,Rakshasa,कुबेर
+365,Garden,उद्यानम्
+366,Land,कुरुजाङ्गल
+367,Human,कुल
+368,Town,कुलिङ्गा 1
+369,Country,शरदण्ड
+371,River,कुलिङ्गा 2
+372,Maharshi,विश्रवा
+373,Brahmana,कुश 1
+374,Human,कुशाम्ब
+375,Human,कुशनाभ
+376,Human,असूर्तरजस
+377,Human,वसु
+378,Maharshi,कुशध्वज 1
+379,Maharshi,बृहस्पति
+380,Human,वेदवती
+381,Tapovan,कुशप्लव
+382,Devi,दिति
+383,Rakshasa,दैत्य
+384,Tapasya,तपस
+385,Capital,कुशावती
+386,Town,कौशाम्बी
+387,Human,कुशाश्व
+388,Human,सहदेव
+389,Rishi,कौशिक 1
+390,Country,कौशिक 2
+391,Maharshi,कौशेय
+392,Mani,कौस्तुभ
+393,Prajapati,क्रतु
+394,Monkey,क्रथन
+395,Monkey,क्रोधन
+396,Forest,क्रौञ्च 1
+397,Mountain,क्रौञ्च 2
+398,Human,क्रौञ्ची
+399,Human,ताम्रा
+400,Sea,क्षीरोद
+401,Devine_juice,अमृत
+404,Gana,असुर
+406,River,कौशिकी
+407,Prince,कुशी
+408,Residential_place,आश्रम 1
+409,Maharshi,वाल्मीकि
+410,Devi,कृत्तिका
+411,God,कार्तिकेय
+412,Prajapati,कृशाश्व
+413,Weapon,शस्त्र
+414,Mountain,कृष्णगिरि
+415,Monkey,रम्भ
+416,River,कृष्णवेणी
+417,Country,केकय
+418,Gandharvi,नर्मदा 2
+419,Country,केरल
+420,Human,केशिनी 1
+421,River,केशिनी 2
+423,Rakshashi,कैकसी
+424,Daitya,कैटभ
+425,Lake,मानस
+426,Mountain,कैलास
+427,Country,कोशल
+428,River,सरयु
+429,King,भानुमान्
+430,District,कोशकार
+431,Rakshashi,शूर्पणखा
+432,City,शृङ्गवेरपुर
+433,River,तमसा
+434,Monkey,गज
+435,Deity,गन्धर्व
+436,Yajna,पुत्रेष्टि
+437,Daitya,गन्धर्वी
+438,Devi,सुरभी
+439,Animal,अश्वाः
+440,King,गय
+441,Country,गया
+442,Rishi,गर्ग
+443,Monkey,गवय
+444,Rank,यूथपति
+445,Monkey,गवाक्ष
+446,Residential_place,भवन
+447,Human,गाधि
+448,Monkey,गन्धमादन
+449,City,गान्धार
+450,Rishi,गार्ग्य
+451,Human,युधाजित्
+453,Rishi,गालव
+454,Gandharva,ग्रामणी
+456,Town,गिरिव्रज 1
+457,Town,वसुमती
+458,Human,गिरिव्रज 2
+459,Tribe,गुह
+460,Demi-god,गुह्यक
+461,Town,गोकर्ण
+462,River,गोदावरी
+463,Forest,पञ्चवटी
+464,Gandharva,गोप
+465,Pier,गोप्रतार
+466,River,गोमती
+467,Kingdom,कोशल
+468,Human,गोमुख
+469,Human,मातलि
+470,Gandharva,गोलभ
+471,Priest,गौतम 1
+472,Town,मिथिला
+473,Rakshasa,घन
+474,Apsara,घृताची
+475,Rakshasa,घोर
+476,Rakshasa,चक्र
+477,Hill,चक्रवान्
+478,Monkey,चण्ड
+479,Society_class,चण्डाल
+480,Rakshashi,चण्डोदरी
+481,Forest,चन्दनवन
+482,Animal,वानराः
+483,Range_of_hills,चन्द्र
+484,Human,चन्द्र 1
+486,Devine_place,मल्लभूमि
+487,Human,चन्द्रकेतु
+488,Place,चन्द्रकान्त
+490,Country,चन्द्रचित्रा
+491,Tribe,चरण
+492,Animal,वानरसन्तान
+493,Hill,चित्रकूट
+494,Human,चित्ररथ 1
+495,Garden,चित्ररथ 2
+496,Forest,चित्ररथ 3
+497,Human,चूलिन्
+498,Gandharvi,सोमदा
+499,Country,चोल
+501,Maharshi,च्यवन
+502,Mountain,हिमालय
+503,Maharshi,भृगु
+504,Rakshashi,छायाग्राह
+505,Town,जटापुर
+506,Snake,जटी
+507,Human,मिथि
+508,Human,जनक 2
+509,Human,जनमेजय
+510,Place,जनस्थान
+511,Rishi,परशुराम
+512,Bow,वैष्णव
+513,Rakshasa,जम्बुमाली
+514,Continent,जम्बूद्वीप
+515,Mountain,सौमनस
+516,Human,पुत्राः 1
+517,Village,जम्बूप्रस्थ
+518,Monkey,जम्भ
+519,Country,लङ्का
+520,Human,जयन्त 1
+521,Human,जयन्त 2
+523,God,जयन्त 3
+524,Goddess,शची
+525,Devi,जया
+526,Sea,जलोद
+527,Devine_fire,बडवाग्नि
+528,Rishi,और्व
+529,Rakshasa,जव
+530,Rakshasa,विराध
+531,Rishi,जह्नु
+532,Human,जाबाली
+533,Human,जाबालि
+534,Monkey,ज्योतिर्मुख
+536,Human,तक्ष
+537,Snake,तक्षक
+538,Town,तक्षशिला
+539,Rakshasa,तपन
+541,Monkey,तरसा
+542,Rakshasa,सुन्द
+543,River,ताम्रपर्णी
+544,Town,किष्किन्धा
+545,Monkey,तारा 1
+546,Monkey,तारेय
+547,Devine_bird,तार्क्ष्य
+548,Monkey,वानरसन्तान 1
+549,Rakshasa,तिमिध्वज
+550,Rakshasa,शम्बर
+551,Gandharva,तुम्बुरु
+552,Rishi,भरद्वाज
+553,Rajarshi,तृणबिन्दु
+554,Village,तोरण
+555,Hill,त्रिकुट
+556,Brahmana,त्रिजट
+557,Rakshashi,त्रिजटा
+558,Vimana,पुष्पक
+559,Bunch_of_cities,त्रिपुर
+560,Loka,स्वर्ग
+561,Rakshasa,त्रिशिरा 1
+562,Rakshasa,त्रिशिरा 2
+563,Aditya,त्वष्टा
+564,Devi,सुप्रभा
+565,Rakshasa,दण्ड 1
+566,Human,दण्ड 2
+567,Town,मधुमन्त
+568,Demi-god,दण्डिन्
+569,Monkey,दधिवक्त्र
+570,Devi,दानू
+571,Human,दन्तवक्त्र
+573,Human,भीम
+574,Human,दमयन्ती
+575,Human,नैषध
+576,Country,दरद
+577,Monkey,दरीमुख
+578,Mountain,दुर्दर
+579,Residential_place,आश्रम 2
+580,Cluster_of_towns,दशार्ण
+581,Land,दाक्षिणात्य
+582,Race,दानवाः
+583,Hill,शिशिर
+584,Human,दिलिप
+585,Human,दीर्घायु
+586,Asura,दुन्दुभि 1
+587,Asura,मायाविन्
+588,Asura,दुन्दुभि 2
+589,Asura,मय
+590,Asura,हेमा
+591,Asura,मन्दोदरी
+592,Rakshasa,दुर्जय
+593,Rakshasa,दुर्धर 1
+594,Monkey,दुर्धर 2
+595,Type_of_god,वसु 1
+596,Rakshasa,दुर्धर्ष
+597,Rakshasa,समुन्नत
+598,Monkey,दुर्मुख 1
+599,Rakshasa,दुर्मुख 2
+600,Rakshashi,दुर्मुखी
+601,Rishi,दुर्वासा
+602,King,दुष्यन्त
+603,Rakshasa,दूषण
+604,Human,दृढनेत्र
+605,Gana,देवाः
+606,Human,देवमीढ
+607,Human,कीर्तिरथ
+608,Human,विवुध
+609,Human,देवयानी
+610,Human,देवरात 1
+611,Human,निमि
+612,Human,देवरात 2
+613,Human,बृहद्रथ
+614,Devi,देववती
+615,Rakshasa,सुकेश
+617,Devi,देववर्णिनी
+618,Range_of_hills,देवसख
+619,Rakshasa,देवान्तक
+620,Place,द्राविड
+621,Country,द्रुमकुल्य
+622,Hill,द्रोण
+623,Rakshasa,द्विजिह्व
+624,Rakshasa,दंष्ट्र
+625,Doctor,धन्वन्तरि
+626,God,धर्म
+627,Human,धर्मपाल
+628,Rishi,धर्मभृत्
+629,Lake,पञ्चाप्सर
+630,Village,धर्मवर्धन
+631,River,कुटिकोष्ठिका
+632,Town,धर्मारण्य
+633,Rakshashi,धान्यमालिनी
+634,Hill,धूम्रगिरि
+635,Rakshasa,धूम्राक्ष
+636,Human,सुचन्द्र
+637,Human,धूम्राश्व
+638,Human,सृञ्जय
+640,Human,धृतराष्ट्री
+641,Bird,हंस
+642,Human,धृति
+643,Human,धृष्टकेतु
+644,Human,सुधृति
+645,Human,हर्यश्व
+646,Human,धृष्टि
+647,Rishi,धौम्य
+648,Rakshasa,ध्वजग्रीव
+649,Devi,नता
+650,Devi,शुकी
+651,Human,नन्दन 1
+652,Forest,नन्दन 2
+653,God,नन्दिन्
+655,Town,नन्दीग्राम
+656,Daitya,नमुचि 1
+657,Rishi,नमुचि 2
+658,Human,नरक 1
+659,Human,कालका
+660,Hill,वराह
+662,Town,प्राग्ज्योतिष
+663,Rakshasa,नरक 2
+664,Class_of_kirata,नरव्याघ्र
+665,Rakshasa,नरान्तक
+666,River,नर्मदा 2
+667,Monkey,नल
+668,God,विश्वकर्मा
+669,Human,नलकुबेर/नलकुबर
+670,Nymph,रम्भा
+671,River,नलिनी
+672,Lake,विन्दु
+673,Deva,नहुष 1
+674,Nymph,नागदत्ता
+675,Deva,नागराज
+676,Temple,मन्दिर
+677,Deva,नारद
+678,Holy_place,निकुम्भिला
+679,Devi,निद्रा
+680,Class_of_daityas,निवात
+681,Rishi,निशाकर
+682,Hill,विन्ध्य
+683,Rakshasa,निशुम्भक
+684,Tribe,निषाद
+685,Bird,क्रौञ्च 3
+686,King,नृग
+687,Rishi,नृषङ्गु
+688,Rakshasa,पञ्चजन
+689,Nidhi,पद्म 1
+690,Regional_elephant,पद्म 2
+691,Hill,पद्माचल
+692,Monkey,पनस 1
+693,Hill,पारियात्र
+694,Rakshasa,पनस 2
+695,Lake,पम्पा
+696,Rakshasa,परुस
+697,Epithet,पर्जन्य
+698,Monkey,शरभ
+699,Rishi,पर्वत
+700,Military,पह्लवा(बहु.)
+701,Devine_cow,सुरभि
+702,Country,पाञ्चाल
+703,Town,पाण्ड्य 1
+704,Country,पाण्ड्य 2
+705,Sea,पश्चिमसमुद्र
+706,River,पावनी
+707,Demi-god,पिङ्गल
+708,Loka,पितृलोक
+709,Demon,पिशाच
+710,Rakshasa,पिशाच 1
+711,Nymph,पुण्डरीका
+712,Rakshashi,पुञ्जिकस्थला

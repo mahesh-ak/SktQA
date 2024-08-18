@@ -1,0 +1,13 @@
+.ipynb_checkpoints
+data/ref/*.pdf
+data/ref/sa_*
+data/1000_Ramayana_*
+models/*
+repos/*
+sa_embedding/repos/*
+sa_embedding/test/*
+sa_embedding/data/*
+sa_embedding/models/*
+sa_lemmatizer/
+SktQA/__pycache__/*
+*.env
