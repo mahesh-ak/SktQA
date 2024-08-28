@@ -20,6 +20,7 @@ import regex as re
 import argparse
 from utils import *
 import pickle
+import string
 
 
 ## Custom embedding 'fasttext' or 'glove'
@@ -113,7 +114,9 @@ class Retriever:
     def lemmatize(self, chunk, translate_only=False):
         text = chunk.replace('\n\n','\n').split('\n')
         pattern = re.compile(r'[0-9]+,[0-9]+\|[0-9]+')
+        table = str.maketrans(dict.fromkeys(string.punctuation))  # OR {key: None for key in string.punctuation}
         lines = [pattern.sub('',transliterate(line, DEVANAGARI, IAST)) for line in text]
+        lines = [line.translate(table) for line in lines]
         if translate_only:
             return ' '.join(lines)
         tokenized_text = [{'input_ids': self.tokenizer(line)['input_ids'] + [self.tokenizer.eos_token_id]} for line in lines]
@@ -184,7 +187,7 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
 
     in_df = pd.read_csv(in_file, sep='\t')
     if os.path.exists(out_file):
-        out_df = pd.read_csv(out_file, sep='\t')
+        out_df = pd.read_csv(out_file, sep='\t', dtype=str)
     else:
         out_df = in_df.copy()
 
@@ -196,7 +199,13 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
         in_df = ApplyQAChainOnDF(in_df, chain=chain, col_name= model)
         for rank in range(k):
             if (f"context_{rank}" not in out_df.columns) or (force):
-                out_df[f"context_{rank}"] = in_df.apply(lambda x: x[model]['context'].split('\n\n')[rank].replace('\t', ' '), axis=1)
+                out_df[f"new_context_{rank}"] = in_df.apply(lambda x: x[model]['context'].split('\n\n')[rank].replace('\t', ' '), axis=1)
+                if (f"context_{rank}" in out_df.columns and f"rel_{rank}" in out_df.columns):
+                    out_df[f"rel_{rank}"] = out_df.apply(lambda x:  str(int(x[f"rel_{rank}"])) if (x[f"context_{rank}"]==x[f"new_context_{rank}"]) else '', axis=1)
+
+                out_df[f"context_{rank}"] = out_df[f"new_context_{rank}"].copy()
+                del out_df[f"new_context_{rank}"]
+                    
         if not context_only:
             out_df[model] = in_df.apply(lambda x: x[model]['answer'], axis=1)
 
