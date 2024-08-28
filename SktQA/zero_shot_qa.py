@@ -11,7 +11,7 @@ def ZeroShotChain(model='gpt-4o', language='english'):
             template = "Answer the question related to Ramayana in the respective language only. Give a short, one word answer as much as possible."
     
     
-    human_template = "{question}"
+    human_template = "{question} {choices}"
 
     chat_prompt = ChatPromptTemplate.from_messages([
         ("system", template),

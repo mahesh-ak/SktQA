@@ -151,7 +151,7 @@ class Retriever:
 def RAGChain(model, retriever, k=2, context_only=False):
     template = """त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु। अपि च यथाऽवश्यम् अधः दत्त-सन्दर्भेभ्यः सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।
      सन्दर्भाः:{context}
-     प्रश्नः:{question}
+     प्रश्नः:{question} {choices}
     """
     prompt = PromptTemplate.from_template(template)
     # LLM
@@ -167,7 +167,7 @@ def RAGChain(model, retriever, k=2, context_only=False):
 
     if not context_only:
         rag_chain = (
-            {"context": context_chain, "question": RunnablePassthrough()}
+            {"context": context_chain, "question": RunnablePassthrough(), "choices": RunnablePassthrough()}
             | RunnablePassthrough.assign(answer=llm_chain)
         )
     else:
