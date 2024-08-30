@@ -178,7 +178,7 @@ def RAGChain(model, retriever, k=2, context_only=False):
     return rag_chain
 
 
-def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=True):
+def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=False):
     if out_file==None:
         out_pth = "results/rag"
         os.makedirs(out_pth, exist_ok=True)

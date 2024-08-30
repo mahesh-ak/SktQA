@@ -48,8 +48,16 @@ def get_chat_model_rag(model):
 
     return chat_model
 
+def chain_invoke(chain, inp):
+    try:
+        return chain.invoke({"question": inp['QUESTION'], "choices": inp['CHOICES']})
+    except Exception as e:
+        print(e)
+        print("Reattempting...")
+        return chain_invoke(chain, inp)
+
 def ApplyQAChainOnDF(df, chain, col_name='predicted'):
-    df[col_name] = df.progress_apply(lambda x: chain.invoke({"question": x['QUESTION'], "choices": x['CHOICES']}), axis=1)
+    df[col_name] = df.progress_apply(lambda x: chain_invoke(chain,x), axis=1)
     return df
 
 diatrics_corr = {'r'+'̣':'ṛ', 's'+'̣':'ṣ', 'r'+'̣'+'̄': 'ṝ', 't'+'̣':'ṭ', 'd'+'̣':'ḍ', 
