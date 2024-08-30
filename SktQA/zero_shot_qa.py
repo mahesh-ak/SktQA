@@ -5,10 +5,10 @@ from langchain_core.prompts.chat import ChatPromptTemplate
 def ZeroShotChain(model='gpt-4o', language='english'):
     match language:
         case 'sanskrit':
-            template = "त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु।"
+            template = "त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन यदि उत्तरे कारणं नापेक्षितम्। कथम् किमर्थम् इत्यादिषु एकेन लघु वाक्येन उत्तरं देहि अत्र तु एक-पद-नियमः नास्ति। "
         case 'english'| _:
             print("Warning! Unspecified language, defaulting prompt to English")
-            template = "Answer the question related to Ramayana in the respective language only. Give a short, one word answer as much as possible."
+            template = "Answer the question related to Ramayana in the respective language only. Give a single word answer if reasoning is not demanded in the answer. With regards to how-questions, answer in a short phrase, there is no single word restriction."
     
     
     human_template = "{question} {choices}"
@@ -28,7 +28,7 @@ def ZeroShotChain(model='gpt-4o', language='english'):
 
 def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None):
     if lang==None:
-        lang = os.path.split(in_file)[-1]
+        lang = os.path.split(in_file)[-1].replace(".tsv","")
     if out_file==None:
         out_pth = "results/zero_shot"
         os.makedirs(out_pth, exist_ok=True)
@@ -65,8 +65,9 @@ def run_zero_shot_default(in_file=None, model=None, **kwargs):
         models = [model]
     
     for fl in f_pths:
-        for m in models:
-            run_zero_shot_qa(fl,m, **kwargs)
+        if os.path.exists(fl):
+            for m in models:
+                run_zero_shot_qa(fl,m, **kwargs)
     return
 
     

@@ -33,15 +33,15 @@ def get_chat_model(model):
 
 def get_chat_model_rag(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:
-        chat_model = ChatOpenAI(model_name=model, temperature=0)
+        chat_model = ChatOpenAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['claude-3-5-sonnet-20240620']:
-        chat_model = ChatAnthropic(model_name=model, temperature=0)
+        chat_model = ChatAnthropic(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['gemini-pro', 'gemini-1.5-pro']:
-        chat_model = ChatVertexAI(model_name=model, temperature=0)
+        chat_model = ChatVertexAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['mistral-large-latest']:
-        chat_model = ChatMistralAI(model_name=model,api_key=os.environ['MISTRAL_API_KEY'], temperature=0)
+        chat_model = ChatMistralAI(model_name=model,api_key=os.environ['MISTRAL_API_KEY'], temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['llama-v3p1-405b-instruct', 'llama-v3p1-70b-instruct','llama-v3p1-8b-instruct']:
-        chat_model = ChatFireworks(model_name=f"accounts/fireworks/models/{model}", api_key=os.environ['FIREWORKS_API_KEY'], temperature=0)
+        chat_model = ChatFireworks(model_name=f"accounts/fireworks/models/{model}", api_key=os.environ['FIREWORKS_API_KEY'], temperature=0, max_tokens= MAX_LENGTH)
     else:
         print(f"Error: Unsupported model - {model}")
         exit(1)

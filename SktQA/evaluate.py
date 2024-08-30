@@ -25,7 +25,7 @@ def eval_file(in_file):
         print('Error: gold answers should be present in column ANSWER')
         exit(1)
     
-    methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER']) and ('context' not in col)]
+    methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col)]
     em_scores = {}
     for m in methods:
         em = df.apply(lambda x: str(x['ANSWER']).strip() == str(x[m]).strip(), axis=1)
