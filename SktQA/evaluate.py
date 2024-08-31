@@ -3,16 +3,22 @@ import argparse
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-
+from utils import MAX_K
 
 def plot_k(data):
     for key, values in data.items():
         plt.plot(values.keys(), values.values(), label=key, marker='o')
+    
+    err = 0.007
+    avg = 0.348
+    plt.axhline(y = avg, color = 'k', linestyle = '-', label='zero-shot baseline') 
+    plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
+    plt.axhline(y = avg-err, color = 'k', linestyle = '--') 
 
     # Labels and title
     plt.xlabel('k')
     plt.ylabel('EM score')
-    plt.xticks(range(1,4))
+    plt.xticks(range(1,MAX_K+1))
     plt.title('Effect of k value in RAG for GPT-4o')
     plt.legend()
     plt.grid(True)
@@ -28,6 +34,7 @@ def eval_file(in_file):
     
     methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col)]
     em_scores = {}
+    df = df[(df['ID'] < 145) | (df['ID'] > 193)]
     for m in methods:
         em = df.apply(lambda x: str(x['ANSWER']).strip() == str(x[m]).strip(), axis=1)
         em_scores[m] = round(em.sum()/len(em), 3)
@@ -100,7 +107,7 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
 
     if rag:
         f_pth = "results/rag/{embedding}_2.tsv"
-        emb = ['bm25', 'fasttext', 'glove']
+        emb = ['bm25', 'fasttext','glove']
         scores = {}
         methods = set()
         for e in emb:
@@ -119,11 +126,11 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
         scores = {}
         for e in emb:
             scores[e] = {}
-            for k in range(1,4):
+            for k in range(1,MAX_K+1):
                 e_f_pth = f_pth.format(embedding=e, k=k)
                 if os.path.exists(e_f_pth):
                     scores[e][k] = eval_file(e_f_pth)['gpt-4o']
-        res_txt = print_table_row_wise(scores, emb, list(range(1,4)), row_head='Retriever')
+        res_txt = print_table_row_wise(scores, emb, list(range(1,MAX_K+1)), row_head='Retriever')
         print(res_txt)
         plot_k(scores)
         with open("results/rag/eval_table_gpt4o.tsv",'w') as fp:

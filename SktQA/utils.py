@@ -12,7 +12,8 @@ tqdm.pandas()
 load_dotenv()
 
 MAX_LENGTH = 64
-DEFAULT_MODELS = ['gpt-4o', 'claude-3-5-sonnet-20240620', 'gemini-1.5-pro', 'mistral-large-latest', 'llama-v3p1-405b-instruct']
+MAX_K = 4
+DEFAULT_MODELS = ['gpt-4o', 'claude-3-5-sonnet-20240620', 'mistral-large-latest', 'llama-v3p1-405b-instruct', 'gemini-1.5-pro']
 
 def get_chat_model(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:

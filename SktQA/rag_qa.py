@@ -217,7 +217,6 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
     return
 
 def run_rag_default(in_file=None, model=None, emb=None, k=None, **kwargs):
-    MAX_K = 3
 
     if in_file == None:
         in_file = 'data/qa_set/sanskrit.tsv'
