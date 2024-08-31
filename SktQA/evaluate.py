@@ -2,6 +2,7 @@ import pandas as pd
 import argparse
 import os
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def plot_k(data):
@@ -73,16 +74,26 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
         return
     
     if zero_shot:
-        f_pth = "results/zero_shot/{lang}.tsv"
+        f_pth = "results/zero_shot/{lang}_{n}.tsv"
         lang = ['sanskrit','telugu','hindi','bengali','marathi']
         scores = {}
         methods = set()
         for l in lang:
-            l_f_pth = f_pth.format(lang=l)
-            if os.path.exists(l_f_pth):
-                scores[l] = eval_file(l_f_pth)
-                methods = methods.union(list(scores[l].keys()))
-        res_txt = print_table_col_wise(scores, list(methods), lang, row_head='LLM')
+            for n in range(3):
+                l_f_pth = f_pth.format(lang=l, n=n)
+                scores_ = {}
+                if os.path.exists(l_f_pth):
+                    if l not in scores:
+                        scores[l] = {}
+                    scores_ = eval_file(l_f_pth)
+                    methods = methods.union(list(scores[l].keys()))
+                    for k,v in scores_.items():
+                        if k not in scores[l]:
+                            scores[l][k] = [v]
+                        else:
+                            scores[l][k].append(v)
+        scores_w_bars = {l: {k:f"{round(np.mean(v),3)} ({round(np.std(v),3)})" for k,v in d.items()} for l,d in scores.items()}
+        res_txt = print_table_col_wise(scores_w_bars, list(methods), lang, row_head='LLM')
         print(res_txt)
         with open("results/zero_shot/eval_table.tsv",'w') as fp:
             fp.write(res_txt)   
