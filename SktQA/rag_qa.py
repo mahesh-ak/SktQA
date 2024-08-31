@@ -149,7 +149,7 @@ class Retriever:
         self.retrieve = retriever
 
 def RAGChain(model, retriever, k=2, context_only=False):
-    template = """त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु। अपि च यथाऽवश्यम् अधः दत्त-सन्दर्भेभ्यः सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।
+    template = """त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु। अपि च यथाऽवश्यम् अधः दत्त-सन्दर्भेभ्यः एकतमात् सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।
      सन्दर्भाः:{context}
      प्रश्नः:{question} {choices}
     """
@@ -178,7 +178,7 @@ def RAGChain(model, retriever, k=2, context_only=False):
     return rag_chain
 
 
-def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=True):
+def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=False):
     if out_file==None:
         out_pth = "results/rag"
         os.makedirs(out_pth, exist_ok=True)
