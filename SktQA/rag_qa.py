@@ -178,7 +178,7 @@ def RAGChain(model, retriever, k=2, context_only=False):
     return rag_chain
 
 
-def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=False):
+def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=True):
     if out_file==None:
         out_pth = "results/rag"
         os.makedirs(out_pth, exist_ok=True)
@@ -199,9 +199,12 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
         in_df = ApplyQAChainOnDF(in_df, chain=chain, col_name= model)
         for rank in range(k):
             if (f"context_{rank}" not in out_df.columns) or (force):
-                out_df[f"new_context_{rank}"] = in_df.apply(lambda x: x[model]['context'].split('\n\n')[rank].replace('\t', ' '), axis=1)
+                out_df[f"new_context_{rank}"] = in_df.apply(lambda x: x[model]['context'].split('\n\n')[rank].replace('\t', ' ').replace('\n',' '), axis=1)
                 if (f"context_{rank}" in out_df.columns and f"rel_{rank}" in out_df.columns):
-                    out_df[f"rel_{rank}"] = out_df.apply(lambda x:  str(int(x[f"rel_{rank}"])) if (x[f"context_{rank}"]==x[f"new_context_{rank}"]) else '', axis=1)
+                    out_df[f"rel_{rank}"] = out_df.apply(
+                        lambda x:  [str(int(x[f"rel_{y}"])) for y in range(k) if x[f"context_{y}"] == x[f"new_context_{rank}"]] ,
+                        axis=1)
+                    out_df[f"rel_{rank}"] = out_df.apply(lambda x: x[f"rel_{rank}"][0] if len(x[f"rel_{rank}"])>0 else '', axis=1)
 
                 out_df[f"context_{rank}"] = out_df[f"new_context_{rank}"].copy()
                 del out_df[f"new_context_{rank}"]
