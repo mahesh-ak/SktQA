@@ -106,7 +106,7 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
             fp.write(res_txt)   
 
     if rag:
-        f_pth = "results/rag/{embedding}_2.tsv"
+        f_pth = "results/rag/{embedding}_4.tsv"
         emb = ['bm25', 'fasttext','glove']
         scores = {}
         methods = set()
