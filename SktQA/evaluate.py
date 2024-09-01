@@ -117,7 +117,7 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
                 methods = methods.union(list(scores[e].keys()))
         res_txt = print_table_row_wise(scores, emb, list(methods), row_head='Retriever')
         print(res_txt)
-        with open("results/rag/eval_table_k2.tsv",'w') as fp:
+        with open("results/rag/eval_table_k4.tsv",'w') as fp:
             fp.write(res_txt)
     
     if k_rag:
