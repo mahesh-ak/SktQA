@@ -26,6 +26,27 @@ def plot_k(data):
     # Show plot
     plt.savefig('results/rag/rag_k_plot_gpt4o.png')
 
+def eval_file_rel(in_file, rel_file):
+    df = pd.read_csv(in_file, sep='\t')
+    rel_df = pd.read_csv(rel_file,sep='\t')
+    rel_df = rel_df[['ID','rel_0','rel_1','rel_2']]
+    rel_df['rel_sum'] = rel_df.apply(lambda x: sum([x[f'rel_{k}'] for k in range(3)]),axis=1)
+    rel_df = rel_df[rel_df['rel_sum']>0][['ID']]
+
+    df = df.merge(rel_df, how='inner')
+    print('Length of relavant rows', len(df))
+    if 'ANSWER' not in df.columns:
+        print('Error: gold answers should be present in column ANSWER')
+        exit(1)
+    
+    methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col)]
+    em_scores = {}
+    df = df[(df['ID'] < 145) | (df['ID'] > 193)]
+    for m in methods:
+        em = df.apply(lambda x: str(x['ANSWER']).strip() == str(x[m]).strip(), axis=1)
+        em_scores[m] = round(em.sum()/len(em), 3)
+    return em_scores
+
 def eval_file(in_file):
     df = pd.read_csv(in_file, sep='\t')
     if 'ANSWER' not in df.columns:
@@ -74,12 +95,18 @@ def print_table_col_wise(scores, row_labels, column_labels, row_head=''):
         lines.append(line)
     return '\n'.join(lines)
 
-def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
+def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=None):
     if in_file:
+        if rel_file:
+            scores = eval_file_rel(in_file, rel_file)
+            print(scores)
+            return
+
         scores = eval_file(in_file)
         print(scores)
         return
     
+        
     if zero_shot:
         f_pth = "results/zero_shot/{lang}_{n}.tsv"
         lang = ['sanskrit','telugu','hindi','bengali','marathi']
@@ -144,6 +171,7 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None):
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description="Evaluate a subtask given the files follow default conventions or just evaluate a single file")
     parser.add_argument('-i','--in-file',type=str,help="input tsv file to evaluate")
+    parser.add_argument('-l','--rel-file',type=str,help="relavence tsv file to compare")
     parser.add_argument('-z','--zero-shot', action='store_true', help="evaluate zero-shot QA")
     parser.add_argument('-r','--rag',action='store_true', help="evaluate RAG for k=2 across available methods")
     parser.add_argument('-k','--k-rag',action='store_true', help="evaluate RAG for GPT-4o across k=1,2,3")
