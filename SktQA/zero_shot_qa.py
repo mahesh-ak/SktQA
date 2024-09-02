@@ -63,7 +63,7 @@ def run_zero_shot_default(in_file=None, model=None,repeat=None, **kwargs):
         f_pths = [in_file]
     
     if model == None:
-        models = DEFAULT_MODELS
+        models = DEFAULT_MODELS + LOW_END_MODELS
     else:
         models = [model]
     

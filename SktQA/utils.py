@@ -14,6 +14,7 @@ load_dotenv()
 MAX_LENGTH = 64
 MAX_K = 4
 DEFAULT_MODELS = ['gpt-4o', 'mistral-large-latest', 'llama-v3p1-405b-instruct', 'gemini-1.5-pro', 'claude-3-5-sonnet-20240620']
+LOW_END_MODELS = ['gpt-4o-mini', 'gpt-3.5-turbo', 'gemini-1.0-pro', 'llama-v3p1-70b-instruct', 'llama-v3p1-8b-instruct']
 
 def get_chat_model(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:
