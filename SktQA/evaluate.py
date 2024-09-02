@@ -4,7 +4,12 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 from utils import MAX_K
+import string
 
+punct_table = str.maketrans(dict.fromkeys(string.punctuation))
+def compare(x,y):
+    return x.translate(punct_table) == y.translate(punct_table)
+    
 def plot_k(data):
     for key, values in data.items():
         plt.plot(values.keys(), values.values(), label=key, marker='o')

@@ -50,12 +50,20 @@ def get_chat_model_rag(model):
     return chat_model
 
 def chain_invoke(chain, inp):
-    try:
-        return chain.invoke({"question": inp['QUESTION'], "choices": inp['CHOICES']})
-    except Exception as e:
-        print(e)
-        print("Reattempting...")
-        return chain_invoke(chain, inp)
+    done = False
+    ret = None
+    i = 0
+    while not done:
+        try:
+            done = True
+            ret =  chain.invoke({"question": inp['QUESTION'], "choices": inp['CHOICES']})
+        except Exception as e:
+            done = False
+            print(e)
+            i += 1
+            print(f"Reattempting {i}th time in a row...")
+
+    return ret
 
 def ApplyQAChainOnDF(df, chain, col_name='predicted'):
     df[col_name] = df.progress_apply(lambda x: chain_invoke(chain,x), axis=1)
