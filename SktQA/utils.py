@@ -21,7 +21,7 @@ def get_chat_model(model):
         chat_model = ChatOpenAI(model=model, max_tokens= MAX_LENGTH)
     elif model in ['claude-3-5-sonnet-20240620']:
         chat_model = ChatAnthropic(model=model, max_tokens= MAX_LENGTH)
-    elif model in ['gemini-pro', 'gemini-1.5-pro']:
+    elif model in ['gemini-1.0-pro', 'gemini-1.5-pro']:
         chat_model = ChatVertexAI(model=model, max_tokens= MAX_LENGTH)
     elif model in ['mistral-large-latest']:
         chat_model = ChatMistralAI(model=model,api_key=os.environ['MISTRAL_API_KEY'], max_tokens= MAX_LENGTH)
@@ -38,7 +38,7 @@ def get_chat_model_rag(model):
         chat_model = ChatOpenAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['claude-3-5-sonnet-20240620']:
         chat_model = ChatAnthropic(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
-    elif model in ['gemini-pro', 'gemini-1.5-pro']:
+    elif model in ['gemini-1.0-pro', 'gemini-1.5-pro']:
         chat_model = ChatVertexAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['mistral-large-latest']:
         chat_model = ChatMistralAI(model_name=model,api_key=os.environ['MISTRAL_API_KEY'], temperature=0, max_tokens= MAX_LENGTH)
