@@ -9,7 +9,7 @@ import string
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 def compare(x,y):
     return x.translate(punct_table) == y.translate(punct_table)
-    
+
 def plot_k(data):
     for key, values in data.items():
         plt.plot(values.keys(), values.values(), label=key, marker='o')
@@ -34,8 +34,8 @@ def plot_k(data):
 def eval_file_rel(in_file, rel_file):
     df = pd.read_csv(in_file, sep='\t')
     rel_df = pd.read_csv(rel_file,sep='\t')
-    rel_df = rel_df[['ID','rel_0','rel_1','rel_2']]
-    rel_df['rel_sum'] = rel_df.apply(lambda x: sum([x[f'rel_{k}'] for k in range(3)]),axis=1)
+    rel_df = rel_df[['ID','rel_0','rel_1','rel_2', 'rel_3']]
+    rel_df['rel_sum'] = rel_df.apply(lambda x: sum([x[f'rel_{k}'] for k in range(4)]),axis=1)
     rel_df = rel_df[rel_df['rel_sum']>0][['ID']]
 
     df = df.merge(rel_df, how='inner')
