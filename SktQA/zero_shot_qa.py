@@ -43,6 +43,8 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
         out_df = pd.read_csv(out_file, sep='\t')
     else:
         out_df = in_df
+    
+    out_df['ANSWER'] = in_df['ANSWER']
 
     chain = ZeroShotChain(model=model, language=lang)
     if model in out_df.columns and (not force):

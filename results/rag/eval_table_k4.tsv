@@ -1,4 +1,4 @@
-Retriever	mistral-large-latest	llama-v3p1-8b-instruct	gpt-3.5-turbo	gemini-1.5-pro	gpt-4o	gpt-4o-mini	llama-v3p1-405b-instruct	gemini-1.0-pro	claude-3-5-sonnet-20240620
-bm25	0.34	0.066	0.004	0.362	0.387	0.029	0.28	0.081	0.38	
-fasttext	0.322	-	-	0.299	0.336	-	0.236	-	0.356	
-glove	0.313	-	-	0.292	0.327	-	0.248	-	0.365	
+Retriever	gpt-4o	gemini-1.0-pro	gemini-1.5-pro	llama-v3p1-8b-instruct	mistral-large-latest	llama-v3p1-405b-instruct	claude-3-5-sonnet-20240620	gpt-3.5-turbo	gpt-4o-mini
+bm25	0.444	0.09	0.416	0.074	0.394	0.326	0.466	0.004	0.031	
+fasttext	0.378	-	0.341	-	0.358	0.27	0.43	-	-	
+glove	0.378	-	0.337	-	0.353	0.287	0.441	-	-	

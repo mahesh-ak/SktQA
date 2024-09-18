@@ -7,15 +7,15 @@ from utils import MAX_K
 import string
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
-def compare(x,y):
-    return x.translate(punct_table) == y.translate(punct_table)
+def compare(ans_list,y):
+    return str(y).translate(punct_table) in [x.strip().translate(punct_table) for x in ans_list.split(';')]
 
 def plot_k(data):
     for key, values in data.items():
         plt.plot(values.keys(), values.values(), label=key, marker='o')
     
-    err = 0.007
-    avg = 0.348
+    err = 0.006
+    avg = 0.407
     plt.axhline(y = avg, color = 'k', linestyle = '-', label='zero-shot baseline') 
     plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
     plt.axhline(y = avg-err, color = 'k', linestyle = '--') 
@@ -46,9 +46,9 @@ def eval_file_rel(in_file, rel_file):
     
     methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col)]
     em_scores = {}
-    df = df[(df['ID'] < 145) | (df['ID'] > 193)]
+    print("Final length:",len(df))
     for m in methods:
-        em = df.apply(lambda x: str(x['ANSWER']).strip() == str(x[m]).strip(), axis=1)
+        em = df.apply(lambda x: compare(x['ANSWER'], x[m]), axis=1)
         em_scores[m] = round(em.sum()/len(em), 3)
     return em_scores
 
@@ -60,9 +60,8 @@ def eval_file(in_file):
     
     methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col)]
     em_scores = {}
-    df = df[(df['ID'] < 145) | (df['ID'] > 193)]
     for m in methods:
-        em = df.apply(lambda x: str(x['ANSWER']).strip() == str(x[m]).strip(), axis=1)
+        em = df.apply(lambda x: compare(x['ANSWER'], x[m]), axis=1)
         em_scores[m] = round(em.sum()/len(em), 3)
     return em_scores
 
@@ -178,8 +177,8 @@ if __name__=='__main__':
     parser.add_argument('-i','--in-file',type=str,help="input tsv file to evaluate")
     parser.add_argument('-l','--rel-file',type=str,help="relavence tsv file to compare")
     parser.add_argument('-z','--zero-shot', action='store_true', help="evaluate zero-shot QA")
-    parser.add_argument('-r','--rag',action='store_true', help="evaluate RAG for k=2 across available methods")
-    parser.add_argument('-k','--k-rag',action='store_true', help="evaluate RAG for GPT-4o across k=1,2,3")
+    parser.add_argument('-r','--rag',action='store_true', help="evaluate RAG for k=4 across available methods")
+    parser.add_argument('-k','--k-rag',action='store_true', help="evaluate RAG for GPT-4o across k=1,2,3,4")
     args = parser.parse_args()
 
     args_dict = vars(args)

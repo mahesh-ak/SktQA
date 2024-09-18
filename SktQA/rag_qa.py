@@ -190,6 +190,8 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
         out_df = pd.read_csv(out_file, sep='\t', dtype=str)
     else:
         out_df = in_df.copy()
+    
+    out_df['ANSWER'] = in_df['ANSWER']
 
     chain = RAGChain(model=model, retriever=retriever, k=k, context_only=context_only)
     if model in out_df.columns and (not force):
