@@ -1,12 +1,12 @@
 LLM	sanskrit	telugu	hindi	bengali	marathi
-mistral-large-latest	0.37 (0.004)	-	-	-	-	
-llama-v3p1-70b-instruct	0.292 (0.0)	-	-	-	-	
-gpt-3.5-turbo	0.01 (0.002)	-	-	-	-	
-llama-v3p1-8b-instruct	0.064 (0.0)	-	-	-	-	
-gpt-4o-mini	0.063 (0.004)	-	-	-	-	
-gpt-4o	0.407 (0.006)	-	-	-	-	
-gemini-1.0-pro	0.191 (0.007)	-	-	-	-	
-gemini-1.5-pro	0.17 (0.004)	-	-	-	-	
-claude-3-5-sonnet-20240620	0.252 (0.011)	-	-	-	-	
-gemini-pro	0.196 (0.0)	-	-	-	-	
-llama-v3p1-405b-instruct	0.397 (0.003)	-	-	-	-	
+llama-v3p1-70b-instruct	0.305 (0.0)	-	-	-	-	
+llama-v3p1-8b-instruct	0.065 (0.0)	-	-	-	-	
+mistral-large-latest	0.371 (0.003)	-	-	-	-	
+gemini-1.5-pro	0.171 (0.004)	-	-	-	-	
+gpt-3.5-turbo	0.01 (0.003)	-	-	-	-	
+gemini-pro	0.202 (0.0)	-	-	-	-	
+gpt-4o	0.408 (0.006)	-	-	-	-	
+claude-3-5-sonnet-20240620	0.253 (0.011)	-	-	-	-	
+llama-v3p1-405b-instruct	0.398 (0.003)	-	-	-	-	
+gemini-1.0-pro	0.196 (0.006)	-	-	-	-	
+gpt-4o-mini	0.066 (0.004)	-	-	-	-	
