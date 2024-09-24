@@ -4,16 +4,20 @@ from langchain_google_vertexai import ChatVertexAI
 from langchain_mistralai import ChatMistralAI
 from langchain_fireworks import ChatFireworks
 from dotenv import load_dotenv
+from typing import List, Optional
 import pandas as pd
 from tqdm import tqdm
 import os
+import time
 
 tqdm.pandas()
 load_dotenv()
 
 MAX_LENGTH = 64
+MAX_LENGTH_KG = 1792
 MAX_K = 4
 DEFAULT_MODELS = ['gpt-4o', 'mistral-large-latest', 'llama-v3p1-405b-instruct', 'gemini-1.5-pro', 'claude-3-5-sonnet-20240620']
+KG_DEFAULT_MODELS = ['gpt-4o', 'mistral-large-latest', 'claude-3-5-sonnet-20240620']
 LOW_END_MODELS = ['gpt-4o-mini', 'gpt-3.5-turbo', 'gemini-1.0-pro', 'llama-v3p1-70b-instruct', 'llama-v3p1-8b-instruct']
 
 def get_chat_model(model):
@@ -50,6 +54,23 @@ def get_chat_model_rag(model):
 
     return chat_model
 
+def get_chat_model_kg(model):
+    if model in ['gpt-4o']:
+        chat_model = ChatOpenAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH_KG)
+    elif model in ['claude-3-5-sonnet-20240620']:
+        chat_model = ChatAnthropic(model_name=model, temperature=0, max_tokens= MAX_LENGTH_KG)
+    elif model in ['gemini-1.5-pro']:
+        chat_model = ChatVertexAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH_KG)
+    elif model in ['mistral-large-latest']:
+        chat_model = ChatMistralAI(model_name=model,api_key=os.environ['MISTRAL_API_KEY'], temperature=0, max_tokens= MAX_LENGTH_KG)
+    elif model in ['llama-v3p1-405b-instruct']:
+        chat_model = ChatFireworks(model_name=f"accounts/fireworks/models/{model}", api_key=os.environ['FIREWORKS_API_KEY'], temperature=0, max_tokens= MAX_LENGTH_KG)
+    else:
+        print(f"Error: Unsupported model - {model}")
+        exit(1)
+
+    return chat_model
+
 def chain_invoke(chain, inp):
     done = False
     ret = None
@@ -63,8 +84,10 @@ def chain_invoke(chain, inp):
             print(e)
             i += 1
             print(f"Reattempting {i}th time in a row...")
+            time.sleep(1)
 
     return ret
+
 
 def ApplyQAChainOnDF(df, chain, col_name='predicted'):
     df[col_name] = df.progress_apply(lambda x: chain_invoke(chain,x), axis=1)
