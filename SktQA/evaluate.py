@@ -113,7 +113,7 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
         
     if zero_shot:
         f_pth = "results/zero_shot/{lang}_{n}.tsv"
-        lang = ['sanskrit','telugu','hindi','bengali','marathi']
+        lang = ['sanskrit','ayurveda']
         scores = {}
         methods = set()
         for l in lang:

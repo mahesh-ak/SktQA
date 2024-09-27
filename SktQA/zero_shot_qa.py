@@ -36,7 +36,8 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
             out_fname = f"{lang}_{r}.tsv"
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
-    
+    if lang == 'ayurveda':
+        lang = 'sanskrit'
 
     in_df = pd.read_csv(in_file, sep='\t')
     if os.path.exists(out_file):
@@ -60,7 +61,7 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
 def run_zero_shot_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/qa_set'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['sanskrit.tsv', 'hindi.tsv', 'telugu.tsv', 'marathi.tsv', 'bengali.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['sanskrit.tsv', 'ayurveda.tsv']]
     else:
         f_pths = [in_file]
     
