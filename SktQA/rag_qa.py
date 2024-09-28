@@ -182,7 +182,11 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
     if out_file==None:
         out_pth = "results/rag"
         os.makedirs(out_pth, exist_ok=True)
-        out_file = os.path.join(out_pth, f"{emb}_{k}.tsv")
+        if 'ayurveda' in in_file:
+            pre = 'ayurveda_'
+        else:
+            pre = ''
+        out_file = os.path.join(out_pth, f"{pre}{emb}_{k}.tsv")
     
 
     in_df = pd.read_csv(in_file, sep='\t')
@@ -218,7 +222,7 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
     out_df.to_csv(out_file, sep='\t', index=False)
     return
 
-def run_rag_default(in_file=None, model=None, emb=None, k=None, **kwargs):
+def run_rag_default(in_file=None, model=None, emb=None, k=None, dataset=None, **kwargs):
 
     if in_file == None:
         in_file = 'data/qa_set/sanskrit.tsv'
@@ -238,7 +242,11 @@ def run_rag_default(in_file=None, model=None, emb=None, k=None, **kwargs):
     else:
         ks = [k]
     
-    retriever = Retriever()
+    if dataset==None or dataset=='ramayana':
+        retriever = Retriever()
+    elif dataset=='ayurveda':
+        in_file = 'data/qa_set/ayurveda.tsv'
+        retriever = Retriever(file_path='data/ref/ayurveda_dev.txt')
 
     for e in embs:
         retriever.load_retriever(emb= e)
@@ -252,7 +260,7 @@ def run_rag_default(in_file=None, model=None, emb=None, k=None, **kwargs):
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description="Run RAG QA evaluation using LLMs")
     parser.add_argument('-i','--in-file', type=str, help="input file containing columns 'QUESTION', 'ANSWER' (gold). By default runs on all languages")
-#    parser.add_argument('-l','--lang', type=str, help="Language of input file, by default deduces from [IN] assuming format [LANG].tsv")
+    parser.add_argument('-d','--dataset', type=str, help="Dataset either [ramayana] or [ayurveda]")
     parser.add_argument('-e','--emb',type=str, help="Embedding/retrieval method. Supported: fasttext, glove, bm25.")
     parser.add_argument('-k', '--k', type=int, help="Retriever number of documents threshold")
     parser.add_argument('-m','--model',type=str, help= "LLM model name, currently supports: gpt-*, claude-*, gemini-*, mistral-*, llama-*, by default runs on gpt-4o, claude-3-5-sonnet, gemini-1.5-pro, mistral-large and llama-v3p1-8b-instruct")

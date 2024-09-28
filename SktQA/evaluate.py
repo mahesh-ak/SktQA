@@ -137,19 +137,22 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
             fp.write(res_txt)   
 
     if rag:
-        f_pth = "results/rag/{embedding}_4.tsv"
+        f_pth = "results/rag/{pre}{embedding}_4.tsv"
         emb = ['bm25', 'fasttext','glove']
-        scores = {}
-        methods = set()
-        for e in emb:
-            e_f_pth = f_pth.format(embedding=e)
-            if os.path.exists(e_f_pth):
-                scores[e] = eval_file(e_f_pth)
-                methods = methods.union(list(scores[e].keys()))
-        res_txt = print_table_row_wise(scores, emb, list(methods), row_head='Retriever')
-        print(res_txt)
-        with open("results/rag/eval_table_k4.tsv",'w') as fp:
-            fp.write(res_txt)
+        for pr in ['','ayurveda_']:
+            scores = {}
+            methods = set()
+            for e in emb:
+                e_f_pth = f_pth.format(embedding=e, pre=pr)
+                if os.path.exists(e_f_pth):
+                    scores[e] = eval_file(e_f_pth)
+                    methods = methods.union(list(scores[e].keys()))
+            res_txt = print_table_row_wise(scores, emb, list(methods), row_head='Retriever')
+            print(f"Dataset: {pr} (default Ramayana)")
+            print(res_txt)
+            print()
+            with open(f"results/rag/eval_table_{pr}k4.tsv",'w') as fp:
+                fp.write(res_txt)
     
     if k_rag:
         f_pth = "results/rag/{embedding}_{k}.tsv"
