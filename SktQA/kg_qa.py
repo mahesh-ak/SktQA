@@ -12,7 +12,7 @@ import torch
 import regex as re
 import random
 
-MAX_DEPTH = 1
+MAX_DEPTH = 2
 MAX_WIDTH = 3
 MAX_WID_PER_ELEM = 15
 
@@ -267,10 +267,11 @@ class ToG:
         return result_txt, track_paths
 
 
-    def __init__(self, model= 'gpt-4o', lemmatizer=None, d=MAX_DEPTH):
+    def __init__(self, model= 'gpt-4o', dataset='sanskrit', lemmatizer=None, d=MAX_DEPTH):
         self.model = get_chat_model_kg(model)
         self.lemmatizer = lemmatizer
         self.d = d
+        self.dataset = dataset
         self.topic_entity_chain = self.Topic_entity_chain()
         self.relation_chain = self.Relation_chain()
         self.entity_chain = self.Entity_chain()
@@ -424,12 +425,13 @@ class ToG:
         return RunnableLambda(self.path_info_format) | reasoning_prompt | self.model
     
     def Answer_chain(self):
+        dataset = 'आयुर्वेद' if self.dataset == 'ayurveda' else 'रामायण'
         answer_prompt = ChatPromptTemplate.from_messages(
             [
                 (
                     "system",
-                    """अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि प्रश्नोचितविभक्तौ भवेत् न तु प्रातिपदिक रूपे । तदपि एकेनैव पदेन यदि उत्तरे कारणं नापेक्षितम्। कथम् किमर्थम् इत्यादिषु एकेन लघु वाक्येन उत्तरं देहि अत्र तु एक-पद-नियमः नास्ति। 
-                    अपि च यथाऽवश्यम् अधः दत्तैः knowledge-graph-तः निष्कर्षित-विषयैः सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।""",
+                    f"""अधः {dataset}-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि प्रश्नोचितविभक्तौ भवेत् न तु प्रातिपदिक रूपे । तदपि एकेनैव पदेन यदि उत्तरे कारणं नापेक्षितम्। कथम् किमर्थम् इत्यादिषु एकेन लघु वाक्येन उत्तरं देहि अत्र तु एक-पद-नियमः नास्ति। 
+                    अपि च यथाऽवश्यम् अधः दत्तैः knowledge-graph-तः निष्कर्षित-विषयैः सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः। उत्तरम् यावद् लघु शक्यं तावत् लघु भवेत्""",
                 ),
                 (
                     "human",
@@ -444,10 +446,11 @@ class ToG:
 
     
 def run_kgqa(in_file, model, lemmatizer, d= 3, out_file=None, force=None):
+    dataset = os.path.split(in_file)[-1].replace(".tsv","")
     if out_file==None:
         out_pth = "results/kgqa"
         os.makedirs(out_pth, exist_ok=True)
-        out_file = os.path.join(out_pth, f"sanskrit.tsv")
+        out_file = os.path.join(out_pth, f"{dataset}.tsv")
     
     in_df = pd.read_csv(in_file, sep='\t')
     if os.path.exists(out_file):
@@ -455,7 +458,7 @@ def run_kgqa(in_file, model, lemmatizer, d= 3, out_file=None, force=None):
     else:
         out_df = in_df.copy()
 
-    tog = ToG(model=model, lemmatizer=lemmatizer) 
+    tog = ToG(model=model, dataset=dataset, lemmatizer=lemmatizer) 
     if model in out_df.columns and (not force):
         print(f"Warning! column {model} already exists in {out_file}. Skipping the chain. Specify -f to overwrite.")
     else:
@@ -473,7 +476,7 @@ def run_kgqa(in_file, model, lemmatizer, d= 3, out_file=None, force=None):
 
 def run_kgqa_default(in_file, model= None, depth=MAX_DEPTH, **kwargs):
     if model == None:
-        models = DEFAULT_MODELS
+        models = KG_DEFAULT_MODELS
     else:
         models = [model]
     

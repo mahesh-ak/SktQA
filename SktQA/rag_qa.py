@@ -114,8 +114,10 @@ class Retriever:
     def lemmatize(self, chunk, translate_only=False):
         text = chunk.replace('\n\n','\n').split('\n')
         pattern = re.compile(r'[0-9]+,[0-9]+\|[0-9]+')
+        num_pattern = re.compile(r'[0-9]+')
         table = str.maketrans(dict.fromkeys(string.punctuation))  # OR {key: None for key in string.punctuation}
         lines = [pattern.sub('',transliterate(line, DEVANAGARI, IAST)) for line in text]
+        lines = [num_pattern.sub('',transliterate(line, DEVANAGARI, IAST)) for line in text]
         lines = [line.translate(table) for line in lines]
         if translate_only:
             return ' '.join(lines)
@@ -148,10 +150,11 @@ class Retriever:
     
         self.retrieve = retriever
 
-def RAGChain(model, retriever, k=2, context_only=False):
-    template = """त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु। अपि च यथाऽवश्यम् अधः दत्त-सन्दर्भेभ्यः एकतमात् सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।
-     सन्दर्भाः:{context}
-     प्रश्नः:{question} {choices}
+def RAGChain(model, retriever, dataset='sanskrit', k=2, context_only=False):
+    text = 'आयुर्वेद' if dataset == 'ayurveda' else 'रामायण'
+    template = f"""त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः {text}-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु। अपि च यथाऽवश्यम् अधः दत्त-सन्दर्भेभ्यः एकतमात् सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।
+     सन्दर्भाः:{{context}}
+     प्रश्नः:{{question}} {{choices}}
     """
     prompt = PromptTemplate.from_template(template)
     # LLM
@@ -179,10 +182,11 @@ def RAGChain(model, retriever, k=2, context_only=False):
 
 
 def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=None, context_only=False):
+    dataset = os.path.split(in_file)[-1].replace(".tsv","")
     if out_file==None:
         out_pth = "results/rag"
         os.makedirs(out_pth, exist_ok=True)
-        if 'ayurveda' in in_file:
+        if dataset == 'ayurveda':
             pre = 'ayurveda_'
         else:
             pre = ''
@@ -197,7 +201,7 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
     
     out_df['ANSWER'] = in_df['ANSWER']
 
-    chain = RAGChain(model=model, retriever=retriever, k=k, context_only=context_only)
+    chain = RAGChain(model=model, retriever=retriever, dataset=dataset, k=k, context_only=context_only)
     if model in out_df.columns and (not force):
         print(f"Warning! column {model} already exists in {out_file}. Skipping the chain. Specify -f to overwrite.")
     else:
