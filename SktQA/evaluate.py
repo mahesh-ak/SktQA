@@ -23,8 +23,8 @@ def plot_k(data, pre):
 
     elif pre=='ayurveda_':
         plt.title('Effect of k value in RAG for GPT-4o (Bhāvaprakāśanighaṇtu)')
-        err = 0.005
-        avg = 0.253
+        err = 0.006
+        avg = 0.268
 
     plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline') 
     plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
@@ -33,7 +33,7 @@ def plot_k(data, pre):
     # Labels and title
     plt.xlabel('k')
     plt.ylabel('EM score')
-    plt.ylim((0.24, 0.45))
+    plt.ylim((0.26, 0.475))
     plt.xticks(range(1,MAX_K+1))
     plt.legend()
     plt.grid(True)
