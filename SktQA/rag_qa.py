@@ -232,8 +232,7 @@ def run_rag_default(in_file=None, model=None, emb=None, k=None, dataset=None, **
         in_file = 'data/qa_set/sanskrit.tsv'
     
     if model == None:
-        models = DEFAULT_MODELS + LOW_END_MODELS
-        models.remove('llama-v3p1-70b-instruct')
+        models = DEFAULT_MODELS
     else:
         models = [model]
     
@@ -246,7 +245,10 @@ def run_rag_default(in_file=None, model=None, emb=None, k=None, dataset=None, **
         ks = range(1,MAX_K+1)
     else:
         ks = [k]
-    
+        if emb == 'bm25':
+            models += LOW_END_MODELS
+            models.remove('llama-v3p1-70b-instruct')
+
     if dataset==None or dataset=='ramayana':
         retriever = Retriever()
     elif dataset=='ayurveda':
