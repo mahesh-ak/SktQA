@@ -1,4 +1,4 @@
-all: ramayana ayurveda
+all: ramayana ayurveda evaluate
 
 ramayana:
 	python SktQA/zero_shot_qa.py -r
@@ -11,4 +11,9 @@ ayurveda:
 	python SktQA/rag_qa.py -d ayurveda -k 4 -e bm25
 	python SktQA/rag_qa.py -d ayurveda -k 4
 	python SktQA/rag_qa.py -d ayurveda -m gpt-4o
+
+evaluate:
+	python SktQA/evaluate.py -z
+	python SktQA/evaluate.py -r
+	python SktQA/evaluate.py -k
 
