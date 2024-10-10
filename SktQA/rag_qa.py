@@ -113,11 +113,11 @@ class Retriever:
 
     def lemmatize(self, chunk, translate_only=False):
         text = chunk.replace('\n\n','\n').split('\n')
-        pattern = re.compile(r'[0-9]+,[0-9]+\|[0-9]+')
-        num_pattern = re.compile(r'[0-9]+')
+        pattern = re.compile(r'[0-9]+')
+        alphanumeric_pattern = re.compile(r'[a-zA-Z0-9]+')
         table = str.maketrans(dict.fromkeys(string.punctuation))  # OR {key: None for key in string.punctuation}
-        lines = [pattern.sub('',transliterate(line, DEVANAGARI, IAST)) for line in text]
-        lines = [num_pattern.sub('',transliterate(line, DEVANAGARI, IAST)) for line in text]
+        lines = [alphanumeric_pattern.sub('',line) for line in text]
+        lines = [pattern.sub('',transliterate(line, DEVANAGARI, IAST)) for line in lines]
         lines = [line.translate(table) for line in lines]
         if translate_only:
             return ' '.join(lines)

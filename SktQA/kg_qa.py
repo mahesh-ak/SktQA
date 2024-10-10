@@ -12,7 +12,7 @@ import torch
 import regex as re
 import random
 
-MAX_DEPTH = 2
+MAX_DEPTH = 1
 MAX_WIDTH = 3
 MAX_WID_PER_ELEM = 15
 
@@ -116,7 +116,7 @@ def chain_invoke_(chain, inp):
             done = True
             ret = None
         except Exception as e:
-            if i > 128:
+            if i > 3:
                 ret = None
                 done = True
                 break
@@ -240,11 +240,18 @@ class ToG:
                     if len(outward_edges) > MAX_WID_PER_ELEM:
                         outward_edges = random.sample(outward_edges, MAX_WID_PER_ELEM)
                     
-                    ends = [f":{edge['type']} {{'lemma': {edge['lemma']}}}" for edge in outward_edges]
+                    ends = []
 
                     for edge in outward_edges:
+                        flag = 0
+                        for p in path:
+                            if f":{edge['type']} {{'lemma': {edge['lemma']}}}" in p: ## Already explored
+                                flag = 1
+                        if flag: continue
                         if edge['lemma'] not in track_paths:
                             track_paths[edge['lemma']] = []
+                        
+                        ends.append(f":{edge['type']} {{'lemma': {edge['lemma']}}}")
                         track_paths[edge['lemma']].extend([f"{p}(:{response['type']} {{'lemma': {response['result']}}})-[:{relation}]->" for p in path])
             
                     if len(ends) > 0: result_txt += f"-[:{relation}]->({'|'.join(ends)})\n"
@@ -253,11 +260,18 @@ class ToG:
                     if len(inward_edges) > MAX_WID_PER_ELEM:
                         inward_edges = random.sample(inward_edges, MAX_WID_PER_ELEM)
                     
-                    ends = [f":{edge['type']} {{'lemma': {edge['lemma']}}}" for edge in inward_edges]
+                    ends = []
 
                     for edge in inward_edges:
+                        flag = 0
+                        for p in path:
+                            if f":{edge['type']} {{'lemma': {edge['lemma']}}}" in p: ## Already explored
+                                flag = 1
+                        if flag: continue
+
                         if edge['lemma'] not in track_paths:
                             track_paths[edge['lemma']] = []
+                        ends.append(f":{edge['type']} {{'lemma': {edge['lemma']}}}")
                         track_paths[edge['lemma']].extend([f"{p}(:{response['type']} {{'lemma': {response['result']}}})<-[:{relation}]-" for p in path])
                 
                     if len(ends) > 0: result_txt += f"<-[:{relation}]-({'|'.join(ends)})\n"

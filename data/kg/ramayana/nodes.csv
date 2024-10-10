@@ -71,7 +71,7 @@
 72,HUMAN,कालिन्दी,3,1,https://archive.org/details/dli.ernet.199817/
 73,HUMAN,च्यवन,3,1,https://archive.org/details/dli.ernet.199817/
 74,FAMILY,भार्गव,3,1,https://archive.org/details/dli.ernet.199817/
-76,HUMAN,(असितभार्या२),3,1,https://archive.org/details/dli.ernet.199817/
+76,HUMAN,असितभार्या,3,1,https://archive.org/details/dli.ernet.199817/
 77,MOUNTAIN,हिमवत्,3,1,https://archive.org/details/dli.ernet.199817/
 78,HUMAN,असमञ्ज,3,1,https://archive.org/details/dli.ernet.199817/
 79,GANA,देव,3,1,https://archive.org/details/dli.ernet.199817/
@@ -95,7 +95,7 @@
 98,PROFESSIONAL,सूत,3,1,https://archive.org/details/dli.ernet.199817/
 99,PROFESSIONAL,मागध,3,1,https://archive.org/details/dli.ernet.199817/
 100,WEAPON,शतघ्नी,3,1,https://archive.org/details/dli.ernet.199817/
-102,UNIT,१०० शत,3,1,https://archive.org/details/dli.ernet.199817/
+102,UNIT,शत,3,1,https://archive.org/details/dli.ernet.199817/
 103,‍‍QUALITY,उच्चाट्टालध्वजवती,3,1,https://archive.org/details/dli.ernet.199817/
 126,SHAPE,अष्टापद,3,1,https://archive.org/details/dli.ernet.199817/
 127,RAKSHASA,यूपाक्ष,3,1,https://archive.org/details/dli.ernet.199817/
@@ -167,8 +167,8 @@
 169,HILL,अपरपर्वत,4,1,https://archive.org/details/dli.ernet.199817/
 170,VILLAGE,अभिकाल,4,1,https://archive.org/details/dli.ernet.199817/
 171,MESSENGER,दूत,4,1,https://archive.org/details/dli.ernet.199817/
-172,RISHI,वशिष्ठ,4,1,https://archive.org/details/dli.ernet.199817/
-173,MAHARSHI,वशिष्ठ,4,1,https://archive.org/details/dli.ernet.199817/
+172,RISHI,वसिष्ठ,4,1,https://archive.org/details/dli.ernet.199817/
+173,MAHARSHI,वसिष्ठ,4,1,https://archive.org/details/dli.ernet.199817/
 174,TOWN,अमरावती,4,1,https://archive.org/details/dli.ernet.199817/
 175,HILL,अयोमुख,4,1,https://archive.org/details/dli.ernet.199817/
 176,RAKSHASHI,अयोमुखी,4,1,https://archive.org/details/dli.ernet.199817/
@@ -194,7 +194,7 @@
 202,HUMAN,अर्थसाधक,4,1,https://archive.org/details/dli.ernet.199817/
 203,FOREST,अलक्षित,4,1,https://archive.org/details/dli.ernet.199817/
 204,ADITYA,अर्यमा,4,1,https://archive.org/details/dli.ernet.199817/
-205,HUMAN,कौशल्या,4,1,https://archive.org/details/dli.ernet.199817/
+205,HUMAN,कौसल्या,4,1,https://archive.org/details/dli.ernet.199817/
 206,HUMAN,अलम्बुषा,4,1,https://archive.org/details/dli.ernet.199817/
 207,HUMAN,विशाल,4,1,https://archive.org/details/dli.ernet.199817/
 208,KING,अलर्क,4,1,https://archive.org/details/dli.ernet.199817/
@@ -269,7 +269,7 @@
 280,HILL,उशीरबीजम्,4,1,https://archive.org/details/dli.ernet.199817/
 281,MONKEY,प्रमाथि,4,1,https://archive.org/details/dli.ernet.199817/
 282,CAVE,ऋक्ष,4,1,https://archive.org/details/dli.ernet.199817/
-283,MONKEY,ऋक्षराज/ऋक्षराट्,4,1,https://archive.org/details/dli.ernet.199817/
+283,MONKEY,ऋक्षरजस्,4,1,https://archive.org/details/dli.ernet.199817/
 284,HILL,ऋक्षवान्,4,1,https://archive.org/details/dli.ernet.199817/
 285,RIKSHA,धूम्र,4,1,https://archive.org/details/dli.ernet.199817/
 286,RISHI,ऋचीक 1,4,1,https://archive.org/details/dli.ernet.199817/
@@ -283,9 +283,9 @@
 295,KING,ऋषभ 2,4,1,https://archive.org/details/dli.ernet.199817/
 296,MONKEY,ऋषभ 3,4,1,https://archive.org/details/dli.ernet.199817/
 297,RAKSHASA,मत्त,4,1,https://archive.org/details/dli.ernet.199817/
-298,MONKEY,ऋषभ-स्कन्ध,4,1,https://archive.org/details/dli.ernet.199817/
+298,MONKEY,ऋषभस्कन्ध,4,1,https://archive.org/details/dli.ernet.199817/
 299,RAKSHASA,इन्द्रजित्,4,1,https://archive.org/details/dli.ernet.199817/
-300,MONKEY,ऋषि-पुत्र,4,1,https://archive.org/details/dli.ernet.199817/
+300,MONKEY,ऋषिपुत्र,4,1,https://archive.org/details/dli.ernet.199817/
 301,COUNTRY,ऋष्टिक,4,1,https://archive.org/details/dli.ernet.199817/
 302,HILL,ऋष्यमुख,4,1,https://archive.org/details/dli.ernet.199817/
 303,MAHARSHI,विभाण्डक,4,1,https://archive.org/details/dli.ernet.199817/
@@ -344,7 +344,7 @@
 360,RAKSHASA,सुमाली,4,1,https://archive.org/details/dli.ernet.199817/
 361,RAKSHASHI,केतुमती,4,1,https://archive.org/details/dli.ernet.199817/
 362,COUNTRY,कुरु,4,1,https://archive.org/details/dli.ernet.199817/
-363,FOREST,कुरुः,4,1,https://archive.org/details/dli.ernet.199817/
+363,FOREST,कुरु,4,1,https://archive.org/details/dli.ernet.199817/
 364,RAKSHASA,कुबेर,4,1,https://archive.org/details/dli.ernet.199817/
 365,GARDEN,उद्यानम्,4,1,https://archive.org/details/dli.ernet.199817/
 366,LAND,कुरुजाङ्गल,4,1,https://archive.org/details/dli.ernet.199817/
@@ -402,8 +402,8 @@
 424,DAITYA,कैटभ,4,1,https://archive.org/details/dli.ernet.199817/
 425,LAKE,मानस,4,1,https://archive.org/details/dli.ernet.199817/
 426,MOUNTAIN,कैलास,4,1,https://archive.org/details/dli.ernet.199817/
-467,KINGDOM,कोशल,4,1,https://archive.org/details/dli.ernet.199817/
-427,COUNTRY,कोशल,4,1,https://archive.org/details/dli.ernet.199817/
+467,KINGDOM,कोसल,4,1,https://archive.org/details/dli.ernet.199817/
+427,COUNTRY,कोसल,4,1,https://archive.org/details/dli.ernet.199817/
 428,RIVER,सरयु,4,1,https://archive.org/details/dli.ernet.199817/
 429,KING,भानुमान्,4,1,https://archive.org/details/dli.ernet.199817/
 430,DISTRICT,कोशकार,4,1,https://archive.org/details/dli.ernet.199817/
@@ -455,7 +455,7 @@
 479,SOCIETY_CLASS,चण्डाल,4,1,https://archive.org/details/dli.ernet.199817/
 480,RAKSHASHI,चण्डोदरी,4,1,https://archive.org/details/dli.ernet.199817/
 481,FOREST,चन्दनवन,4,1,https://archive.org/details/dli.ernet.199817/
-482,ANIMAL,वानराः,4,1,https://archive.org/details/dli.ernet.199817/
+482,ANIMAL,वानर,4,1,https://archive.org/details/dli.ernet.199817/
 483,RANGE_OF_HILLS,चन्द्र,4,1,https://archive.org/details/dli.ernet.199817/
 484,HUMAN,चन्द्र 1,4,1,https://archive.org/details/dli.ernet.199817/
 488,PLACE,चन्द्रकान्त,4,1,https://archive.org/details/dli.ernet.199817/
@@ -527,9 +527,9 @@
 558,VIMANA,पुष्पक,4,1,https://archive.org/details/dli.ernet.199817/
 559,BUNCH_OF_CITIES,त्रिपुर,4,1,https://archive.org/details/dli.ernet.199817/
 560,LOKA,स्वर्ग,4,1,https://archive.org/details/dli.ernet.199817/
-561,RAKSHASA,त्रिशिरा 1,4,1,https://archive.org/details/dli.ernet.199817/
-562,RAKSHASA,त्रिशिरा 2,4,1,https://archive.org/details/dli.ernet.199817/
-563,ADITYA,त्वष्टा,4,1,https://archive.org/details/dli.ernet.199817/
+561,RAKSHASA,त्रिशिस्,4,1,https://archive.org/details/dli.ernet.199817/
+562,RAKSHASA,त्रिशिस्,4,1,https://archive.org/details/dli.ernet.199817/
+563,ADITYA,त्वष्टृ,4,1,https://archive.org/details/dli.ernet.199817/
 564,DEVI,सुप्रभा,4,1,https://archive.org/details/dli.ernet.199817/
 565,RAKSHASA,दण्ड 1,4,1,https://archive.org/details/dli.ernet.199817/
 566,HUMAN,दण्ड 2,4,1,https://archive.org/details/dli.ernet.199817/
@@ -547,7 +547,7 @@
 579,RESIDENTIAL_PLACE,आश्रम 2,4,1,https://archive.org/details/dli.ernet.199817/
 580,CLUSTER_OF_TOWNS,दशार्ण,4,1,https://archive.org/details/dli.ernet.199817/
 581,LAND,दाक्षिणात्य,4,1,https://archive.org/details/dli.ernet.199817/
-582,RACE,दानवाः,4,1,https://archive.org/details/dli.ernet.199817/
+582,RACE,दानव,4,1,https://archive.org/details/dli.ernet.199817/
 583,HILL,शिशिर,4,1,https://archive.org/details/dli.ernet.199817/
 584,HUMAN,दिलिप,4,1,https://archive.org/details/dli.ernet.199817/
 585,HUMAN,दीर्घायु,4,1,https://archive.org/details/dli.ernet.199817/
@@ -629,7 +629,7 @@
 665,RAKSHASA,नरान्तक,4,1,https://archive.org/details/dli.ernet.199817/
 667,MONKEY,नल,4,1,https://archive.org/details/dli.ernet.199817/
 668,GOD,विश्वकर्मा,4,1,https://archive.org/details/dli.ernet.199817/
-669,HUMAN,नलकुबेर/नलकुबर,4,1,https://archive.org/details/dli.ernet.199817/
+669,HUMAN,नलकूवर,4,1,https://archive.org/details/dli.ernet.199817/
 670,NYMPH,रम्भा,4,1,https://archive.org/details/dli.ernet.199817/
 671,RIVER,नलिनी,4,1,https://archive.org/details/dli.ernet.199817/
 672,LAKE,विन्दु,4,1,https://archive.org/details/dli.ernet.199817/
@@ -660,7 +660,7 @@
 697,EPITHET,पर्जन्य,4,1,https://archive.org/details/dli.ernet.199817/
 698,MONKEY,शरभ,4,1,https://archive.org/details/dli.ernet.199817/
 699,RISHI,पर्वत,4,1,https://archive.org/details/dli.ernet.199817/
-700,MILITARY,पह्लवा(बहु.),4,1,https://archive.org/details/dli.ernet.199817/
+700,MILITARY,पह्लव,4,1,https://archive.org/details/dli.ernet.199817/
 701,DEVINE_COW,सुरभि,4,1,https://archive.org/details/dli.ernet.199817/
 702,COUNTRY,पाञ्चाल,4,1,https://archive.org/details/dli.ernet.199817/
 703,TOWN,पाण्ड्य 1,4,1,https://archive.org/details/dli.ernet.199817/
@@ -721,7 +721,7 @@
 759,NIDHI,प्रौष्ठपद,4,1,https://archive.org/details/dli.ernet.199817/
 760,MONKEY,प्लक्ष,4,1,https://archive.org/details/dli.ernet.199817/
 761,GANDHARVA,बभ्रु,4,1,https://archive.org/details/dli.ernet.199817/
-762,SOLDIER,बर्बरा(बहु.),4,1,https://archive.org/details/dli.ernet.199817/
+762,SOLDIER,बर्बर,4,1,https://archive.org/details/dli.ernet.199817/
 763,DEVINE_COW,शवला,4,1,https://archive.org/details/dli.ernet.199817/
 764,DAITYA,बल,4,1,https://archive.org/details/dli.ernet.199817/
 765,RAKSHASA,विरोचन,4,1,https://archive.org/details/dli.ernet.199817/
@@ -736,7 +736,7 @@
 774,MONKEY,तार,4,1,https://archive.org/details/dli.ernet.199817/
 775,HUMAN,ब्रह्मदत्त,4,1,https://archive.org/details/dli.ernet.199817/
 776,COUNTRY,बराहमाल,4,1,https://archive.org/details/dli.ernet.199817/
-777,RAKSHASA,ब्रह्मराक्षस(बहु.),4,1,https://archive.org/details/dli.ernet.199817/
+777,RAKSHASA,ब्रह्मराक्षस,4,1,https://archive.org/details/dli.ernet.199817/
 778,SACRIFICE,यज्ञ,4,1,https://archive.org/details/dli.ernet.199817/
 779,RAKSHASA,ब्रह्मशत्रु,4,1,https://archive.org/details/dli.ernet.199817/
 781,RAKSHASHI,ब्रह्महत्या,4,1,https://archive.org/details/dli.ernet.199817/
@@ -786,7 +786,7 @@
 825,HUMAN,मन्त्रपाल,4,1,https://archive.org/details/dli.ernet.199817/
 826,RAKSHASHI,मन्थरा 1,4,1,https://archive.org/details/dli.ernet.199817/
 829,RIVER,मन्दाकिनी 1,4,1,https://archive.org/details/dli.ernet.199817/
-830,RISHI,सुक्तीक्ष्ण,4,1,https://archive.org/details/dli.ernet.199817/
+830,RISHI,सुतीक्ष्ण,4,1,https://archive.org/details/dli.ernet.199817/
 831,RIVER,मन्दाकिनी 2,4,1,https://archive.org/details/dli.ernet.199817/
 832,MOUNTAIN,मन्दार,4,1,https://archive.org/details/dli.ernet.199817/
 833,EVENT,समुद्रमन्थन,4,1,https://archive.org/details/dli.ernet.199817/
@@ -795,7 +795,7 @@
 837,HILL,मैनाक,4,1,https://archive.org/details/dli.ernet.199817/
 838,HUMAN,मरु 1,4,1,https://archive.org/details/dli.ernet.199817/
 839,HUMAN,प्रतीन्धक,4,1,https://archive.org/details/dli.ernet.199817/
-840,STORM_DEITIES,मरुत् (बहु.),4,1,https://archive.org/details/dli.ernet.199817/
+840,STORM_DEITIES,मरुत्,4,1,https://archive.org/details/dli.ernet.199817/
 841,KING,मरुत्त,4,1,https://archive.org/details/dli.ernet.199817/
 842,RISHI,संवर्त,4,1,https://archive.org/details/dli.ernet.199817/
 843,TOWN,मलद,4,1,https://archive.org/details/dli.ernet.199817/

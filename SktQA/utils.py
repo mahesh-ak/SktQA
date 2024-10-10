@@ -22,6 +22,8 @@ LOW_END_MODELS = ['gpt-4o-mini', 'gpt-3.5-turbo', 'gemini-1.0-pro', 'llama-v3p1-
 
 def get_chat_model(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:
+        if model == 'gpt-4o':
+            model = 'gpt-4o-2024-05-13'
         chat_model = ChatOpenAI(model=model, max_tokens= MAX_LENGTH)
     elif model in ['claude-3-5-sonnet-20240620']:
         chat_model = ChatAnthropic(model=model, max_tokens= MAX_LENGTH)
@@ -39,6 +41,8 @@ def get_chat_model(model):
 
 def get_chat_model_rag(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:
+        if model == 'gpt-4o':
+            model = 'gpt-4o-2024-05-13'
         chat_model = ChatOpenAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
     elif model in ['claude-3-5-sonnet-20240620']:
         chat_model = ChatAnthropic(model_name=model, temperature=0, max_tokens= MAX_LENGTH)
@@ -56,6 +60,8 @@ def get_chat_model_rag(model):
 
 def get_chat_model_kg(model):
     if model in ['gpt-4o']:
+        if model == 'gpt-4o':
+            model = 'gpt-4o-2024-05-13'
         chat_model = ChatOpenAI(model_name=model, temperature=0, max_tokens= MAX_LENGTH_KG)
     elif model in ['claude-3-5-sonnet-20240620']:
         chat_model = ChatAnthropic(model_name=model, temperature=0, max_tokens= MAX_LENGTH_KG)
