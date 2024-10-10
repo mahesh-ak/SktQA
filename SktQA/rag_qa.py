@@ -232,7 +232,8 @@ def run_rag_default(in_file=None, model=None, emb=None, k=None, dataset=None, **
         in_file = 'data/qa_set/sanskrit.tsv'
     
     if model == None:
-        models = DEFAULT_MODELS
+        models = DEFAULT_MODELS + LOW_END_MODELS
+        models.remove('llama-v3p1-70b-instruct')
     else:
         models = [model]
     

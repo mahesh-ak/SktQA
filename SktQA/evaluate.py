@@ -10,26 +10,36 @@ punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 def compare(ans_list,y):
     return str(y).translate(punct_table) in [x.strip().translate(punct_table) for x in ans_list.split(';')]
 
-def plot_k(data):
+def plot_k(data, pre):
+    plt.figure()
+    map = {'bm25': 'BM25', 'fasttext': 'AvgFT', 'glove': 'AvgGV'}
     for key, values in data.items():
-        plt.plot(values.keys(), values.values(), label=key, marker='o')
+        plt.plot(values.keys(), values.values(), label=map[key], marker='o')
     
-    err = 0.006
-    avg = 0.407
-    plt.axhline(y = avg, color = 'k', linestyle = '-', label='zero-shot baseline') 
+    if pre=='':
+        plt.title('Effect of k value in RAG for GPT-4o (Rāmāyaṇa)')
+        err = 0.006
+        avg = 0.407
+
+    elif pre=='ayurveda_':
+        plt.title('Effect of k value in RAG for GPT-4o (Bhāvaprakāśanighaṇtu)')
+        err = 0.005
+        avg = 0.253
+
+    plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline') 
     plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
     plt.axhline(y = avg-err, color = 'k', linestyle = '--') 
 
     # Labels and title
     plt.xlabel('k')
     plt.ylabel('EM score')
+    plt.ylim((0.24, 0.45))
     plt.xticks(range(1,MAX_K+1))
-    plt.title('Effect of k value in RAG for GPT-4o')
     plt.legend()
     plt.grid(True)
 
     # Show plot
-    plt.savefig('results/rag/rag_k_plot_gpt4o.png')
+    plt.savefig(f'results/rag/rag_k_plot_{pre}gpt4o.png')
 
 def eval_file_rel(in_file, rel_file):
     df = pd.read_csv(in_file, sep='\t')
@@ -155,20 +165,22 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
                 fp.write(res_txt)
     
     if k_rag:
-        f_pth = "results/rag/{embedding}_{k}.tsv"
+        f_pth = "results/rag/{pre}{embedding}_{k}.tsv"
         emb = ['bm25', 'fasttext', 'glove']
-        scores = {}
-        for e in emb:
-            scores[e] = {}
-            for k in range(1,MAX_K+1):
-                e_f_pth = f_pth.format(embedding=e, k=k)
-                if os.path.exists(e_f_pth):
-                    scores[e][k] = eval_file(e_f_pth)['gpt-4o']
-        res_txt = print_table_row_wise(scores, emb, list(range(1,MAX_K+1)), row_head='Retriever')
-        print(res_txt)
-        plot_k(scores)
-        with open("results/rag/eval_table_gpt4o.tsv",'w') as fp:
-            fp.write(res_txt)
+        for pr in ['', 'ayurveda_']:
+            scores = {}
+            for e in emb:
+                scores[e] = {}
+                for k in range(1,MAX_K+1):
+                    e_f_pth = f_pth.format(pre=pr, embedding=e, k=k)
+                    if os.path.exists(e_f_pth):
+                        scores[e][k] = eval_file(e_f_pth)['gpt-4o']
+            print(f"Dataset: {pr} (default Ramayana)")
+            res_txt = print_table_row_wise(scores, emb, list(range(1,MAX_K+1)), row_head='Retriever')
+            print(res_txt)
+            plot_k(scores, pre=pr)
+            with open(f"results/rag/eval_table_{pr}gpt4o.tsv",'w') as fp:
+                fp.write(res_txt)
 
 
         
