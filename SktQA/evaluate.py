@@ -8,7 +8,7 @@ import string
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 def compare(ans_list,y):
-    return str(y).translate(punct_table) in [x.strip().translate(punct_table) for x in ans_list.split(';')]
+    return str(y).replace('उत्तरम्:','').strip().translate(punct_table) in [x.strip().replace('।','').translate(punct_table) for x in ans_list.split(';')]
 
 def plot_k(data, pre):
     plt.figure()
@@ -44,8 +44,11 @@ def plot_k(data, pre):
 def eval_file_rel(in_file, rel_file):
     df = pd.read_csv(in_file, sep='\t')
     rel_df = pd.read_csv(rel_file,sep='\t')
-    rel_df = rel_df[['ID','rel_0','rel_1','rel_2', 'rel_3']]
-    rel_df['rel_sum'] = rel_df.apply(lambda x: sum([x[f'rel_{k}'] for k in range(4)]),axis=1)
+    if 'rel_0' in rel_df.columns:
+        rel_df = rel_df[['ID','rel_0','rel_1','rel_2', 'rel_3']]
+        rel_df['rel_sum'] = rel_df.apply(lambda x: sum([x[f'rel_{k}'] for k in range(4)]),axis=1)
+    else:
+        rel_df['rel_sum'] = rel_df['rel']
     rel_df = rel_df[rel_df['rel_sum']>0][['ID']]
 
     df = df.merge(rel_df, how='inner')
@@ -53,8 +56,7 @@ def eval_file_rel(in_file, rel_file):
     if 'ANSWER' not in df.columns:
         print('Error: gold answers should be present in column ANSWER')
         exit(1)
-    
-    methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col)]
+    methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col) and ('maxd' not in col) and ('paths' not in col)]
     em_scores = {}
     print("Final length:",len(df))
     for m in methods:

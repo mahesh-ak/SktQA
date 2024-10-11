@@ -71,7 +71,7 @@
 72,Human,कालिन्दी
 73,Human,च्यवन
 74,Family,भार्गव
-76,Human,(असितभार्या२)
+76,Human,असितभार्या
 77,Mountain,हिमवत्
 78,Human,असमञ्ज
 79,Gana,देव
@@ -95,7 +95,7 @@
 98,Professional,सूत
 99,Professional,मागध
 100,Weapon,शतघ्नी
-102,Unit,१०० शत
+102,Unit,शत
 103,‍‍quality,उच्चाट्टालध्वजवती
 126,Shape,अष्टापद
 127,Rakshasa,यूपाक्ष
@@ -167,8 +167,8 @@
 169,Hill,अपरपर्वत
 170,Village,अभिकाल
 171,Messenger,दूत
-172,Rishi,वशिष्ठ
-173,Maharshi,वशिष्ठ
+172,Rishi,वसिष्ठ
+173,Maharshi,वसिष्ठ
 174,Town,अमरावती
 175,Hill,अयोमुख
 176,Rakshashi,अयोमुखी
@@ -194,7 +194,7 @@
 202,Human,अर्थसाधक
 203,Forest,अलक्षित
 204,Aditya,अर्यमा
-205,Human,कौशल्या
+205,Human,कौसल्या
 206,Human,अलम्बुषा
 207,Human,विशाल
 208,King,अलर्क
@@ -269,7 +269,7 @@
 280,Hill,उशीरबीजम्
 281,Monkey,प्रमाथि
 282,Cave,ऋक्ष
-283,Monkey,ऋक्षराज/ऋक्षराट्
+283,Monkey,ऋक्षरजस्
 284,Hill,ऋक्षवान्
 285,Riksha,धूम्र
 286,Rishi,ऋचीक 1
@@ -283,9 +283,9 @@
 295,King,ऋषभ 2
 296,Monkey,ऋषभ 3
 297,Rakshasa,मत्त
-298,Monkey,ऋषभ-स्कन्ध
+298,Monkey,ऋषभस्कन्ध
 299,Rakshasa,इन्द्रजित्
-300,Monkey,ऋषि-पुत्र
+300,Monkey,ऋषिपुत्र
 301,Country,ऋष्टिक
 302,Hill,ऋष्यमुख
 303,Maharshi,विभाण्डक
@@ -344,7 +344,7 @@
 360,Rakshasa,सुमाली
 361,Rakshashi,केतुमती
 362,Country,कुरु
-363,Forest,कुरुः
+363,Forest,कुरु
 364,Rakshasa,कुबेर
 365,Garden,उद्यानम्
 366,Land,कुरुजाङ्गल
@@ -402,8 +402,8 @@
 424,Daitya,कैटभ
 425,Lake,मानस
 426,Mountain,कैलास
-467,Kingdom,कोशल
-427,Country,कोशल
+467,Kingdom,कोसल
+427,Country,कोसल
 428,River,सरयु
 429,King,भानुमान्
 430,District,कोशकार
@@ -455,7 +455,7 @@
 479,Society_class,चण्डाल
 480,Rakshashi,चण्डोदरी
 481,Forest,चन्दनवन
-482,Animal,वानराः
+482,Animal,वानर
 483,Range_of_hills,चन्द्र
 484,Human,चन्द्र 1
 488,Place,चन्द्रकान्त
@@ -527,9 +527,9 @@
 558,Vimana,पुष्पक
 559,Bunch_of_cities,त्रिपुर
 560,Loka,स्वर्ग
-561,Rakshasa,त्रिशिरा 1
-562,Rakshasa,त्रिशिरा 2
-563,Aditya,त्वष्टा
+561,Rakshasa,त्रिशिस्
+562,Rakshasa,त्रिशिस्
+563,Aditya,त्वष्टृ
 564,Devi,सुप्रभा
 565,Rakshasa,दण्ड 1
 566,Human,दण्ड 2
@@ -547,7 +547,7 @@
 579,Residential_place,आश्रम 2
 580,Cluster_of_towns,दशार्ण
 581,Land,दाक्षिणात्य
-582,Race,दानवाः
+582,Race,दानव
 583,Hill,शिशिर
 584,Human,दिलिप
 585,Human,दीर्घायु
@@ -629,7 +629,7 @@
 665,Rakshasa,नरान्तक
 667,Monkey,नल
 668,God,विश्वकर्मा
-669,Human,नलकुबेर/नलकुबर
+669,Human,नलकूवर
 670,Nymph,रम्भा
 671,River,नलिनी
 672,Lake,विन्दु
@@ -660,7 +660,7 @@
 697,Epithet,पर्जन्य
 698,Monkey,शरभ
 699,Rishi,पर्वत
-700,Military,पह्लवा(बहु.)
+700,Military,पह्लव
 701,Devine_cow,सुरभि
 702,Country,पाञ्चाल
 703,Town,पाण्ड्य 1
@@ -721,7 +721,7 @@
 759,Nidhi,प्रौष्ठपद
 760,Monkey,प्लक्ष
 761,Gandharva,बभ्रु
-762,Soldier,बर्बरा(बहु.)
+762,Soldier,बर्बर
 763,Devine_cow,शवला
 764,Daitya,बल
 765,Rakshasa,विरोचन
@@ -736,7 +736,7 @@
 774,Monkey,तार
 775,Human,ब्रह्मदत्त
 776,Country,बराहमाल
-777,Rakshasa,ब्रह्मराक्षस(बहु.)
+777,Rakshasa,ब्रह्मराक्षस
 778,Sacrifice,यज्ञ
 779,Rakshasa,ब्रह्मशत्रु
 781,Rakshashi,ब्रह्महत्या
@@ -786,7 +786,7 @@
 825,Human,मन्त्रपाल
 826,Rakshashi,मन्थरा 1
 829,River,मन्दाकिनी 1
-830,Rishi,सुक्तीक्ष्ण
+830,Rishi,सुतीक्ष्ण
 831,River,मन्दाकिनी 2
 832,Mountain,मन्दार
 833,Event,समुद्रमन्थन
@@ -795,7 +795,7 @@
 837,Hill,मैनाक
 838,Human,मरु 1
 839,Human,प्रतीन्धक
-840,Storm_deities,मरुत् (बहु.)
+840,Storm_deities,मरुत्
 841,King,मरुत्त
 842,Rishi,संवर्त
 843,Town,मलद
