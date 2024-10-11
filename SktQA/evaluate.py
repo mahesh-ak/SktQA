@@ -3,7 +3,7 @@ import argparse
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-from utils import MAX_K
+from utils import MAX_K, DEFAULT_MODELS, LOW_END_MODELS
 import string
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
@@ -18,13 +18,13 @@ def plot_k(data, pre):
     
     if pre=='':
         plt.title('Effect of k value in RAG for GPT-4o (Rāmāyaṇa)')
-        err = 0.006
-        avg = 0.407
+        err = 0.007
+        avg = 0.409
 
     elif pre=='ayurveda_':
         plt.title('Effect of k value in RAG for GPT-4o (Bhāvaprakāśanighaṇtu)')
         err = 0.006
-        avg = 0.268
+        avg = 0.27
 
     plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline') 
     plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
@@ -97,7 +97,7 @@ def print_table_row_wise(scores, row_labels, column_labels, row_head=''):
 def print_table_col_wise(scores, row_labels, column_labels, row_head=''):
     lines = ['\t'.join([row_head]+[str(col) for col in column_labels])]
     for row in row_labels:
-        row_scores = ['']*(len(column_labels)+1)
+        row_scores = ['']*(len(column_labels))
         line = [row]
         for i,c in enumerate(column_labels):
             if c not in scores:
@@ -143,23 +143,35 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
                         else:
                             scores[l][k].append(v)
         scores_w_bars = {l: {k:f"{round(np.mean(v),3)} ({round(np.std(v),3)})" for k,v in d.items()} for l,d in scores.items()}
-        res_txt = print_table_col_wise(scores_w_bars, list(methods), lang, row_head='LLM')
+        res_txt = print_table_col_wise(scores_w_bars, DEFAULT_MODELS+LOW_END_MODELS, lang, row_head='LLM')
         print(res_txt)
         with open("results/zero_shot/eval_table.tsv",'w') as fp:
             fp.write(res_txt)   
 
     if rag:
         f_pth = "results/rag/{pre}{embedding}_4.tsv"
+        f_pth_kg = "results/kgqa/{pre}.tsv"
+        f_pth_zs = "results/zero_shot/eval_table.tsv"
         emb = ['bm25', 'fasttext','glove']
         for pr in ['','ayurveda_']:
             scores = {}
-            methods = set()
             for e in emb:
                 e_f_pth = f_pth.format(embedding=e, pre=pr)
                 if os.path.exists(e_f_pth):
                     scores[e] = eval_file(e_f_pth)
-                    methods = methods.union(list(scores[e].keys()))
-            res_txt = print_table_row_wise(scores, emb, list(methods), row_head='Retriever')
+
+            dataset = 'sanskrit' if pr == '' else pr.replace('_','')
+            kg_f_pth = f_pth_kg.format(pre = dataset)
+            
+            if os.path.exists(kg_f_pth):
+                scores['llm-kg'] = eval_file(kg_f_pth)
+            
+            if os.path.exists(f_pth_zs):
+                zs_df = pd.read_csv(f_pth_zs, sep='\t')
+                scores['zero-shot'] = dict(zip(zs_df['LLM'], zs_df[dataset]))
+
+
+            res_txt = print_table_row_wise(scores, ['zero-shot']+emb+['llm-kg'], DEFAULT_MODELS+LOW_END_MODELS, row_head='Method')
             print(f"Dataset: {pr} (default Ramayana)")
             print(res_txt)
             print()
