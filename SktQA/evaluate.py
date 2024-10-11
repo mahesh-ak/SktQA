@@ -8,7 +8,7 @@ import string
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 def compare(ans_list,y):
-    return str(y).replace('उत्तरम्:','').strip().translate(punct_table) in [x.strip().replace('।','').translate(punct_table) for x in ans_list.split(';')]
+    return str(y).replace('उत्तरम्','').translate(punct_table).strip() in [x.replace('।','').translate(punct_table).strip() for x in ans_list.split(';')]
 
 def plot_k(data, pre):
     plt.figure()

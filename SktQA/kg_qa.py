@@ -471,6 +471,8 @@ def run_kgqa(in_file, model, lemmatizer, d= 3, out_file=None, force=None):
         out_df = pd.read_csv(out_file, sep='\t')
     else:
         out_df = in_df.copy()
+    
+    out_df['ANSWER'] = in_df['ANSWER']
 
     tog = ToG(model=model, dataset=dataset, lemmatizer=lemmatizer) 
     if model in out_df.columns and (not force):
