@@ -41,7 +41,7 @@ def plot_k(data, pre):
     # Show plot
     plt.savefig(f'results/rag/rag_k_plot_{pre}gpt4o.png')
 
-def eval_file_rel(in_file, rel_file):
+def eval_file_rel(in_file, rel_file, reverse = False):
     df = pd.read_csv(in_file, sep='\t')
     rel_df = pd.read_csv(rel_file,sep='\t')
     if 'rel_0' in rel_df.columns:
@@ -49,7 +49,11 @@ def eval_file_rel(in_file, rel_file):
         rel_df['rel_sum'] = rel_df.apply(lambda x: sum([x[f'rel_{k}'] for k in range(4)]),axis=1)
     else:
         rel_df['rel_sum'] = rel_df['rel']
-    rel_df = rel_df[rel_df['rel_sum']>0][['ID']]
+
+    if reverse:
+        rel_df = rel_df[rel_df['rel_sum']==0][['ID']]
+    else:
+        rel_df = rel_df[rel_df['rel_sum']>0][['ID']]
 
     df = df.merge(rel_df, how='inner')
     print('Length of relavant rows', len(df))
@@ -111,7 +115,27 @@ def print_table_col_wise(scores, row_labels, column_labels, row_head=''):
         lines.append(line)
     return '\n'.join(lines)
 
-def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=None):
+def zero_shot_eval(f_pth, rel_file=None, reverse=False):
+    scores = {'zero-shot':{}}
+    for n in range(3):
+        l_f_pth = f_pth.format(n=n)
+        scores_ = {}
+        if os.path.exists(l_f_pth):
+            if rel_file:
+                scores_ = eval_file_rel(l_f_pth, rel_file,reverse=reverse)
+            else:
+                scores_ = eval_file(l_f_pth)
+            for k,v in scores_.items():
+                if k not in scores['zero-shot']:
+                    scores['zero-shot'][k] = [v]
+                else:
+                    scores['zero-shot'][k].append(v)
+    scores = {'zero-shot': {k:f"{round(np.mean(v),3)} ({round(np.std(v),3)})" for k,v in scores['zero-shot'].items()}}
+    return scores['zero-shot']
+
+
+
+def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=None, abl=None):
     if in_file:
         if rel_file:
             scores = eval_file_rel(in_file, rel_file)
@@ -122,7 +146,70 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
         print(scores)
         return
     
-        
+    if abl:
+        f_pth_zs = "results/zero_shot/{pre}_{{n}}.tsv"
+        f_pth_rag = "results/rag/{pr}bm25_4.tsv"
+        f_pth_rag_rel = "data/{pr}bm25_4_rel.tsv"
+        f_pth_kg = "results/kgqa/{pre}.tsv"
+        f_pth_kg_rel = "data/{pre}_kg_rel.tsv"
+
+        for pr in ['', 'ayurveda_']:
+            pre = 'sanskrit' if pr == '' else pr.replace('_','')
+
+            ## RAG
+            scores = {}
+            scores['zero-shot'] = zero_shot_eval(f_pth_zs.format(pre=pre), f_pth_rag_rel.format(pr=pr))
+            scores['rag-bm25'] = eval_file_rel(f_pth_rag.format(pr=pr), f_pth_rag_rel.format(pr=pr))
+
+            res_txt = print_table_row_wise(scores, ['zero-shot', 'rag-bm25'], DEFAULT_MODELS, row_head='Method')
+            print(f"Dataset: {'ramayana' if pr == '' else pre} RAG")
+            print(res_txt)
+            print()
+            with open(f"results/rag/eval_table_{pr}rag_abl.tsv",'w') as fp:
+                fp.write(res_txt)
+
+            ## RAG inverse
+            scores = {}
+            scores['zero-shot'] = zero_shot_eval(f_pth_zs.format(pre=pre), f_pth_rag_rel.format(pr=pr), reverse=True)
+            scores['rag-bm25'] = eval_file_rel(f_pth_rag.format(pr=pr), f_pth_rag_rel.format(pr=pr), reverse=True)
+
+            res_txt = print_table_row_wise(scores, ['zero-shot', 'rag-bm25'], DEFAULT_MODELS, row_head='Method')
+            print(f"Dataset: {'ramayana' if pr == '' else pre} RAG inverse")
+            print(res_txt)
+            print()
+            with open(f"results/rag/eval_table_{pr}rag_abl_inverse.tsv",'w') as fp:
+                fp.write(res_txt)
+
+            ## KG
+            scores = {}
+            scores['zero-shot'] = zero_shot_eval(f_pth_zs.format(pre=pre), f_pth_kg_rel.format(pre=pre))
+            scores['rag-bm25'] = eval_file_rel(f_pth_rag.format(pr=pr), f_pth_kg_rel.format(pre=pre))
+            scores['llm-kg'] = eval_file_rel(f_pth_kg.format(pre=pre), f_pth_kg_rel.format(pre=pre))
+
+            res_txt = print_table_row_wise(scores, ['zero-shot', 'rag-bm25', 'llm-kg'], DEFAULT_MODELS, row_head='Method')
+            print(f"Dataset: {'ramayana' if pr == '' else pre} LLM-KG")
+            print(res_txt)
+            print()
+            with open(f"results/kgqa/eval_table_{pre}_abl.tsv",'w') as fp:
+                fp.write(res_txt)
+
+            ## KG inverse
+            scores = {}
+            scores['zero-shot'] = zero_shot_eval(f_pth_zs.format(pre=pre), f_pth_kg_rel.format(pre=pre), reverse=True)
+            scores['rag-bm25'] = eval_file_rel(f_pth_rag.format(pr=pr), f_pth_kg_rel.format(pre=pre), reverse=True)
+            scores['llm-kg'] = eval_file_rel(f_pth_kg.format(pre=pre), f_pth_kg_rel.format(pre=pre), reverse=True)
+
+
+            res_txt = print_table_row_wise(scores, ['zero-shot', 'rag-bm25', 'llm-kg'], DEFAULT_MODELS, row_head='Method')
+            print(f"Dataset: {'ramayana' if pr == '' else pre} LLM-KG inverse")
+            print(res_txt)
+            print()
+            with open(f"results/kgqa/eval_table_{pre}_abl_inverse.tsv",'w') as fp:
+                fp.write(res_txt)
+
+
+
+
     if zero_shot:
         f_pth = "results/zero_shot/{lang}_{n}.tsv"
         lang = ['sanskrit','ayurveda']
@@ -172,7 +259,7 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
 
 
             res_txt = print_table_row_wise(scores, ['zero-shot']+emb+['llm-kg'], DEFAULT_MODELS+LOW_END_MODELS, row_head='Method')
-            print(f"Dataset: {pr} (default Ramayana)")
+            print(f"Dataset: {'ramayana' if pr == '' else dataset}")
             print(res_txt)
             print()
             with open(f"results/rag/eval_table_{pr}k4.tsv",'w') as fp:
@@ -207,6 +294,7 @@ if __name__=='__main__':
     parser.add_argument('-l','--rel-file',type=str,help="relavence tsv file to compare")
     parser.add_argument('-z','--zero-shot', action='store_true', help="evaluate zero-shot QA")
     parser.add_argument('-r','--rag',action='store_true', help="evaluate RAG for k=4 across available methods")
+    parser.add_argument('-a', '--abl', action='store_true', help="generate ablation results")
     parser.add_argument('-k','--k-rag',action='store_true', help="evaluate RAG for GPT-4o across k=1,2,3,4")
     args = parser.parse_args()
 

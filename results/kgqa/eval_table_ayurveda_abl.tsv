@@ -1,0 +1,4 @@
+Method	gpt-4o	mistral-large-latest	llama-v3p1-405b-instruct	gemini-1.5-pro	claude-3-5-sonnet-20240620
+zero-shot	0.258 (0.015)	0.217 (0.007)	0.235 (0.004)	0.068 (0.004)	0.215 (0.004)	
+rag-bm25	0.482	0.478	0.288	0.478	0.552	
+llm-kg	0.284	0.281	-	-	0.247	
