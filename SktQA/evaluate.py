@@ -18,13 +18,22 @@ def plot_k(data, pre):
     
     if pre=='':
         plt.title('Effect of k value in RAG for GPT-4o (Rāmāyaṇa)')
-        err = 0.007
-        avg = 0.409
+        
+        zs_df = pd.read_csv('results/zero_shot/eval_table.tsv', sep='\t')
+        txt = dict(zip(zs_df['LLM'], zs_df['sanskrit']))['gpt-4o']
+
+        err = float(txt.split('(')[1].replace(')',''))
+        avg = float(txt.split('(')[0].strip())
 
     elif pre=='ayurveda_':
         plt.title('Effect of k value in RAG for GPT-4o (Bhāvaprakāśanighaṇtu)')
-        err = 0.006
-        avg = 0.27
+        
+        zs_df = pd.read_csv('results/zero_shot/eval_table.tsv', sep='\t')
+        txt = dict(zip(zs_df['LLM'], zs_df['ayurveda']))['gpt-4o']
+
+        err = float(txt.split('(')[1].replace(')',''))
+        avg = float(txt.split('(')[0].strip())
+
 
     plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline') 
     plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
