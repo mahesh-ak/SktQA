@@ -12,12 +12,16 @@ def compare(ans_list,y):
 
 def plot_k(data, pre):
     plt.figure()
+    design = {
+     'fontsize' : 11,
+     'weight' : 'bold'
+    }
     map = {'bm25': 'BM25', 'fasttext': 'AvgFT', 'glove': 'AvgGV'}
     for key, values in data.items():
-        plt.plot(values.keys(), values.values(), label=map[key], marker='o')
+        plt.plot(values.keys(), values.values(), label=map[key], marker='o', linewidth=3)
     
     if pre=='':
-        plt.title('Effect of k value in RAG for GPT-4o (Rāmāyaṇa)')
+        plt.title('Effect of k value in RAG for GPT-4o (Rāmāyaṇa)', **design)
         
         zs_df = pd.read_csv('results/zero_shot/eval_table.tsv', sep='\t')
         txt = dict(zip(zs_df['LLM'], zs_df['sanskrit']))['gpt-4o']
@@ -26,7 +30,7 @@ def plot_k(data, pre):
         avg = float(txt.split('(')[0].strip())
 
     elif pre=='ayurveda_':
-        plt.title('Effect of k value in RAG for GPT-4o (Bhāvaprakāśanighaṇtu)')
+        plt.title('Effect of k value in RAG for GPT-4o (Bhāvaprakāśanighaṇtu)', **design)
         
         zs_df = pd.read_csv('results/zero_shot/eval_table.tsv', sep='\t')
         txt = dict(zip(zs_df['LLM'], zs_df['ayurveda']))['gpt-4o']
@@ -35,20 +39,20 @@ def plot_k(data, pre):
         avg = float(txt.split('(')[0].strip())
 
 
-    plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline') 
+    plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline', linewidth=3) 
     plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
     plt.axhline(y = avg-err, color = 'k', linestyle = '--') 
 
     # Labels and title
-    plt.xlabel('k')
-    plt.ylabel('EM score')
+    plt.xlabel('k', **design)
+    plt.ylabel('EM score', **design)
     plt.ylim((0.26, 0.475))
     plt.xticks(range(1,MAX_K+1))
-    plt.legend()
+    plt.legend(prop={'weight':'bold'})
     plt.grid(True)
 
     # Show plot
-    plt.savefig(f'results/rag/rag_k_plot_{pre}gpt4o.png')
+    plt.savefig(f'results/rag/rag_k_plot_{pre}gpt4o.png',bbox_inches='tight',transparent=True, pad_inches=0)
 
 def eval_file_rel(in_file, rel_file, reverse = False):
     df = pd.read_csv(in_file, sep='\t')

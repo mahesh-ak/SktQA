@@ -25,4 +25,5 @@ evaluate:
 	python SktQA/evaluate.py -z
 	python SktQA/evaluate.py -r
 	python SktQA/evaluate.py -k
+	python SktQA/evaluate.py -a
 

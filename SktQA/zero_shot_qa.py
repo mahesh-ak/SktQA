@@ -2,10 +2,13 @@ from utils import *
 import argparse
 from langchain_core.prompts.chat import ChatPromptTemplate
 
-def ZeroShotChain(model='gpt-4o', language='english'):
+def ZeroShotChain(model='gpt-4o', dataset='sanskrit', language='english'):
+    
+    text = 'आयुर्वेद' if dataset == 'ayurveda' else 'रामायण'
+
     match language:
         case 'sanskrit':
-            template = "त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः रामायण-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन यदि उत्तरे कारणं नापेक्षितम्। कथम् किमर्थम् इत्यादिषु एकेन लघु वाक्येन उत्तरं देहि अत्र तु एक-पद-नियमः नास्ति। "
+            template = f"त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः {text}-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन यदि उत्तरे कारणं नापेक्षितम्। कथम् किमर्थम् इत्यादिषु एकेन लघु वाक्येन उत्तरं देहि अत्र तु एक-पद-नियमः नास्ति। "
         case 'english'| _:
             print("Warning! Unspecified language, defaulting prompt to English")
             template = "Answer the question related to Ramayana in the respective language only. Give a single word answer if reasoning is not demanded in the answer. With regards to how-questions, answer in a short phrase, there is no single word restriction."
@@ -36,6 +39,7 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
             out_fname = f"{lang}_{r}.tsv"
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
+    dataset = lang
     if lang == 'ayurveda':
         lang = 'sanskrit'
 
@@ -47,7 +51,7 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
     
     out_df['ANSWER'] = in_df['ANSWER']
 
-    chain = ZeroShotChain(model=model, language=lang)
+    chain = ZeroShotChain(model=model, dataset=dataset, language=lang)
     if model in out_df.columns and (not force):
         print(f"Warning! column {model} already exists in {out_file}. Skipping the chain. Specify -f to overwrite.")
     else:
