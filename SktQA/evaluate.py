@@ -46,7 +46,7 @@ def plot_k(data, pre):
     # Labels and title
     plt.xlabel('k', **design)
     plt.ylabel('EM score', **design)
-    plt.ylim((0.26, 0.475))
+    plt.ylim((0.32, 0.55))
     plt.xticks(range(1,MAX_K+1))
     plt.legend(prop={'weight':'bold'})
     plt.grid(True)
