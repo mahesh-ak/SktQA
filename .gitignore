@@ -11,3 +11,4 @@ sa_embedding/models/*
 sa_lemmatizer/
 SktQA/__pycache__/*
 *.env
+.~lock*
