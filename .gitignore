@@ -12,3 +12,4 @@ sa_lemmatizer/
 SktQA/__pycache__/*
 *.env
 .~lock*
+Code*
