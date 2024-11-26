@@ -94,6 +94,39 @@ def eval_file(in_file):
         em_scores[m] = round(em.sum()/len(em), 3)
     return em_scores
 
+category2idx = {'sanskrit': {}, 'ayurveda': {}}
+
+skt_df = pd.read_csv("data/categories_sanskrit.tsv", sep='\t')
+catgs = skt_df['category'].unique()
+for c in catgs:
+    id_range = skt_df[skt_df['category']==c]['id'].tolist()[0]
+    lims = id_range.split('-')
+    category2idx['sanskrit'][c] = list(range(int(lims[0]),int(lims[1])+1)) 
+
+ayur_df = pd.read_csv("data/categories_ayurveda.tsv", sep='\t')
+catgs = ayur_df['category'].unique()
+for c in catgs:
+    ids = ayur_df[ayur_df['category']==c]['id'].tolist()
+    category2idx['ayurveda'][c] = ids
+
+def eval_file_cat(in_file, dataset):
+    cats = category2idx[dataset]
+    df = pd.read_csv(in_file, sep='\t')
+    if 'ANSWER' not in df.columns:
+        print('Error: gold answers should be present in column ANSWER')
+        exit(1)
+    
+    methods = [col for col in df.columns if (col not in ['QUESTION','ANSWER','ID','CHOICES']) and ('context' not in col) and ('maxd' not in col) and ('paths' not in col)]
+    methods = ['gpt-4o','claude-3-5-sonnet-20240620','mistral-large-latest']
+    em_scores = {}
+    for m in methods:
+        if m not in em_scores:
+            em_scores[m] = {}
+        for c, id_list in cats.items():
+            em = df[df['ID'].isin(id_list)].apply(lambda x: compare(x['ANSWER'], x[m]), axis=1)
+            em_scores[m][c] = round(em.sum()/len(em), 3)
+    return em_scores
+
 def print_table_row_wise(scores, row_labels, column_labels, row_head=''):
     lines = ['\t'.join([row_head]+[str(col) for col in column_labels])]
     for row in row_labels:
@@ -148,7 +181,7 @@ def zero_shot_eval(f_pth, rel_file=None, reverse=False):
 
 
 
-def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=None, abl=None):
+def eval_default(in_file=None, rag=None, category_wise=None, k_rag=None, zero_shot=None, rel_file=None, abl=None):
     if in_file:
         if rel_file:
             scores = eval_file_rel(in_file, rel_file)
@@ -277,7 +310,45 @@ def eval_default(in_file=None, rag=None, k_rag=None, zero_shot=None, rel_file=No
             print()
             with open(f"results/rag/eval_table_{pr}k4.tsv",'w') as fp:
                 fp.write(res_txt)
-    
+
+    if category_wise:
+        f_pth = "results/rag/{pre}{embedding}_4.tsv"
+        f_pth_kg = "results/kgqa/{pre}.tsv"
+        f_pth_zs = "results/zero_shot/{pre}_0.tsv"
+
+        emb = ['bm25'] #, 'fasttext','glove']
+        for pr in ['','ayurveda_']:
+
+            dataset = 'sanskrit' if pr == '' else pr.replace('_','')
+            scores = {}
+            for e in emb:
+                e_f_pth = f_pth.format(embedding=e, pre=pr)
+                if os.path.exists(e_f_pth):
+                    scores[e] = eval_file_cat(e_f_pth, dataset)
+
+            kg_f_pth = f_pth_kg.format(pre = dataset)
+            zs_f_pth = f_pth_zs.format(pre = dataset)
+            
+            if os.path.exists(kg_f_pth):
+                scores['llm-kg'] = eval_file_cat(kg_f_pth, dataset)
+            
+            if os.path.exists(zs_f_pth):
+                scores['zero-shot'] = eval_file_cat(zs_f_pth, dataset)
+
+            new_scores = {}
+            methods = list(scores['zero-shot'].keys())
+            paradigms = ['zero-shot'] + emb + ['llm-kg']
+
+            for p in paradigms:
+                for m in methods:
+                    new_scores[f"{p}-{m}"] = scores[p][m]
+            res_txt = print_table_row_wise(new_scores, list(new_scores.keys()), list(new_scores[f"{paradigms[0]}-{methods[0]}"].keys()), row_head='Model')
+            print(f"Dataset: {'ramayana' if pr == '' else dataset}")
+            print(res_txt)
+            print()
+            with open(f"results/category_wise/eval_table_{pr}k4.tsv",'w') as fp:
+                fp.write(res_txt)
+
     if k_rag:
         f_pth = "results/rag/{pre}{embedding}_{k}.tsv"
         emb = ['bm25', 'fasttext', 'glove']
@@ -307,6 +378,7 @@ if __name__=='__main__':
     parser.add_argument('-l','--rel-file',type=str,help="relavence tsv file to compare")
     parser.add_argument('-z','--zero-shot', action='store_true', help="evaluate zero-shot QA")
     parser.add_argument('-r','--rag',action='store_true', help="evaluate RAG for k=4 across available methods")
+    parser.add_argument('-c','--category-wise',action='store_true', help="evaluate category wise")
     parser.add_argument('-a', '--abl', action='store_true', help="generate ablation results")
     parser.add_argument('-k','--k-rag',action='store_true', help="evaluate RAG for GPT-4o across k=1,2,3,4")
     args = parser.parse_args()
