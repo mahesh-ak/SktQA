@@ -22,8 +22,8 @@ ayurveda:
 
 
 evaluate:
-	python SktQA/evaluate.py -z
-	python SktQA/evaluate.py -r
-	python SktQA/evaluate.py -k
-	python SktQA/evaluate.py -a
+	python SktQA/eval.py -z
+	python SktQA/eval.py -r
+	python SktQA/eval.py -k
+	python SktQA/eval.py -a
 

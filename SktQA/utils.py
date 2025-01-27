@@ -1,7 +1,7 @@
 from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
-from langchain_google_vertexai import ChatVertexAI
-from langchain_mistralai import ChatMistralAI
+#from langchain_anthropic import ChatAnthropic
+#from langchain_google_vertexai import ChatVertexAI
+#from langchain_mistralai import ChatMistralAI
 from langchain_fireworks import ChatFireworks
 from dotenv import load_dotenv
 from typing import List, Optional
@@ -16,9 +16,9 @@ load_dotenv()
 MAX_LENGTH = 64
 MAX_LENGTH_KG = 1792
 MAX_K = 4
-DEFAULT_MODELS = ['gpt-4o', 'mistral-large-latest', 'llama-v3p1-405b-instruct', 'gemini-1.5-pro', 'claude-3-5-sonnet-20240620']
+DEFAULT_MODELS = ['gpt-4o', 'llama-v3p1-405b-instruct']
 KG_DEFAULT_MODELS = ['gpt-4o', 'mistral-large-latest', 'claude-3-5-sonnet-20240620']
-LOW_END_MODELS = ['gpt-4o-mini', 'gpt-3.5-turbo', 'gemini-1.0-pro', 'llama-v3p1-70b-instruct', 'llama-v3p1-8b-instruct']
+LOW_END_MODELS = ['gpt-4o-mini', 'llama-v3p1-8b-instruct'] #, 'llama-v3p1-70b-instruct', 'gpt-3.5-turbo']
 
 def get_chat_model(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:
@@ -94,9 +94,30 @@ def chain_invoke(chain, inp):
 
     return ret
 
+def chain_invoke_generic(chain, inp):
+    done = False
+    ret = None
+    i = 0
+    while not done:
+        try:
+            done = True
+            ret =  chain.invoke({"input": inp['sentence']})
+        except Exception as e:
+            done = False
+            print(e)
+            i += 1
+            print(f"Reattempting {i}th time in a row...")
+            time.sleep(1)
+
+    return ret
+
 
 def ApplyQAChainOnDF(df, chain, col_name='predicted'):
     df[col_name] = df.progress_apply(lambda x: chain_invoke(chain,x), axis=1)
+    return df
+
+def ApplyChainOnDF(df, chain, col_name='predicted'):
+    df[col_name] = df.progress_apply(lambda x: chain_invoke_generic(chain,x), axis=1)
     return df
 
 diatrics_corr = {'r'+'̣':'ṛ', 's'+'̣':'ṣ', 'r'+'̣'+'̄': 'ṝ', 't'+'̣':'ṭ', 'd'+'̣':'ḍ', 
