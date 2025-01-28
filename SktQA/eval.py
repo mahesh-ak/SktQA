@@ -8,7 +8,7 @@ import string
 import evaluate as ev
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
-bleu = ev.load('bleu')
+bleu = ev.load('sacrebleu')
 def compare(ans_list,y):
     return str(y).replace('उत्तरम्','').translate(punct_table).strip() in [x.replace('।','').translate(punct_table).strip() for x in ans_list.split(';')]
 
@@ -107,7 +107,7 @@ def eval_file_mt(in_file):
     references = [[ref] for ref in df['gold'].tolist()]
     for m in methods:
         predictions = df[m].tolist()
-        em_scores[m] = bleu.compute(predictions=predictions, references=references)['bleu']
+        em_scores[m] = bleu.compute(predictions=predictions, references=references)['score']
     return em_scores
 
 category2idx = {'sanskrit': {}, 'ayurveda': {}}
