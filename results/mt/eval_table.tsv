@@ -1,0 +1,5 @@
+LLM	mt_in	mt_out
+gpt-4o	20.526 (0.0)	16.495 (0.0)
+llama-v3p1-405b-instruct	19.643 (0.0)	17.146 (0.0)
+gpt-4o-mini	7.082 (0.0)	9.052 (0.0)
+llama-v3p1-8b-instruct	2.826 (0.0)	4.067 (0.0)
