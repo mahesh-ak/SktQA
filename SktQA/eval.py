@@ -135,13 +135,20 @@ def eval_file_ner(in_file):
     methods = [col for col in df.columns if (col not in ['sentence','gold','id'])]
     em_scores = {}
     references = [ref.split() for ref in df['gold'].tolist()]
-    
+    N = 0
+    if 'skt' in in_file:
+        N = 32
+    elif 'lat' in in_file:
+        N = 3
+    elif 'gra' in in_file:
+        N = 8
     for m in methods:
         df[m] = df.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
         predictions = df[m].tolist()
         scores_ = seqeval.compute(predictions=predictions, references=references)
+        #print(scores_)
         F1 = [v['f1'] for k,v in scores_.items() if k not in [f"overall_{th}" for th in ['precision','recall','f1','accuracy']]]
-        em_scores[m] = np.mean(F1)
+        em_scores[m] = np.sum(F1)/N
     return em_scores
 
 category2idx = {'sanskrit': {}, 'ayurveda': {}}
@@ -362,7 +369,7 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
             fp.write(res_txt) 
     if mt:
         f_pth = "results/mt/{lang}_{n}.tsv"
-        lang = ['mt_in','mt_out']
+        lang = ['mt_in','mt_out','grc_eng','lat_eng']
         scores = {}
         methods = set()
         for l in lang:
