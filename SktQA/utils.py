@@ -24,6 +24,8 @@ def get_chat_model(model):
     if model in ['gpt-4o','gpt-4o-mini','gpt-3.5-turbo']:
         if model == 'gpt-4o':
             model = 'gpt-4o-2024-05-13'
+        if model == 'gpt-4o-mini':
+            model = 'gpt-4o-mini-2024-07-18'
         chat_model = ChatOpenAI(model=model, max_tokens= MAX_LENGTH)
     elif model in ['claude-3-5-sonnet-20240620']:
         chat_model = ChatAnthropic(model=model, max_tokens= MAX_LENGTH)
