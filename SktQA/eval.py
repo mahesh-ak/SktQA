@@ -8,6 +8,7 @@ import string
 import evaluate as ev
 import json
 from collections import Counter
+from sklearn.metrics import confusion_matrix
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 bleu = ev.load('sacrebleu')
@@ -130,6 +131,10 @@ def format_ner(dict_json, sent):
             inv_dict[vi] = k
     return [inv_dict[w] if w in inv_dict else 'O' for w in words]
 
+SKT_ENT = ['ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA']
+LAT_ENT = ['PERS', 'LOC', 'GRP']
+GRA_ENT = ['LOC', 'GOD', 'ORG', 'NORP', 'WORK', 'EVENT', 'PERSON', 'LANGUAGE']
+
 def eval_file_ner(in_file):
     df = pd.read_csv(in_file, sep='\t')
     if 'gold' not in df.columns:
@@ -138,13 +143,13 @@ def eval_file_ner(in_file):
     
     methods = [col for col in df.columns if (col not in ['sentence','gold','id'])]
     em_scores = {}
+    cm = {'matrices': {}, 'labels': None}
     
-    N = 0
-    if 'skt' in in_file:
-        N = 32
+    if 'skt' in in_file or 'skten' in in_file:
+        labels = SKT_ENT
     elif 'lat' in in_file:
         lat_out_d = {m: 0.0 for m in methods}
-        N = 3
+        labels = LAT_ENT
         df_1 = df[df['id'].str.contains('Ovid')]
         for m in methods:
             df_1[m] = df_1.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
@@ -152,11 +157,12 @@ def eval_file_ner(in_file):
             references = [ref.split() for ref in df_1['gold'].tolist()]
             scores_1 = seqeval.compute(predictions=predictions, references=references)
             #print(scores_)
-            F1 = [v['f1'] for k,v in scores_1.items() if k not in [f"overall_{th}" for th in ['precision','recall','f1','accuracy']]]
-            lat_out_d[m] = np.sum(F1)/N
+            F1 = [v['f1'] for k,v in scores_1.items() if k in labels]
+            lat_out_d[m] = np.mean(F1)
         print(lat_out_d)
     elif 'gra' in in_file:
-        N = 8
+        labels = GRA_ENT
+    cm['labels'] = labels
     references = [ref.split() for ref in df['gold'].tolist()]
     all_refs = []
     for ref in references:
@@ -164,17 +170,22 @@ def eval_file_ner(in_file):
     cnt_ref = Counter(all_refs)
     mc_ref = cnt_ref.most_common(6)[1:]
     mc_f1 = {m: {mr[0]: 0.0 for mr in mc_ref} for m in methods}
+    mc_f1['counts'] = {mr[0]: mr[1] for mr in mc_ref}
     for m in methods:
         df[m] = df.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
         predictions = df[m].tolist()
+        all_preds = []
+        for pred in predictions:
+            all_preds = all_preds + [c.replace('B-','').replace('I-','') for c in pred]
+        cm['matrices'][m] = confusion_matrix(all_refs, all_preds, labels=labels, normalize='true').tolist()
         scores_ = seqeval.compute(predictions=predictions, references=references)
         #print(scores_)
-        F1 = [v['f1'] for k,v in scores_.items() if k not in [f"overall_{th}" for th in ['precision','recall','f1','accuracy']]]
-        em_scores[m] = np.sum(F1)/N
+        F1 = [v['f1'] for k,v in scores_.items() if k in labels]
+        em_scores[m] = np.mean(F1)
         for k in mc_f1[m]:
             mc_f1[m][k] = round(scores_[k]['f1'], 3)
-    print(print_table_row_wise(mc_f1, methods, mc_f1[methods[0]].keys()))
-    return em_scores
+    print(print_table_row_wise(mc_f1, ['counts']+methods, mc_f1[methods[0]].keys()))
+    return em_scores, cm
 
 category2idx = {'sanskrit': {}, 'ayurveda': {}}
 
@@ -370,8 +381,9 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
 
     if ner:
         f_pth = "results/ner/{lang}_{n}.tsv"
-        lang = ['skt_ner', 'lat_ner', 'gra_ner']
+        lang = ['skten_ner', 'lat_ner', 'gra_ner']
         scores = {}
+        cm = {}
         methods = set()
         for l in lang:
             for n in range(1):
@@ -380,7 +392,7 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
                 if os.path.exists(l_f_pth):
                     if l not in scores:
                         scores[l] = {}
-                    scores_ = eval_file_ner(l_f_pth)
+                    scores_, cm[l] = eval_file_ner(l_f_pth)
                     methods = methods.union(list(scores[l].keys()))
                     for k,v in scores_.items():
                         if k not in scores[l]:
@@ -390,6 +402,8 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
         scores_w_bars = {l: {k:f"{round(np.mean(v),3)} ({round(np.std(v),3)})" for k,v in d.items()} for l,d in scores.items()}
         res_txt = print_table_col_wise(scores_w_bars, DEFAULT_MODELS+LOW_END_MODELS, lang, row_head='LLM')
         print(res_txt)
+        with open("results/ner/ner_confusion.json",'w') as fp:
+            json.dump(cm,fp, indent='\t')
         with open("results/ner/eval_table.tsv",'w') as fp:
             fp.write(res_txt) 
     if mt:

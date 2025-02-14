@@ -86,7 +86,10 @@ def chain_invoke(chain, inp):
     while not done:
         try:
             done = True
-            ret =  chain.invoke({"question": inp['QUESTION'], "choices": inp['CHOICES']})
+            inp_dict = {"question": inp['QUESTION'], "choices": inp['CHOICES']}
+            if 'CONTEXT' in inp:
+                inp_dict['context'] = inp['CONTEXT']
+            ret =  chain.invoke(inp_dict)
         except Exception as e:
             done = False
             print(e)

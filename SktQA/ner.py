@@ -5,6 +5,12 @@ from langchain_core.prompts.chat import ChatPromptTemplate
 def NERChain(model='gpt-4o', language='english'):
     
     match language:
+        case 'skten_ner':
+            template = """Recognize the named entities from the following sentence in Sanskrit.
+The valid tags are 'O', 'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
+Do not provide explanation and do not list out entries of 'O'. Example:
+दशरथः अयोध्यायाः राजा असीत्‌
+{{'B-HUMAN': ['दशरथः'], 'B-CITY':['अयोध्यायाः']}}"""
         case 'skt_ner':
             template = """अधो दत्त वाक्ये named entities अभिजानीहि (NER कुरु) । तदपि विवृतम्‌ मा कुरु, केवलम्‌ पृष्ट-विषयस्य उत्तरम्‌ देहि । 
 entities एतेषु वर्गेषु वर्तन्ते -  'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
@@ -51,6 +57,7 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
 
+    in_file = in_file.replace("skten","skt")
     in_df = pd.read_csv(in_file, sep='\t')
     #in_df = in_df[:100]
     if os.path.exists(out_file):
@@ -72,7 +79,7 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
 def run_ner_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/ner/'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['skt_ner.tsv','lat_ner.tsv', 'gra_ner.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['skten_ner.tsv','skt_ner.tsv','lat_ner.tsv', 'gra_ner.tsv']]
     else:
         f_pths = [in_file]
     
@@ -82,13 +89,12 @@ def run_ner_default(in_file=None, model=None,repeat=None, **kwargs):
         models = [model]
     
     for fl in f_pths:
-        if os.path.exists(fl):
-            for m in models:
-                if repeat:
-                    for n in range(3):
-                        run_ner(fl,m, r=n,**kwargs)
-                else:
-                    run_ner(fl, m, **kwargs)
+        for m in models:
+            if repeat:
+                for n in range(3):
+                    run_ner(fl,m, r=n,**kwargs)
+            else:
+                run_ner(fl, m, **kwargs)
     return
 
     

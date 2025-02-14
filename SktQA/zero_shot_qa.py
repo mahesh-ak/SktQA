@@ -4,14 +4,14 @@ from langchain_core.prompts.chat import ChatPromptTemplate
 
 def ZeroShotChain(model='gpt-4o', dataset='sanskrit', language='english'):
     
-    text = 'आयुर्वेद' if dataset == 'ayurveda' else 'रामायण'
+    text = 'आयुर्वेद' if dataset.replace('_en','') == 'ayurveda' else 'रामायण'
 
     match language:
         case 'sanskrit':
             template = f"त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः {text}-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन यदि उत्तरे कारणं नापेक्षितम्। कथम् किमर्थम् इत्यादिषु एकेन लघु वाक्येन उत्तरं देहि अत्र तु एक-पद-नियमः नास्ति। "
         case 'english'| _:
             print("Warning! Unspecified language, defaulting prompt to English")
-            template = "Answer the question related to Ramayana in the respective language only. Give a single word answer if reasoning is not demanded in the answer. With regards to how-questions, answer in a short phrase, there is no single word restriction."
+            template = f"Answer the question related to {text} in the Sanskrit only. Give a single word answer if reasoning is not demanded in the answer. With regards to how-questions, answer in a short phrase, there is no single word restriction."
     
     
     human_template = "{question} {choices}"
@@ -40,10 +40,9 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
     dataset = lang
-    if lang == 'ayurveda':
-        lang = 'sanskrit'
+    lang = lang.replace("ayurveda","sanskrit")
 
-    in_df = pd.read_csv(in_file, sep='\t')
+    in_df = pd.read_csv(in_file.replace("_en",""), sep='\t')
     if os.path.exists(out_file):
         out_df = pd.read_csv(out_file, sep='\t')
     else:
@@ -65,7 +64,7 @@ def run_zero_shot_qa(in_file, model, lang=None, out_file=None, force=None, r=Non
 def run_zero_shot_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/qa_set'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['sanskrit.tsv', 'ayurveda.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['sanskrit.tsv', 'ayurveda.tsv', 'sanskrit_en.tsv', 'ayurveda_en.tsv']]
     else:
         f_pths = [in_file]
     
@@ -75,13 +74,12 @@ def run_zero_shot_default(in_file=None, model=None,repeat=None, **kwargs):
         models = [model]
     
     for fl in f_pths:
-        if os.path.exists(fl):
-            for m in models:
-                if repeat:
-                    for n in range(3):
-                        run_zero_shot_qa(fl,m, r=n,**kwargs)
-                else:
-                    run_zero_shot_qa(fl, m, **kwargs)
+        for m in models:
+            if repeat:
+                for n in range(3):
+                    run_zero_shot_qa(fl,m, r=n,**kwargs)
+            else:
+                run_zero_shot_qa(fl, m, **kwargs)
     return
 
     
