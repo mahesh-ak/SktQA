@@ -1,16 +1,9 @@
-# Sanskrit Question-Answering with LLMs - (KG) RAG
+# NLU in Classical Languages
 
 - Requires .env file with below format to access the LLMs and Neo4j KG:
 
 ```
 OPENAI_API_KEY= "..."
-
-ANTHROPIC_API_KEY= "..."
-
-GOOGLE_API_KEY="..."
-GOOGLE_APPLICATION_CREDENTIALS="..."
-
-MISTRAL_API_KEY="..."
 
 FIREWORKS_API_KEY="..."
 
@@ -28,6 +21,6 @@ NEO4J_DATABASE="neo4j"
 
 - Knowledge graphs are by default loaded into database named ```neo4j```
 
-Results and tables are generated in ```results/```
+Results and tables are generated in ```results/``` except ```results.json``` in the main folder
 
 
