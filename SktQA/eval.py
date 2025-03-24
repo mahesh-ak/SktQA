@@ -7,6 +7,7 @@ from utils import MAX_K, DEFAULT_MODELS, LOW_END_MODELS
 import string
 import evaluate as ev
 import json
+from collections import Counter
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 bleu = ev.load('sacrebleu')
@@ -137,14 +138,32 @@ def eval_file_ner(in_file):
     
     methods = [col for col in df.columns if (col not in ['sentence','gold','id'])]
     em_scores = {}
-    references = [ref.split() for ref in df['gold'].tolist()]
+    
     N = 0
     if 'skt' in in_file:
         N = 32
     elif 'lat' in in_file:
+        lat_out_d = {m: 0.0 for m in methods}
         N = 3
+        df_1 = df[df['id'].str.contains('Ovid')]
+        for m in methods:
+            df_1[m] = df_1.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
+            predictions = df_1[m].tolist()
+            references = [ref.split() for ref in df_1['gold'].tolist()]
+            scores_1 = seqeval.compute(predictions=predictions, references=references)
+            #print(scores_)
+            F1 = [v['f1'] for k,v in scores_1.items() if k not in [f"overall_{th}" for th in ['precision','recall','f1','accuracy']]]
+            lat_out_d[m] = np.sum(F1)/N
+        print(lat_out_d)
     elif 'gra' in in_file:
         N = 8
+    references = [ref.split() for ref in df['gold'].tolist()]
+    all_refs = []
+    for ref in references:
+        all_refs = all_refs + [c.replace('B-','').replace('I-','') for c in ref]
+    cnt_ref = Counter(all_refs)
+    mc_ref = cnt_ref.most_common(6)[1:]
+    mc_f1 = {m: {mr[0]: 0.0 for mr in mc_ref} for m in methods}
     for m in methods:
         df[m] = df.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
         predictions = df[m].tolist()
@@ -152,6 +171,9 @@ def eval_file_ner(in_file):
         #print(scores_)
         F1 = [v['f1'] for k,v in scores_.items() if k not in [f"overall_{th}" for th in ['precision','recall','f1','accuracy']]]
         em_scores[m] = np.sum(F1)/N
+        for k in mc_f1[m]:
+            mc_f1[m][k] = round(scores_[k]['f1'], 3)
+    print(print_table_row_wise(mc_f1, methods, mc_f1[methods[0]].keys()))
     return em_scores
 
 category2idx = {'sanskrit': {}, 'ayurveda': {}}
