@@ -151,7 +151,7 @@
 			]
 		}
 	},
-	"(b) Machine Translation": {
+	"(b) Machine Translation to English": {
 		"san": {
 			"gpt-4o-mini": [
 				0.06269203190084,

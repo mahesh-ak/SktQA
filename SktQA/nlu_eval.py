@@ -14,6 +14,7 @@ MODELS = LOW_END_MODELS + DEFAULT_MODELS
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 bleu = ev.load('sacrebleu')
 seqeval = ev.load('seqeval')
+NUM_CHUNKS = 10
 
 def compare(ans_list,y):
     return str(y).replace('उत्तरम्','').translate(punct_table).strip() in [x.replace('।','').translate(punct_table).strip() for x in ans_list.split(';')]
@@ -39,7 +40,7 @@ GRA_ENT = ['LOC', 'GOD', 'ORG', 'NORP', 'WORK', 'EVENT', 'PERSON', 'LANGUAGE']
 def eval_file_ner(in_file):
     df_ = pd.read_csv(in_file, sep='\t')
     N = len(df_)
-    step = ceil(N/10.0)
+    step = ceil(N/NUM_CHUNKS)
     if 'gold' not in df_.columns:
         print('Error: gold answers should be present in column ANSWER')
         exit(1)
@@ -81,7 +82,7 @@ def eval_file_mt(in_file):
     methods = MODELS 
     scores = {m:[] for m in methods}
     N = len(df_)
-    step = ceil(N/10.0)
+    step = ceil(N/NUM_CHUNKS)
 
     print('Computing MT scores from',in_file)
     for i in tqdm(range(0,N,step)):
@@ -100,7 +101,7 @@ def eval_file_qa(df_):
     methods = MODELS 
     em_scores = {m: [] for m in methods}
     N = len(df_)
-    step = ceil(N/10.0)
+    step = ceil(N/NUM_CHUNKS)
 
     print('Computing QA scores')
     for i in tqdm(range(0,N,step)):
@@ -128,7 +129,7 @@ def eval_file_rel(df_, rel_df_, reverse = False):
     methods = MODELS
     em_scores = {m: [] for m in MODELS}
     N = len(df_)
-    step = ceil(N/10.0)
+    step = ceil(N/NUM_CHUNKS)
 
     print('Computing QA rel scores')
     for i in tqdm(range(0,N,step)):
@@ -162,7 +163,7 @@ def eval_default():
         l_f_pth = f_pth.format(lang=lang[l],n=0)
         scores[l] = eval_file_mt(l_f_pth)
     
-    results['(b) Machine Translation'] = scores
+    results['(b) Machine Translation to English'] = scores
 
     ## QA evaluation
     files = {'w/o context': [f"results/zero_shot/{pre}_0.tsv" for pre in ['sanskrit','ayurveda']],

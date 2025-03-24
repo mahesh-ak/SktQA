@@ -8,14 +8,14 @@ from langchain.prompts import PromptTemplate
 from langchain_chroma import Chroma
 from transformers import AutoTokenizer, DataCollatorForSeq2Seq, T5ForConditionalGeneration
 from indic_transliteration.sanscript import IAST, DEVANAGARI, transliterate
-import torch
+#import torch
 import importlib
 from typing import Optional, cast, List
 import numpy as np
 import numpy.typing as npt
 from chromadb.api.types import EmbeddingFunction, Documents, Embeddings
-import fasttext as ft
-from gensim.models import KeyedVectors as kv
+#import fasttext as ft
+#from gensim.models import KeyedVectors as kv
 import regex as re
 import argparse
 from utils import *
@@ -82,12 +82,13 @@ class VectorEmbeddingFunction(EmbeddingFunction[Documents]):
 class Retriever:
 
     ## Loading lemmatizer
+    """
     checkpoint = 'mahesh27/t5lemmatizer'
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     lemmatizer_model = T5ForConditionalGeneration.from_pretrained(checkpoint)
     data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer)
     stop_words = open("sa_embedding/stop_words.txt",'r').read().split()
-
+    """
     def __init__(self, file_path='data/ref/rAmAyaNa_dev.txt', load_cached=True):
         f_name = os.path.split(file_path)[1]
         if os.path.exists(f"models/{f_name}.pkl"):
@@ -151,11 +152,16 @@ class Retriever:
         self.retrieve = retriever
 
 def RAGChain(model, retriever, dataset='sanskrit', k=2, context_only=False):
-    text = 'आयुर्वेद' if dataset == 'ayurveda' else 'रामायण'
+    text = 'आयुर्वेद' if dataset in ['ayurveda', 'ayurveda_en'] else 'रामायण'
     template = f"""त्वया संस्कृत-भाषायाम् एव वक्तव्यम्। न तु अन्यासु भाषासु। अधः {text}-सम्बन्धे पृष्ट-प्रश्नस्य प्रत्युत्तरं देहि। तदपि एकेनैव पदेन, यावद् लघु शक्यं तावद्, तं पुनः विवृतम् मा कुरु। अपि च यथाऽवश्यम् अधः दत्त-सन्दर्भेभ्यः एकतमात् सहाय्यं गृहाण। तत्तु सर्वदा साधु इति नाऽस्ति प्रतीतिः।
      सन्दर्भाः:{{context}}
      प्रश्नः:{{question}} {{choices}}
     """
+    if dataset in ['ayurveda_en', 'sanskrit_en']:
+        template = f"""Answer the following question related to {text} in Sanskrit only. Give a single word answer if reasoning is not demanded in the answer. With regards to how-questions, answer in a short phrase. Also take help from the contexts provided. The contexts may not always be relevant."
+contexts: {{context}}
+question:{{question}} {{choices}}
+"""
     prompt = PromptTemplate.from_template(template)
     # LLM
     llm = get_chat_model_rag(model=model)
@@ -163,8 +169,10 @@ def RAGChain(model, retriever, dataset='sanskrit', k=2, context_only=False):
     # Post-processing
     def format_docs(docs):
         return '\n\n'.join([doc.metadata['text'] for doc in docs[:k]])
-    
-    context_chain = RunnableLambda(lambda x: retriever.lemmatize(x['question'], translate_only=False)) | retriever.retrieve | format_docs
+    if retriever:
+        context_chain = RunnableLambda(lambda x: retriever.lemmatize(x['question'], translate_only=False)) | retriever.retrieve | format_docs
+    else:
+        context_chain = RunnablePassthrough()
     llm_chain = prompt | llm | StrOutputParser() | RunnableLambda(lambda x: x.replace('।','').strip())
 
 
@@ -188,18 +196,27 @@ def run_rag_qa(in_file, model, retriever, emb='bm25', k=2, out_file=None, force=
         os.makedirs(out_pth, exist_ok=True)
         if dataset == 'ayurveda':
             pre = 'ayurveda_'
+        elif dataset in ['ayurveda_en', 'sanskrit_en']:
+            pre = f"en_{dataset.replace('en','').replace('sanskrit_','')}"
         else:
             pre = ''
         out_file = os.path.join(out_pth, f"{pre}{emb}_{k}.tsv")
     
 
-    in_df = pd.read_csv(in_file, sep='\t')
+    in_df = pd.read_csv(in_file.replace('_en',''), sep='\t')
     if os.path.exists(out_file):
         out_df = pd.read_csv(out_file, sep='\t', dtype=str)
     else:
         out_df = in_df.copy()
     
     out_df['ANSWER'] = in_df['ANSWER']
+
+    if not retriever:
+        rel_df = pd.read_csv(out_file.replace('en_',''), sep='\t')
+        in_df['CONTEXT'] = rel_df.apply(lambda x: '\n\n'.join([x[f"context_{i}"] for i in range(k)]), axis=1)
+        for i in range(k):
+            if f'context_{i}' not in out_df.columns:
+                out_df[f'context_{i}'] = rel_df[f"context_{i}"]
 
     chain = RAGChain(model=model, retriever=retriever, dataset=dataset, k=k, context_only=context_only)
     if model in out_df.columns and (not force):
@@ -247,16 +264,22 @@ def run_rag_default(in_file=None, model=None, emb=None, k=None, dataset=None, **
         ks = [k]
         if emb == 'bm25':
             models += LOW_END_MODELS
-            models.remove('llama-v3p1-70b-instruct')
+          #  models.remove('llama-v3p1-70b-instruct')
 
     if dataset==None or dataset=='ramayana':
         retriever = Retriever()
     elif dataset=='ayurveda':
         in_file = 'data/qa_set/ayurveda.tsv'
         retriever = Retriever(file_path='data/ref/ayurveda_dev.txt')
+    else:
+        retriever = None
+    
+    if dataset in ['sanskrit_en', 'ayurveda_en']:
+        in_file = f"data/qa_set/{dataset}.tsv"
 
     for e in embs:
-        retriever.load_retriever(emb= e)
+        if retriever:
+            retriever.load_retriever(emb= e)
         for m in models:
             for ki in ks:
                 run_rag_qa(in_file,m,retriever, emb=e,k=ki,**kwargs)
