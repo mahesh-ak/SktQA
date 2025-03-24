@@ -100,6 +100,9 @@ def eval_file(in_file):
 
 def eval_file_mt(in_file):
     df = pd.read_csv(in_file, sep='\t')
+    if 'mt' in in_file:
+        df_2 = pd.read_csv(in_file.replace('in','out'),sep='\t')
+        df = pd.concat([df,df_2])
     if 'gold' not in df.columns:
         print('Error: gold answers should be present in column ANSWER')
         exit(1)
@@ -369,7 +372,7 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
             fp.write(res_txt) 
     if mt:
         f_pth = "results/mt/{lang}_{n}.tsv"
-        lang = ['mt_in','mt_out','grc_eng','lat_eng']
+        lang = ['mt_in','grc_eng','lat_eng']#, 'mt_out'
         scores = {}
         methods = set()
         for l in lang:
