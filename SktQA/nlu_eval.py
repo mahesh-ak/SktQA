@@ -10,11 +10,13 @@ from collections import Counter
 from tqdm import tqdm
 from math import ceil
 
+
 MODELS = LOW_END_MODELS + DEFAULT_MODELS
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 bleu = ev.load('sacrebleu')
 seqeval = ev.load('seqeval')
 NUM_CHUNKS = 10
+
 
 def compare(ans_list,y):
     return str(y).replace('उत्तरम्','').translate(punct_table).strip() in [x.replace('।','').translate(punct_table).strip() for x in ans_list.split(';')]
@@ -109,7 +111,7 @@ def eval_file_qa(df_):
         for m in methods:
             em = df.apply(lambda x: compare(x['ANSWER'], x[m]), axis=1)
             em_scores[m].append(em.sum()/len(em))
-
+    
     return em_scores
 
 def eval_file_rel(df_, rel_df_, reverse = False):
@@ -146,7 +148,7 @@ def eval_default():
     results = {}
 
     ## NER evaluation
-    lang = {'san': 'skt_ner', 'lat': 'lat_ner', 'grc': 'gra_ner'}
+    lang = {'san<san>': 'skt_ner', 'san': 'skten_ner', 'lat': 'lat_ner', 'grc': 'gra_ner'}
     f_pth = "results/ner/{lang}_{n}.tsv"
     scores = {}
     for l in lang:
@@ -156,7 +158,7 @@ def eval_default():
     results['(a) Named Entity Recognition'] = scores
 
     ## MT evaluation
-    lang = {'san': 'mt_in', 'lat': 'lat_eng', 'grc':'grc_eng'}
+    lang = {'san<san>': 'mt_in','san': 'mt_in_en', 'lat': 'lat_eng', 'grc':'grc_eng'}
     f_pth = "results/mt/{lang}_{n}.tsv"
     scores = {}
     for l in lang:
@@ -166,8 +168,10 @@ def eval_default():
     results['(b) Machine Translation to English'] = scores
 
     ## QA evaluation
-    files = {'w/o context': [f"results/zero_shot/{pre}_0.tsv" for pre in ['sanskrit','ayurveda']],
-            '+ context (RAG-BM25)': [f"results/rag/{pr}bm25_4.tsv" for pr in ['','ayurveda_']]}
+    files = {'closed<san>': [f"results/zero_shot/{pre}_0.tsv" for pre in ['sanskrit','ayurveda']],
+            '+RAG-BM25<san>': [f"results/rag/{pr}bm25_4.tsv" for pr in ['','ayurveda_']],
+            'closed': [f"results/zero_shot/{pre}_en_0.tsv" for pre in ['sanskrit','ayurveda']],
+            '+RAG-BM25': [f"results/rag/en_{pr}bm25_4.tsv" for pr in ['','ayurveda_']]}
     scores = {}
 
     rel_files = [f"data/{pr}bm25_4_rel.tsv" for pr in ['','ayurveda_']]
@@ -190,9 +194,9 @@ def eval_default():
         rel_scores[f] = eval_file_rel(df_, rel_df)
         rel_scores_neg[f] = eval_file_rel(df_, rel_df, reverse=True)
     
-    results['(c) Question Answering (san) - Overall'] = scores
-    results['(d) Question Answering (san) - Answer in Context'] = rel_scores
-    results['(e) Question Answering (san) - Answer not in Context'] = rel_scores_neg
+    results['(c) Question Answering san - Overall'] = scores
+    results['(d) Question Answering san - Answer in Context'] = rel_scores
+    results['(e) Question Answering san - Answer not in Context'] = rel_scores_neg
     with open("results.json",'w') as fp:
         json.dump(results, fp, indent='\t')
 

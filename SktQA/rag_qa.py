@@ -8,14 +8,14 @@ from langchain.prompts import PromptTemplate
 from langchain_chroma import Chroma
 from transformers import AutoTokenizer, DataCollatorForSeq2Seq, T5ForConditionalGeneration
 from indic_transliteration.sanscript import IAST, DEVANAGARI, transliterate
-#import torch
+import torch
 import importlib
 from typing import Optional, cast, List
 import numpy as np
 import numpy.typing as npt
 from chromadb.api.types import EmbeddingFunction, Documents, Embeddings
-#import fasttext as ft
-#from gensim.models import KeyedVectors as kv
+import fasttext as ft
+from gensim.models import KeyedVectors as kv
 import regex as re
 import argparse
 from utils import *
@@ -82,33 +82,33 @@ class VectorEmbeddingFunction(EmbeddingFunction[Documents]):
 class Retriever:
 
     ## Loading lemmatizer
-    """
     checkpoint = 'mahesh27/t5lemmatizer'
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     lemmatizer_model = T5ForConditionalGeneration.from_pretrained(checkpoint)
     data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer)
     stop_words = open("sa_embedding/stop_words.txt",'r').read().split()
-    """
-    def __init__(self, file_path='data/ref/rAmAyaNa_dev.txt', load_cached=True):
-        f_name = os.path.split(file_path)[1]
-        if os.path.exists(f"models/{f_name}.pkl"):
-            print("Found lemmatized docs in models/, skipping lemmatization")
-            with open(f"models/{f_name}.pkl",'rb') as fp:
-                self.splits = pickle.load(fp)
-        else:
-            # Load Documents
-            loader = TextLoader(file_path=file_path)
-            docs = loader.load()
 
-            # Split
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-            self.splits = text_splitter.split_documents(docs)
-            print("Lemmatizing document chunks")
-            for split in tqdm(self.splits):
-                split.metadata['text'] = split.page_content.replace('\n\n','\n')
-                split.page_content = self.lemmatize(split.page_content, translate_only=False)
-            with open(f"models/{f_name}.pkl",'wb') as fp:
-                pickle.dump(self.splits, fp)
+    def __init__(self, file_path='data/ref/rAmAyaNa_dev.txt', load_cached=True):
+        if file_path:
+            f_name = os.path.split(file_path)[1]
+            if os.path.exists(f"models/{f_name}.pkl"):
+                print("Found lemmatized docs in models/, skipping lemmatization")
+                with open(f"models/{f_name}.pkl",'rb') as fp:
+                    self.splits = pickle.load(fp)
+            else:
+                # Load Documents
+                loader = TextLoader(file_path=file_path)
+                docs = loader.load()
+
+                # Split
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+                self.splits = text_splitter.split_documents(docs)
+                print("Lemmatizing document chunks")
+                for split in tqdm(self.splits):
+                    split.metadata['text'] = split.page_content.replace('\n\n','\n')
+                    split.page_content = self.lemmatize(split.page_content, translate_only=False)
+                with open(f"models/{f_name}.pkl",'wb') as fp:
+                    pickle.dump(self.splits, fp)
         
 
 
