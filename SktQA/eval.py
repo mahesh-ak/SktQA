@@ -6,9 +6,11 @@ import numpy as np
 from utils import MAX_K, DEFAULT_MODELS, LOW_END_MODELS
 import string
 import evaluate as ev
+import json
 
 punct_table = str.maketrans(dict.fromkeys(string.punctuation))
 bleu = ev.load('sacrebleu')
+seqeval = ev.load('seqeval')
 def compare(ans_list,y):
     return str(y).replace('उत्तरम्','').translate(punct_table).strip() in [x.replace('।','').translate(punct_table).strip() for x in ans_list.split(';')]
 
@@ -110,6 +112,38 @@ def eval_file_mt(in_file):
         em_scores[m] = bleu.compute(predictions=predictions, references=references)['score']
     return em_scores
 
+def format_ner(dict_json, sent):
+    words = sent.split()
+    try:
+        dict_json = json.loads(dict_json.replace("'",'"'))
+    except:
+        dict_json = {}
+    inv_dict = {}
+    if not type(dict_json) == dict:
+        dict_json = {}
+    for k, v in dict_json.items():
+        for vi in v:
+            inv_dict[vi] = k
+    return [inv_dict[w] if w in inv_dict else 'O' for w in words]
+
+def eval_file_ner(in_file):
+    df = pd.read_csv(in_file, sep='\t')
+    if 'gold' not in df.columns:
+        print('Error: gold answers should be present in column ANSWER')
+        exit(1)
+    
+    methods = [col for col in df.columns if (col not in ['sentence','gold','id'])]
+    em_scores = {}
+    references = [ref.split() for ref in df['gold'].tolist()]
+    
+    for m in methods:
+        df[m] = df.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
+        predictions = df[m].tolist()
+        scores_ = seqeval.compute(predictions=predictions, references=references)
+        F1 = [v['f1'] for k,v in scores_.items() if k not in [f"overall_{th}" for th in ['precision','recall','f1','accuracy']]]
+        em_scores[m] = np.mean(F1)
+    return em_scores
+
 category2idx = {'sanskrit': {}, 'ayurveda': {}}
 
 skt_df = pd.read_csv("data/categories_sanskrit.tsv", sep='\t')
@@ -197,13 +231,18 @@ def zero_shot_eval(f_pth, rel_file=None, reverse=False):
 
 
 
-def eval_default(in_file=None, rag=None, category_wise=None, k_rag=None, zero_shot=None, rel_file=None, abl=None, mt=None):
+def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=None, zero_shot=None, rel_file=None, abl=None, mt=None):
     if in_file:
         if rel_file:
             scores = eval_file_rel(in_file, rel_file)
             print(scores)
             return
 
+        if ner:
+            scores = eval_file_ner(in_file)
+            print(scores)
+            return
+        
         scores = eval_file(in_file)
         print(scores)
         return
@@ -297,6 +336,30 @@ def eval_default(in_file=None, rag=None, category_wise=None, k_rag=None, zero_sh
         with open("results/zero_shot/eval_table.tsv",'w') as fp:
             fp.write(res_txt)   
 
+    if ner:
+        f_pth = "results/ner/{lang}_{n}.tsv"
+        lang = ['skt_ner', 'lat_ner', 'gra_ner']
+        scores = {}
+        methods = set()
+        for l in lang:
+            for n in range(1):
+                l_f_pth = f_pth.format(lang=l, n=n)
+                scores_ = {}
+                if os.path.exists(l_f_pth):
+                    if l not in scores:
+                        scores[l] = {}
+                    scores_ = eval_file_ner(l_f_pth)
+                    methods = methods.union(list(scores[l].keys()))
+                    for k,v in scores_.items():
+                        if k not in scores[l]:
+                            scores[l][k] = [v]
+                        else:
+                            scores[l][k].append(v)
+        scores_w_bars = {l: {k:f"{round(np.mean(v),3)} ({round(np.std(v),3)})" for k,v in d.items()} for l,d in scores.items()}
+        res_txt = print_table_col_wise(scores_w_bars, DEFAULT_MODELS+LOW_END_MODELS, lang, row_head='LLM')
+        print(res_txt)
+        with open("results/ner/eval_table.tsv",'w') as fp:
+            fp.write(res_txt) 
     if mt:
         f_pth = "results/mt/{lang}_{n}.tsv"
         lang = ['mt_in','mt_out']
@@ -418,6 +481,7 @@ if __name__=='__main__':
     parser.add_argument('-l','--rel-file',type=str,help="relavence tsv file to compare")
     parser.add_argument('-z','--zero-shot', action='store_true', help="evaluate zero-shot QA")
     parser.add_argument('-t','--mt',action='store_true', help="evaluate machine translation")
+    parser.add_argument('-n','--ner',action='store_true', help="evaluate NER")
     parser.add_argument('-r','--rag',action='store_true', help="evaluate RAG for k=4 across available methods")
     parser.add_argument('-c','--category-wise',action='store_true', help="evaluate category wise")
     parser.add_argument('-a', '--abl', action='store_true', help="generate ablation results")
