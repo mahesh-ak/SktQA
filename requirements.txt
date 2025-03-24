@@ -31,3 +31,4 @@ tokenizers==0.19.1
 tqdm==4.66.4
 transformers==4.42.3
 evaluate==0.4.3
+sacrebleu==2.5.1
