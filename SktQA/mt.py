@@ -11,8 +11,12 @@ def MTChain(model='gpt-4o', language='english'):
             template = f"Translate the following sentence in Sanskrit into English. Do not give any explanations."
         case 'grc_eng':
             template = f"Translate the following sentence in Ancient Greek into English. Do not give any explanations."
+        case 'grc_eng_nen':
+            template = f"Μετάφρασον τὴνδε τὴν Ἑλληνικὴν πρότασιν εἰς τὴν Ἀγγλικήν. Μηδεμίαν ἐξήγησιν παρέχου."
         case 'lat_eng':
             template = f"Translate the following sentence in Latin into English. Do not give any explanations."
+        case 'lat_eng_nen':
+            template = f"Verte hanc sententiam Latinam in Anglicam. Nullam explicationem praebe."
 
     
     human_template = "{input}"
@@ -41,7 +45,7 @@ def run_mt(in_file, model, lang=None, out_file=None, force=None, r=None):
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
 
-    in_df = pd.read_csv(in_file.replace('_en.tsv','.tsv'), sep='\t')
+    in_df = pd.read_csv(in_file.replace('_en.tsv','.tsv').replace('_nen.tsv','.tsv'), sep='\t')
 #    in_df = in_df
     if os.path.exists(out_file):
         out_df = pd.read_csv(out_file, sep='\t')
@@ -62,7 +66,7 @@ def run_mt(in_file, model, lang=None, out_file=None, force=None, r=None):
 def run_mt_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/mt/'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['mt_in.tsv','mt_out.tsv','grc_eng.tsv','lat_eng.tsv','mt_in_en.tsv', 'mt_out_en.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['mt_in.tsv','mt_out.tsv','grc_eng.tsv','lat_eng.tsv', 'grc_eng_nen.tsv', 'lat_eng_nen.tsv', 'mt_in_en.tsv', 'mt_out_en.tsv']]
     else:
         f_pths = [in_file]
     
@@ -72,13 +76,12 @@ def run_mt_default(in_file=None, model=None,repeat=None, **kwargs):
         models = [model]
     
     for fl in f_pths:
-        if os.path.exists(fl) or '_en.tsv' in fl:
-            for m in models:
-                if repeat:
-                    for n in range(3):
-                        run_mt(fl,m, r=n,**kwargs)
-                else:
-                    run_mt(fl, m, **kwargs)
+        for m in models:
+            if repeat:
+                for n in range(3):
+                    run_mt(fl,m, r=n,**kwargs)
+            else:
+                run_mt(fl, m, **kwargs)
     return
 
     

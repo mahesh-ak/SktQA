@@ -23,6 +23,12 @@ The valid tags are 'O', 'B-PERS', 'I-PERS', 'B-LOC', 'B-GRP', 'I-LOC', 'I-GRP'.
 Do not provide explanation and do not list out entries of 'O'. Example:
 intercedit M. Antonius Q. Cassius tribuni plebis .
 {{'B-PERS': ['M.','Q.'], 'I-PERS': ['Antonius','Cassius']}}"""
+        case 'lat_nenner':
+            template = """Agnosce nomina propria (named entities) ex hac sententia Latina.
+Notae validae sunt 'O', 'B-PERS', 'I-PERS', 'B-LOC', 'B-GRP', 'I-LOC', 'I-GRP'.
+Explanationem ne praebeas nec elementa 'O' elenca. Exemplar:
+intercedit M. Antonius Q. Cassius tribuni plebis .
+{{'B-PERS': ['M.','Q.'], 'I-PERS': ['Antonius','Cassius']}}"""
         case 'gra_ner':
             template = """Recognize the named entities from the following sentence in Ancient Greek.
 The valid entities are 'O', 'LOC', 'GOD', 'ORG', 'NORP', 'WORK', 'EVENT', 'PERSON', 'LANGUAGE'.
@@ -30,6 +36,13 @@ NORP refers to ethnic groups (like greeks, persians), demonyms and other social 
 Do not provide explanation in the answer and do not list out entries of 'O'. Example:
 ἐκεῖ Χάριτες , ἐκεῖ δὲ Πόθος .
 {{'B-GOD': ['Χάριτες', 'Πόθος']}}""" 
+        case 'gra_nenner':
+            template = """Ἀναγνώρισον τὰ ὀνόματα (named entities) ἐκ τῆςδε τῆς Ἑλληνικῆς περιόδου.
+Τὰ ἔγκυρα εἴδη ἐστιν 'O', 'LOC', 'GOD', 'ORG', 'NORP', 'WORK', 'EVENT', 'PERSON', 'LANGUAGE'.
+NORP σημαίνει ἔθνη (οἷον Ἕλληνες, Πέρσαι), ἐθνωνύμια, καὶ ἄλλας κοινωνικὰς ὁμάδας (οἷον θρησκευτικὰς ὁργανώσεις).
+Μὴ παρέχου ἐξήγησιν ἐν τῇ ἀποκρίσει μηδὲ τὰ εἰς 'O' ἐγγεγραμμένα παρατίθεσο. Παράδειγμα:
+ἐκεῖ Χάριτες , ἐκεῖ δὲ Πόθος .
+{{'B-GOD': ['Χάριτες', 'Πόθος']}}"""
     
     human_template = "{input}"
 
@@ -57,7 +70,7 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
 
-    in_file = in_file.replace("skten","skt")
+    in_file = in_file.replace("skten","skt").replace("nen","")
     in_df = pd.read_csv(in_file, sep='\t')
     #in_df = in_df[:100]
     if os.path.exists(out_file):
@@ -79,7 +92,7 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
 def run_ner_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/ner/'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['skten_ner.tsv','skt_ner.tsv','lat_ner.tsv', 'gra_ner.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['skten_ner.tsv','skt_ner.tsv','lat_ner.tsv', 'gra_ner.tsv','lat_nenner.tsv','gra_nenner.tsv']]
     else:
         f_pths = [in_file]
     
