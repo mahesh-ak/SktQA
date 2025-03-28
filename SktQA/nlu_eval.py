@@ -148,7 +148,7 @@ def eval_default():
     results = {}
 
     ## NER evaluation
-    lang = {'san<san>': 'skt_ner', 'san': 'skten_ner', 'lat': 'lat_ner', 'grc': 'gra_ner'}
+    lang = {'san': 'skt_ner', 'san<en>': 'skten_ner', 'lat': 'lat_nenner', 'lat<en>': 'lat_ner', 'grc<en>': 'gra_ner'}
     f_pth = "results/ner/{lang}_{n}.tsv"
     scores = {}
     for l in lang:
@@ -158,7 +158,7 @@ def eval_default():
     results['(a) Named Entity Recognition'] = scores
 
     ## MT evaluation
-    lang = {'san<san>': 'mt_in','san': 'mt_in_en', 'lat': 'lat_eng', 'grc':'grc_eng'}
+    lang = {'san': 'mt_in','san<en>': 'mt_in_en', 'lat': 'lat_eng_nen', 'lat<en>': 'lat_eng', 'grc':'grc_eng_nen', 'grc<en>': 'grc_eng'}
     f_pth = "results/mt/{lang}_{n}.tsv"
     scores = {}
     for l in lang:
@@ -168,10 +168,10 @@ def eval_default():
     results['(b) Machine Translation to English'] = scores
 
     ## QA evaluation
-    files = {'closed<san>': [f"results/zero_shot/{pre}_0.tsv" for pre in ['sanskrit','ayurveda']],
-            '+RAG-BM25<san>': [f"results/rag/{pr}bm25_4.tsv" for pr in ['','ayurveda_']],
-            'closed': [f"results/zero_shot/{pre}_en_0.tsv" for pre in ['sanskrit','ayurveda']],
-            '+RAG-BM25': [f"results/rag/en_{pr}bm25_4.tsv" for pr in ['','ayurveda_']]}
+    files = {'closed': [f"results/zero_shot/{pre}_0.tsv" for pre in ['sanskrit','ayurveda']],
+            '+RAG-BM25': [f"results/rag/{pr}bm25_4.tsv" for pr in ['','ayurveda_']],
+            'closed<en>': [f"results/zero_shot/{pre}_en_0.tsv" for pre in ['sanskrit','ayurveda']],
+            '+RAG-BM25<en>': [f"results/rag/en_{pr}bm25_4.tsv" for pr in ['','ayurveda_']]}
     scores = {}
 
     rel_files = [f"data/{pr}bm25_4_rel.tsv" for pr in ['','ayurveda_']]
