@@ -7,52 +7,72 @@ def NERChain(model='gpt-4o', language='english'):
     match language:
         case 'skten_ner':
             template = """Recognize the named entities from the following sentence in Sanskrit.
-The valid tags are 'O', 'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
+The valid entities are 'O', 'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
 Do not provide explanation and do not list out entries of 'O'. Example:
-दशरथः अयोध्यायाः राजा असीत्‌
-{{'B-HUMAN': ['दशरथः'], 'B-CITY':['अयोध्यायाः']}}"""
+Sentence: <word_1> <word_2> <word_3> <word_4> <word_5>
+Output: {{'B-<entity1>': ['<word_1>', '<word_4>'], 'B-<entity2>':['<word_5>']}}"""
+            human_template = """Sentence: {input}
+Output: """
+
         case 'skt_ner':
-            template = """अधो दत्त वाक्ये named entities अभिजानीहि (NER कुरु) । तदपि विवृतम्‌ मा कुरु, केवलम्‌ पृष्ट-विषयस्य उत्तरम्‌ देहि । 
-entities एतेषु वर्गेषु वर्तन्ते -  'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
+            template = """अधो दत्त वाक्ये नामकृताः सत्त्वाः (named entities) अभिजानीहि । तदपि विवृतम्‌ मा कुरु, केवलम्‌ पृष्ट-विषयस्य उत्तरम्‌ देहि । अपि च 'O'-सम्बन्धितानि न देयानि । 
+सत्त्वाः एतेषु वर्गेषु वर्तन्ते - 'O', 'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
 उदाहरणाय - 
-दशरथः अयोध्यायाः राजा असीत्‌
-{{'B-HUMAN': ['दशरथः'], 'B-CITY':['अयोध्यायाः']}}"""
+वाक्यम्‌: <पदम्‌_1> <पदम्‌_2> <पदम्‌_3> <पदम्‌_4> <पदम्‌_5>
+फलितम्‌: {{'B-<सत्त्व:1>': ['<पदम्‌_1>', '<पदम्‌_4>'], 'B-<सत्त्व:2>': ['<पदम्‌_5>']}}"""
+            human_template = """वाक्यम्‌: {input}
+फलितम्‌: """
+
         case 'lat_ner':
             template = """Recognize the named entities from the following Latin sentence.
-The valid tags are 'O', 'B-PERS', 'I-PERS', 'B-LOC', 'B-GRP', 'I-LOC', 'I-GRP'.
+The valid entities 'O', 'PERS', 'LOC', 'GRP'.
 Do not provide explanation and do not list out entries of 'O'. Example:
-intercedit M. Antonius Q. Cassius tribuni plebis .
-{{'B-PERS': ['M.','Q.'], 'I-PERS': ['Antonius','Cassius']}}"""
+Sentence: <word_1> <word_2> <word_3> <word_4> <word_5>
+Output: {{'B-<entity1>': ['<word_1>', '<word_4>'], 'I-<entity1>': ['<word_2>'], 'B-<entity2>':['<word_5>']}}"""
+            human_template = """Sentence: {input}
+Output: """
+
         case 'lat_nenner':
             template = """Agnosce nomina propria (named entities) ex hac sententia Latina.
-Notae validae sunt 'O', 'B-PERS', 'I-PERS', 'B-LOC', 'B-GRP', 'I-LOC', 'I-GRP'.
+Notae validae sunt 'O', 'PERS', 'LOC', 'GRP'.
 Explanationem ne praebeas nec elementa 'O' elenca. Exemplar:
-intercedit M. Antonius Q. Cassius tribuni plebis .
-{{'B-PERS': ['M.','Q.'], 'I-PERS': ['Antonius','Cassius']}}"""
+Sententia: <verbum_1> <verbum_2> <verbum_3> <verbum_4> <verbum_5>
+Productus: {{'B-<entitatem1>': ['<verbum_1>', '<verbum_4>'], 'I-<entitatem1>': ['<verbum_2>'], 'B-<entitatem3>':['<verbum_5>']}}"""
+            human_template = """Sententia: {input}
+Productus: """
+
         case 'gra_ner':
             template = """Recognize the named entities from the following sentence in Ancient Greek.
 The valid entities are 'O', 'LOC', 'GOD', 'ORG', 'NORP', 'WORK', 'EVENT', 'PERSON', 'LANGUAGE'.
 NORP refers to ethnic groups (like greeks, persians), demonyms and other social groups (like religious organizations)
 Do not provide explanation in the answer and do not list out entries of 'O'. Example:
-ἐκεῖ Χάριτες , ἐκεῖ δὲ Πόθος .
-{{'B-GOD': ['Χάριτες', 'Πόθος']}}""" 
+Sentence: <word_1> <word_2> <word_3> <word_4> <word_5>
+Output: {{'B-<entity1>': ['<word_1>', '<word_4>'], 'B-<entity2>':['<word_5>']}}""" 
+            human_template = """Sentence: {input}
+Output: """
+
         case 'gra_nenner':
             template = """Ἀναγνώρισον τὰ ὀνόματα (named entities) ἐκ τῆςδε τῆς Ἑλληνικῆς περιόδου.
 Τὰ ἔγκυρα εἴδη ἐστιν 'O', 'LOC', 'GOD', 'ORG', 'NORP', 'WORK', 'EVENT', 'PERSON', 'LANGUAGE'.
 NORP σημαίνει ἔθνη (οἷον Ἕλληνες, Πέρσαι), ἐθνωνύμια, καὶ ἄλλας κοινωνικὰς ὁμάδας (οἷον θρησκευτικὰς ὁργανώσεις).
 Μὴ παρέχου ἐξήγησιν ἐν τῇ ἀποκρίσει μηδὲ τὰ εἰς 'O' ἐγγεγραμμένα παρατίθεσο. Παράδειγμα:
-ἐκεῖ Χάριτες , ἐκεῖ δὲ Πόθος .
-{{'B-GOD': ['Χάριτες', 'Πόθος']}}"""
-    
-    human_template = "{input}"
+Πρότασις: <λέξις_1> <λέξις_2> <λέξις_3> <λέξις_4> <λέξις_5>
+Παραγωγή: {{'B-<ὀντότης1>': ['<λέξις_1>', '<λέξις_4>'], 'B-<ὀντότης2>':['<λέξις_5>']}}"""
+            human_template = """Πρότασις: {input}
+Παραγωγή: """
 
     chat_prompt = ChatPromptTemplate.from_messages([
         ("system", template),
         ("human", human_template),
     ])
 
+    output_tags = ['Output:', 'Productus:','Παραγωγή:', 'फलितम्‌:']
     def output_parse(ai_message):
-        return ai_message.content.strip()
+        output_txt = ai_message.content
+        for tag in output_tags:
+            if tag in output_txt:
+                output_txt = output_txt.split(tag)[1]
+        return output_txt.strip()
 
     chat_model = get_chat_model(model=model)    
     ner_chain = chat_prompt | chat_model | output_parse
