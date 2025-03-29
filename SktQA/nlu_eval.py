@@ -47,7 +47,10 @@ def eval_file_ner(in_file):
         print('Error: gold answers should be present in column ANSWER')
         exit(1)
     
-    methods = MODELS 
+    methods = MODELS.copy()
+    for m in MODELS:
+        if m not in df_.columns:
+            methods.remove(m)
     scores = {m: [] for m in methods}
     
     if 'skt' in in_file:
@@ -148,7 +151,7 @@ def eval_default():
     results = {}
 
     ## NER evaluation
-    lang = {'san': 'skt_ner', 'san<en>': 'skten_ner', 'lat': 'lat_nenner', 'lat<en>': 'lat_ner', 'grc<en>': 'gra_ner'}
+    lang = {'san': 'skt_ner', 'san<en>': 'skten_ner', 'lat': 'lat_nenner', 'lat<en>': 'lat_ner', 'grc':'gra_nenner', 'grc<en>': 'gra_ner'}
     f_pth = "results/ner/{lang}_{n}.tsv"
     scores = {}
     for l in lang:
