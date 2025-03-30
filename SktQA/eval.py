@@ -150,7 +150,8 @@ def eval_file_ner(in_file):
     elif 'lat' in in_file:
         lat_out_d = {m: 0.0 for m in methods}
         labels = LAT_ENT
-        df_1 = df[df['id'].str.contains('Ovid')]
+        df_1 = pd.read_csv(in_file.replace('_ner','_nenner'), sep='\t')
+        df_1 = df_1[df_1['id'].str.contains('Ovid')]
         for m in methods:
             df_1[m] = df_1.apply(lambda x: format_ner(x[m],x['sentence']), axis = 1)
             predictions = df_1[m].tolist()
@@ -159,7 +160,9 @@ def eval_file_ner(in_file):
             #print(scores_)
             F1 = [v['f1'] for k,v in scores_1.items() if k in labels]
             lat_out_d[m] = np.mean(F1)
+        print()
         print(lat_out_d)
+        print()
     elif 'gra' in in_file:
         labels = GRA_ENT
     cm['labels'] = labels
