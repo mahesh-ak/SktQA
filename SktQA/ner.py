@@ -94,7 +94,7 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
     in_file = in_file.replace("skten","skt").replace("nen","").replace("iast","")
     in_df = pd.read_csv(in_file, sep='\t')
     #in_df = in_df[:100]
-    if 'iast' in in_file:
+    if 'iast' in lang:
         in_df['sentence'] = in_df.apply(lambda x: transliterate(x['sentence'], DEVANAGARI, IAST), axis=1)
     if os.path.exists(out_file):
         out_df = pd.read_csv(out_file, sep='\t')
