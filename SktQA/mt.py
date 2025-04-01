@@ -1,5 +1,6 @@
 from utils import *
 import argparse
+from indic_transliteration.sanscript import IAST, DEVANAGARI, transliterate
 from langchain_core.prompts.chat import ChatPromptTemplate
 
 def MTChain(model='gpt-4o', language='english'):
@@ -7,7 +8,7 @@ def MTChain(model='gpt-4o', language='english'):
     match language:
         case 'mt_in' | 'mt_out':
             template = f"अधो दत्त-संस्कृत-वाक्यम्‌ आंग्ले अनुवादय, तद्‌ अपि विवृतम्‌ मा कुरु -"
-        case 'mt_in_en' | 'mt_out_en':
+        case 'mt_in_en' | 'mt_out_en' | 'mt_in_iast' | 'mt_out_iast':
             template = f"Translate the following sentence in Sanskrit into English. Do not give any explanations."
         case 'grc_eng':
             template = f"Translate the following sentence in Ancient Greek into English. Do not give any explanations."
@@ -45,8 +46,10 @@ def run_mt(in_file, model, lang=None, out_file=None, force=None, r=None):
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
 
-    in_df = pd.read_csv(in_file.replace('_en.tsv','.tsv').replace('_nen.tsv','.tsv'), sep='\t')
+    in_df = pd.read_csv(in_file.replace('_en.tsv','.tsv').replace('_nen.tsv','.tsv').replace('_iast.tsv','.tsv'), sep='\t')
 #    in_df = in_df
+    if 'iast' in in_file:
+        in_df['sentence'] = in_df.apply(lambda x: transliterate(x['sentence'], DEVANAGARI, IAST), axis=1)
     if os.path.exists(out_file):
         out_df = pd.read_csv(out_file, sep='\t')
     else:
@@ -66,7 +69,7 @@ def run_mt(in_file, model, lang=None, out_file=None, force=None, r=None):
 def run_mt_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/mt/'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['mt_in.tsv','mt_out.tsv','grc_eng.tsv','lat_eng.tsv', 'grc_eng_nen.tsv', 'lat_eng_nen.tsv', 'mt_in_en.tsv', 'mt_out_en.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['mt_in.tsv','mt_out.tsv','grc_eng.tsv','lat_eng.tsv', 'grc_eng_nen.tsv', 'lat_eng_nen.tsv', 'mt_in_en.tsv', 'mt_out_en.tsv','mt_in_iast.tsv', 'mt_out_iast.tsv']]
     else:
         f_pths = [in_file]
     

@@ -384,7 +384,7 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
 
     if ner:
         f_pth = "results/ner/{lang}_{n}.tsv"
-        lang = ['skten_ner', 'lat_ner', 'gra_ner']
+        lang = ['skten_ner', 'sktiast_ner', 'lat_ner', 'gra_ner']
         scores = {}
         cm = {}
         methods = set()
@@ -411,7 +411,7 @@ def eval_default(in_file=None, ner=None, rag=None, category_wise=None, k_rag=Non
             fp.write(res_txt) 
     if mt:
         f_pth = "results/mt/{lang}_{n}.tsv"
-        lang = ['mt_in','grc_eng','lat_eng']#, 'mt_out'
+        lang = ['mt_in','grc_eng','lat_eng', 'mt_in_en', 'mt_in_iast']#, 'mt_out'
         scores = {}
         methods = set()
         for l in lang:

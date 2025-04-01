@@ -1,11 +1,12 @@
 from utils import *
 import argparse
 from langchain_core.prompts.chat import ChatPromptTemplate
+from indic_transliteration.sanscript import IAST, DEVANAGARI, transliterate
 
 def NERChain(model='gpt-4o', language='english'):
     
     match language:
-        case 'skten_ner':
+        case 'skten_ner' | 'sktiast_ner':
             template = """Recognize the named entities from the following sentence in Sanskrit.
 The valid entities are 'O', 'ASURA', 'RAKSHASA', 'HUMAN', 'KULA', 'DEVA', 'PALACE', 'NAGA', 'GANDHARVA', 'TREE', 'FLOWER', 'MOUNTAIN', 'KINGDOM', 'VANARA', 'AXE', 'ORNAMENT', 'MUHURTA', 'SEA', 'HOUSE', 'GARDEN', 'FOREST', 'ASTRA', 'VINE', 'RIVERBANK', 'GRAHA', 'CITY', 'GRIDHRA', 'ARROW', 'ROAD', 'FESTIVAL', 'SWARGA', 'FRUIT', 'RATHA' । 
 Do not provide explanation and do not list out entries of 'O'. Example:
@@ -90,9 +91,11 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
         os.makedirs(out_pth, exist_ok=True)
         out_file = os.path.join(out_pth, out_fname)
 
-    in_file = in_file.replace("skten","skt").replace("nen","")
+    in_file = in_file.replace("skten","skt").replace("nen","").replace("iast","")
     in_df = pd.read_csv(in_file, sep='\t')
     #in_df = in_df[:100]
+    if 'iast' in in_file:
+        in_df['sentence'] = in_df.apply(lambda x: transliterate(x['sentence'], DEVANAGARI, IAST), axis=1)
     if os.path.exists(out_file):
         out_df = pd.read_csv(out_file, sep='\t')
     else:
@@ -112,7 +115,7 @@ def run_ner(in_file, model, lang=None, out_file=None, force=None, r=None):
 def run_ner_default(in_file=None, model=None,repeat=None, **kwargs):
     if in_file == None:
         file_path = 'data/ner/'
-        f_pths = [os.path.join(file_path, f_name) for f_name in ['skten_ner.tsv','skt_ner.tsv','lat_ner.tsv', 'gra_ner.tsv','lat_nenner.tsv','gra_nenner.tsv']]
+        f_pths = [os.path.join(file_path, f_name) for f_name in ['skten_ner.tsv','skt_ner.tsv','lat_ner.tsv', 'gra_ner.tsv','lat_nenner.tsv','gra_nenner.tsv', 'sktiast_ner.tsv']]
     else:
         f_pths = [in_file]
     
