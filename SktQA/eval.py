@@ -46,8 +46,8 @@ def plot_k(data, pre):
 
 
     plt.axhline(y = avg, color = 'k', linestyle = '-', label='Zero-Shot baseline', linewidth=3) 
-    plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
-    plt.axhline(y = avg-err, color = 'k', linestyle = '--') 
+    #plt.axhline(y = avg+err, color = 'k', linestyle = '--') 
+    #plt.axhline(y = avg-err, color = 'k', linestyle = '--') 
 
     # Labels and title
     plt.xlabel('k', **design)
